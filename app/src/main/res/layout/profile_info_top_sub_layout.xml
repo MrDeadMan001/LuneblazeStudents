@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/padding_large"
+    android:paddingTop="@dimen/padding_large"
+    android:paddingRight="@dimen/padding_large"
+
+    android:paddingBottom="@dimen/padding_small">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_profile_menu_options"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@android:drawable/ic_media_play" />
+
+
+        <ImageView
+            android:id="@+id/iv_user_dp"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/padding_small"
+            android:layout_marginTop="@dimen/padding_small"
+            android:scaleType="centerCrop"
+            android:src="@drawable/placeholder" />
+
+        <ImageButton
+            android:id="@+id/ib_edit_user_dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@id/iv_user_dp"
+            android:layout_alignBottom="@id/iv_user_dp"
+            android:background="@drawable/white_rounded_8dp_border_white_fill"
+            android:padding="@dimen/padding_extra_small"
+            android:src="@drawable/ic_edit_grey" />
+
+        <TextView
+            android:id="@+id/tv_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding_large"
+            android:layout_marginTop="@dimen/padding_small"
+            android:layout_toLeftOf="@id/iv_profile_menu_options"
+            android:layout_toRightOf="@id/iv_user_dp"
+            android:gravity="left"
+            android:text="User Name"
+            android:textColor="@color/dark_grey"
+            android:textSize="@dimen/text_xxl"
+            android:textStyle="bold"
+
+            />
+
+        <LinearLayout
+
+            android:id="@+id/ll_basic_info_wrapper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_username"
+            android:layout_marginLeft="@dimen/padding_large"
+            android:layout_marginRight="@dimen/padding_medium"
+            android:layout_toRightOf="@id/iv_user_dp"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/tv_user_designation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="User Designation"
+                android:textColor="@color/med_grey"
+                android:textSize="@dimen/text_large" />
+
+            <TextView
+                android:id="@+id/tv_institution"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="Last Educational Institute"
+                android:textColor="@color/med_grey"
+                android:textSize="@dimen/text_large" />
+
+            <TextView
+                android:id="@+id/tv_area"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/padding_medium"
+                android:gravity="left"
+                android:text="Current area"
+                android:textColor="@color/med_grey"
+                android:textSize="@dimen/text_large" />
+
+        </LinearLayout>
+
+
+
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_field_of_interest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_basic_info_wrapper"
+        android:drawableLeft="@drawable/ic_foi_filled"
+        android:layout_marginTop="@dimen/padding_medium"
+        android:paddingLeft="@dimen/padding_medium"
+        android:layout_marginRight="@dimen/padding_medium"
+        android:gravity="center_vertical"
+        android:drawablePadding="@dimen/padding_small"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:text="field of interest"
+        android:textColor="@color/med_grey"
+        android:textSize="@dimen/text_large" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/padding_small"
+        android:layout_marginTop="@dimen/padding_medium"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_add_fellow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/app_theme_border"
+            android:drawableLeft="@drawable/ic_add_fellow"
+            android:drawablePadding="@dimen/padding_small"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/padding_medium"
+            android:paddingTop="@dimen/padding_small"
+            android:paddingRight="@dimen/padding_medium"
+            android:paddingBottom="@dimen/padding_small"
+            android:text="@string/add_fellow"
+            android:textColor="@color/med_grey"
+            android:textSize="@dimen/text_large"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tv_mutual_friends_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/tv_add_fellow"
+            android:layout_marginLeft="@dimen/padding_small"
+            android:layout_marginBottom="@dimen/padding_small"
+            android:layout_toRightOf="@id/tv_add_fellow"
+            android:gravity="center_vertical"
+            android:paddingBottom="4dp"
+            android:text="@string/mutual_friends"
+            android:textColor="@color/med_grey"
+            android:textSize="@dimen/text_med" />
+
+        <TextView
+            android:id="@+id/tv_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding_medium"
+            android:layout_toRightOf="@id/tv_mutual_friends_count"
+            android:drawableLeft="@drawable/ic_message_unfilled"
+            android:drawablePadding="@dimen/padding_medium"
+            android:gravity="center_vertical"
+            android:padding="@dimen/padding_small"
+            android:paddingBottom="@dimen/padding_small"
+            android:text="@string/message"
+            android:textColor="@color/med_grey"
+            android:textSize="@dimen/text_large" />
+
+    </RelativeLayout>
+
+</LinearLayout>

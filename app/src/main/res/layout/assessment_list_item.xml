@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_content_wrapper"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/padding_extra_small"
+    android:background="@drawable/white_rounded_border_white_fill"
+    android:elevation="2dp"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/padding_large"
+    android:paddingTop="@dimen/padding_small"
+    android:paddingRight="@dimen/padding_large"
+    android:paddingBottom="@dimen/padding_small">
+
+    <TextView
+        android:id="@+id/tv_report_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:padding="@dimen/padding_small"
+        android:text="@string/report_status"
+        android:textColor="@color/med_grey" />
+
+    <TextView
+        android:id="@+id/tv_transaction_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:padding="@dimen/padding_small"
+        android:text="@string/transaction_id"
+        android:textColor="@color/med_grey" />
+
+    <TextView
+        android:id="@+id/tv_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@id/tv_browser"
+        android:gravity="right"
+        android:padding="@dimen/padding_small"
+        android:text="@string/amount_paid"
+        android:textColor="@color/med_grey" />
+
+    <TextView
+        android:id="@+id/tv_download"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:gravity="right"
+        android:padding="@dimen/padding_small"
+        android:text="@string/download_report"
+        android:textColor="@color/app_theme_dark"
+        android:textSize="@dimen/text_xl"
+        android:textStyle="bold" />
+
+
+</LinearLayout>

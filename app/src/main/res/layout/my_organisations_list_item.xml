@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_content_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/padding_extra_small"
+        android:background="@drawable/white_rounded_border_white_fill"
+        android:elevation="2dp"
+        android:paddingLeft="@dimen/padding_large"
+        android:paddingRight="@dimen/padding_large"
+        android:paddingTop="@dimen/padding_medium"
+        android:paddingBottom="@dimen/padding_medium"
+        >
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_image_wrapper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/padding_large"
+            app:cardCornerRadius="4dp"
+            >
+            <ImageView
+                android:id="@+id/iv_dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+
+                android:scaleType="centerCrop"
+                android:src="@drawable/placeholder" />
+
+        </androidx.cardview.widget.CardView>
+
+
+        <TextView
+            android:id="@+id/tv_follow"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/app_theme_border"
+            android:drawableLeft="@drawable/ic_venue_unfollowed"
+            android:drawablePadding="@dimen/padding_small"
+            android:elevation="1dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/padding_small"
+            android:paddingTop="@dimen/padding_small"
+            android:paddingBottom="@dimen/padding_small"
+            android:text="@string/following"
+            android:textColor="@color/med_grey"
+            android:textSize="@dimen/text_large"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+
+        <!-- <Button
+             android:id="@+id/bt_add_friend"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_centerVertical="true"
+             android:layout_alignParentRight="true"
+             android:text="Add friend"
+             />-->
+
+
+        <LinearLayout
+            android:id="@+id/ll_data_wrapper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding_large"
+            android:layout_marginRight="@dimen/all_activity_margin_medium"
+            android:layout_toLeftOf="@id/tv_follow"
+            android:layout_toRightOf="@id/cv_image_wrapper"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="name"
+                android:textColor="@color/med_grey"
+                android:textSize="@dimen/text_large"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_company_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="type"
+                android:textColor="@color/med_grey"
+                android:textSize="@dimen/text_med" />
+
+            <TextView
+                android:id="@+id/tv_city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="city"
+                android:textColor="@color/med_grey"
+                android:textSize="@dimen/text_med" />
+
+            <TextView
+                android:id="@+id/tv_about"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="about"
+                android:textColor="@color/light_grey"
+                android:textSize="@dimen/text_med" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/pb_loading_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:elevation="2dp" />
+
+    <TextView
+        android:id="@+id/tv_no_more_results"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:elevation="2dp"
+        android:padding="@dimen/padding_medium"
+        android:text="@string/no_more_results_found"
+        android:textColor="@color/med_grey"
+        android:visibility="gone"
+        android:textSize="@dimen/text_large" />
+
+</RelativeLayout>

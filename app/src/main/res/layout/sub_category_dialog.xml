@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/white_rounded_border_white_fill"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/padding_medium">
+
+    <TextView
+        android:id="@+id/tv_dialog_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:padding="@dimen/padding_large"
+        android:text="@string/please_select_categories_above"
+        android:textColor="@color/med_grey"
+        android:textSize="@dimen/text_xl"
+        android:textStyle="bold" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_sub_categories"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/padding_small"
+        android:background="@drawable/rounded_light_grey_border"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_medium">
+
+        <LinearLayout
+            android:id="@+id/ll_any_category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_any"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="@dimen/padding_medium"
+                android:text="@string/any"
+                android:textColor="@color/med_grey"
+                android:textSize="@dimen/text_xl"
+                app:buttonTint="@color/app_theme_medium"
+                android:checked="true"
+                />
+
+            <TextView
+                android:id="@+id/tv_any_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding_small"
+                android:layout_marginRight="@dimen/padding_small"
+                android:gravity="left"
+                android:text="@string/any_category_description"
+                android:textColor="@color/med_grey"
+                android:textSize="@dimen/text_large" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_all_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_small"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="@dimen/padding_medium"
+                android:text="@string/all"
+                android:textColor="@color/med_grey"
+                android:textSize="@dimen/text_xl"
+                app:buttonTint="@color/app_theme_medium" />
+
+            <TextView
+                android:id="@+id/tv_any_all"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding_large"
+                android:layout_marginRight="@dimen/padding_small"
+                android:gravity="left"
+                android:text="@string/all_category_description"
+                android:textColor="@color/med_grey"
+                android:textSize="@dimen/text_large" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_done"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_margin="@dimen/padding_medium"
+        android:padding="@dimen/padding_medium"
+        android:text="@string/done"
+        android:textColor="@color/app_theme_dark"
+        android:textSize="@dimen/text_xl"
+        android:textStyle="bold" />
+</LinearLayout>

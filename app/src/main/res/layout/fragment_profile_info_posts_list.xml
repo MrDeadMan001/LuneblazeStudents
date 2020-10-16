@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ultra_light_grey"
+    android:orientation="vertical"
+    tools:activity=".fragments.profileinfo.ProfileInfoPostsListFragment">
+
+    <LinearLayout
+        android:id="@+id/ll_content_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:background="@color/white"
+            android:drawableLeft="@drawable/ic_filter_gray"
+            android:gravity="center_vertical"
+            android:padding="@dimen/padding_small"
+            android:text="@string/filter"
+            android:textColor="@color/med_grey"
+            android:textSize="@dimen/text_large"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_no_posts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/padding_large"
+            android:text="@string/no_posts_written"
+            android:textColor="@color/med_grey"
+            android:textSize="@dimen/text_xl"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tv_create_post"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/padding_large"
+            android:background="@drawable/app_theme_border"
+            android:drawableLeft="@drawable/ic_create_post_gray"
+            android:drawablePadding="@dimen/padding_extra_small"
+            android:elevation="1dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/padding_medium_small"
+            android:paddingTop="@dimen/padding_small"
+            android:paddingRight="@dimen/padding_medium"
+            android:paddingBottom="@dimen/padding_small"
+            android:text="@string/create_post"
+            android:textColor="@color/med_grey"
+            android:textSize="@dimen/text_large"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_news_feed_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            android:background="@color/ultra_light_grey" />
+    </LinearLayout>
+
+    <include layout="@layout/connection_error_sublayout" />
+
+</RelativeLayout>

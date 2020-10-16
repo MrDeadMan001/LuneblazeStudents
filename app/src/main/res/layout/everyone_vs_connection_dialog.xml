@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="32dp"
+        android:layout_marginLeft="@dimen/padding_large"
+        android:layout_marginRight="@dimen/padding_large"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_dialog_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="@dimen/padding_large"
+            android:paddingLeft="@dimen/padding_medium"
+            android:paddingRight="@dimen/padding_medium"
+            android:textStyle="bold"
+            android:text="Choose who can see your connections on Luneblaze"
+            android:textColor="@color/dark_grey"
+            android:textSize="@dimen/text_xl" />
+
+        <include layout="@layout/thinnest_light_grey_divider_with_margin" />
+
+        <RadioGroup
+            android:layout_margin="@dimen/padding_large"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/rb_my_connections"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding_large"
+                android:buttonTint="@color/app_theme_dark"
+                android:padding="@dimen/padding_medium"
+                android:text="@string/my_connections_only"
+                android:textColor="@color/dark_grey"
+                android:textSize="@dimen/text_xl" />
+
+            <RadioButton
+                android:id="@+id/rb_everyone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding_large"
+                android:buttonTint="@color/app_theme_dark"
+                android:padding="@dimen/padding_medium"
+                android:text="@string/everyone"
+                android:textColor="@color/dark_grey"
+                android:textSize="@dimen/text_xl" />
+            <RadioButton
+                android:id="@+id/rb_none"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding_large"
+                android:buttonTint="@color/app_theme_dark"
+                android:padding="@dimen/padding_medium"
+                android:text="@string/no_one"
+                android:textColor="@color/dark_grey"
+                android:textSize="@dimen/text_xl" />
+
+
+        </RadioGroup>
+
+        <include layout="@layout/thick_divider" />
+
+        <TextView
+            android:id="@+id/tv_done_button"
+            style="@style/blue_button_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/done" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,39 @@
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/ultra_light_grey"
+    tools:activity="com.avadna.luneblaze.fragments.sessions.OrganisedSessionGalleryFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/ll_parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/session_gallery_fragment_photos_sub_layout" />
+
+            <include layout="@layout/session_gallery_fragment_notes_sub_layout"
+                />
+
+            <include layout="@layout/session_gallery_fragment_videos_sub_layout"
+                />
+
+        </LinearLayout>
+
+        <include layout="@layout/connection_error_sublayout" />
+        <ProgressBar
+            android:id="@+id/pb_loading_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/padding_large" />
+
+
+    </RelativeLayout>
+
+</androidx.core.widget.NestedScrollView>

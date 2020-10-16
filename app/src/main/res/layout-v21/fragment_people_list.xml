@@ -1,0 +1,34 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ultra_light_grey"
+    tools:activity="com.avadna.luneblaze.fragments.search.UserSearchResultListFragment">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_people_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/ultra_light_grey" />
+
+    <RelativeLayout
+        android:id="@+id/rl_no_results_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/rv_people_list"
+        android:layout_marginTop="@dimen/padding_large"
+        android:visibility="gone"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no_results_found"
+            android:textColor="@color/med_grey"
+            android:layout_centerHorizontal="true"
+            android:textSize="@dimen/text_xl"
+            />
+
+    </RelativeLayout>
+    <include layout="@layout/connection_error_sublayout"/>
+
+</RelativeLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sv_parent_wrapper"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:activity="com.avadna.luneblaze.activities.DatePollActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+       >
+
+        <TextView
+            android:id="@+id/tv_add_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/padding_extra_small"
+            android:background="@color/app_theme_medium"
+            android:gravity="center"
+            android:padding="@dimen/padding_large"
+            android:text="@string/suggest_date"
+            android:textColor="@color/white"
+            android:layout_alignParentBottom="true"
+            />
+        <LinearLayout
+            android:id="@+id/ll_date_data_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_above="@id/tv_add_date"
+            android:layout_alignParentTop="true"
+            >
+            <CheckBox
+                android:id="@+id/cb_select_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:buttonTint="@color/app_theme_dark"
+                android:drawableTint="@color/app_theme_dark"
+                android:textColor="@color/dark_grey"
+                android:text="@string/select_all"
+                android:padding="@dimen/padding_medium"
+                android:layout_marginLeft="@dimen/padding_medium"
+                />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_date_poll_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="@dimen/padding_extra_small" />
+            <!--
+             <android.support.v7.widget.RecyclerView
+                 android:id="@+id/rv_time_poll"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:background="#0033ff" />-->
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>

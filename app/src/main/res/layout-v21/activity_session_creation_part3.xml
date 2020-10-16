@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ultra_light_grey"
+    android:orientation="vertical"
+    tools:activity="com.avadna.luneblaze.activities.sessionCreation.SessionCreationPart3">
+
+    <ScrollView
+        android:id="@+id/sv_content_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/padding_small"
+        android:layout_marginRight="@dimen/padding_small"
+        android:background="@color/white"
+        android:layout_above="@id/tv_verify_otp"
+        >
+
+        <LinearLayout
+            android:id="@+id/ll_scroll_child"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/rl_venue_search_wrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/padding_medium"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="@dimen/padding_large">
+
+                <TextView
+                    android:id="@+id/tv_venues"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/padding_extra_small"
+                    android:text="@string/cities"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="@dimen/text_xl" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="@dimen/padding_large"
+                    >
+
+                    <TextView
+                        android:id="@+id/tv_venue1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:background="@drawable/grey_border_white_fill"
+                        android:gravity="center"
+                        android:hint="Choose Venue 1"
+                        android:padding="@dimen/padding_medium"
+                        android:textColor="@color/dark_grey"
+                        android:textColorHint="@color/med_grey" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_margin="@dimen/padding_medium"
+                        >
+
+                        <TextView
+                            android:id="@+id/tv_venue1_date1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:background="@drawable/grey_border_white_fill"
+                            android:gravity="center"
+                            android:hint="Pick date 1"
+                            android:padding="@dimen/padding_small"
+                            android:layout_margin="@dimen/padding_small"
+                            android:textColor="@color/dark_grey"
+                            android:textColorHint="@color/light_grey" />
+
+
+                        <TextView
+                            android:id="@+id/tv_venue1_date2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:background="@drawable/grey_border_white_fill"
+                            android:gravity="center"
+                            android:hint="Pick date 2"
+                            android:padding="@dimen/padding_small"
+                            android:textColor="@color/dark_grey"
+                            android:layout_margin="@dimen/padding_small"
+
+                            android:textColorHint="@color/light_grey" />
+
+                        <TextView
+                            android:id="@+id/tv_venue1_date3"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:background="@drawable/grey_border_white_fill"
+                            android:gravity="center"
+                            android:hint="Pick date 3"
+                            android:padding="@dimen/padding_small"
+                            android:textColor="@color/dark_grey"
+                            android:textColorHint="@color/light_grey"
+
+                            android:visibility="gone"/>
+
+
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/tv_venue2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="32dp"
+                        android:layout_weight="3"
+                        android:background="@drawable/grey_border_white_fill"
+                        android:gravity="center"
+                        android:hint="Choose Venue 2"
+                        android:padding="@dimen/padding_medium"
+                        android:textColor="@color/dark_grey"
+                        android:textColorHint="@color/med_grey" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/padding_medium"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_venue2_date1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:background="@drawable/grey_border_white_fill"
+                            android:gravity="center"
+                            android:hint="Pick date 1"
+                            android:padding="@dimen/padding_small"
+                            android:layout_margin="@dimen/padding_small"
+
+                            android:textColor="@color/dark_grey"
+                            android:textColorHint="@color/light_grey" />
+
+
+                        <TextView
+                            android:id="@+id/tv_venue2_date2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:background="@drawable/grey_border_white_fill"
+                            android:gravity="center"
+                            android:hint="Pick date 2"
+                            android:padding="@dimen/padding_small"
+                            android:layout_margin="@dimen/padding_small"
+
+                            android:textColor="@color/dark_grey"
+                            android:textColorHint="@color/light_grey" />
+
+                        <TextView
+                            android:id="@+id/tv_venue2_date3"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:background="@drawable/grey_border_white_fill"
+                            android:gravity="center"
+                            android:hint="Pick date 3"
+                            android:padding="@dimen/padding_small"
+                            android:textColor="@color/dark_grey"
+                            android:visibility="gone"
+                            android:textColorHint="@color/light_grey" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_venue3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="32dp"
+                        android:layout_weight="3"
+                        android:background="@drawable/grey_border_white_fill"
+                        android:gravity="center"
+                        android:hint="Choose Venue 3"
+                        android:padding="@dimen/padding_medium"
+                        android:textColor="@color/dark_grey"
+                        android:visibility="gone"
+                        android:textColorHint="@color/med_grey" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/padding_medium"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        >
+
+                        <TextView
+                            android:id="@+id/tv_venue3_date1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:background="@drawable/grey_border_white_fill"
+                            android:gravity="center"
+                            android:hint="Pick date 1"
+                            android:padding="@dimen/padding_small"
+                            android:layout_margin="@dimen/padding_small"
+
+                            android:textColor="@color/dark_grey"
+                            android:textColorHint="@color/light_grey" />
+
+
+                        <TextView
+                            android:id="@+id/tv_venue3_date2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:background="@drawable/grey_border_white_fill"
+                            android:gravity="center"
+                            android:hint="Pick date 2"
+                            android:padding="@dimen/padding_small"
+                            android:layout_margin="@dimen/padding_small"
+
+                            android:textColor="@color/dark_grey"
+                            android:textColorHint="@color/light_grey" />
+
+                        <TextView
+                            android:id="@+id/tv_venue3_date3"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:background="@drawable/grey_border_white_fill"
+                            android:gravity="center"
+                            android:hint="Pick date 3"
+                            android:padding="@dimen/padding_small"
+                            android:visibility="gone"
+                            android:textColor="@color/dark_grey"
+                            android:textColorHint="@color/light_grey" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_selected_venue_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_venues"
+                    android:background="@color/ultra_light_grey"
+                    android:nestedScrollingEnabled="false"
+                    android:visibility="gone" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+    <ProgressBar
+        android:id="@+id/pb_calling_api"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <TextView
+        android:id="@+id/tv_verify_otp"
+        style="@style/blue_button_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Verify with OTP"
+        android:layout_alignParentBottom="true"
+        />
+</RelativeLayout>

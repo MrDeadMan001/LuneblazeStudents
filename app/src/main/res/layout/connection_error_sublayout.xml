@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_no_connection_wrapper"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:visibility="gone"
+    android:padding="@dimen/padding_large">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:lottie_loop="true"
+        app:lottie_autoPlay="true"
+        app:lottie_rawRes="@raw/no_internet_connection"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="32dp"
+        />
+   <!-- <ImageView
+        android:id="@+id/iv_no_connection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/ic_no_connection"
+        android:layout_marginTop="24dp"
+        />-->
+
+    <TextView
+        android:id="@+id/tv_connection_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:drawablePadding="@dimen/padding_medium"
+        android:text="@string/cannot_connect_to_server"
+        android:textColor="@color/med_grey"
+        android:textSize="@dimen/text_xl"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_retry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:drawableLeft="@drawable/ic_retry_gray"
+        android:drawablePadding="@dimen/padding_medium"
+        android:padding="@dimen/padding_medium"
+        android:text="@string/retry"
+        android:textColor="@color/app_theme_dark"
+        android:textSize="@dimen/text_xl"
+        android:textStyle="bold" />
+
+</LinearLayout>

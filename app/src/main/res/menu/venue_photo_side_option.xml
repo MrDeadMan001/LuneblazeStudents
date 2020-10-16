@@ -1,0 +1,16 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/primary"
+        android:title="@string/set_cover_photo"
+        app:showAsAction="never"
+        android:icon="@drawable/ic_edit_grey"
+        />
+    <item
+        android:id="@+id/delete"
+        android:title="@string/delete"
+        app:showAsAction="never"
+        android:icon="@drawable/ic_gray_delete"
+        />
+</menu>

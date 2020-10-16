@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/invite"
+        android:title="@string/invite_fellows"
+        app:showAsAction="never"
+        android:icon="@drawable/ic_invite_unfilled"
+        />
+    <item
+        android:id="@+id/send_conduct_request"
+        android:title="@string/send_conduct_request"
+        app:showAsAction="never"
+        android:icon="@drawable/ic_session_conduct_request"
+        />
+  <!--  <item
+        android:id="@+id/follow_sharer"
+        android:title="@string/follow_sharer"
+        app:showAsAction="never"
+        />-->
+  <!--  <item
+        android:id="@+id/follow_interest"
+        android:title="@string/follow_tagged_interests"
+        app:showAsAction="never"
+        android:icon="@drawable/ic_interest_follow_unfilled"
+        />-->
+    <item
+        android:id="@+id/create_session"
+        android:title="@string/create_session"
+        app:showAsAction="never"
+        android:icon="@drawable/ic_session_unfilled"
+        />
+    <item
+        android:id="@+id/share_to"
+        android:title="@string/share_to"
+        app:showAsAction="never"
+        android:icon="@drawable/ic_reply_flipped"
+        />
+
+    <item
+        android:id="@+id/report"
+        android:title="@string/report"
+        app:showAsAction="never"
+        android:icon="@drawable/ic_report_gray"
+        />
+
+</menu>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/white_rounded_border_white_fill"
+    android:padding="@dimen/padding_large"
+    android:layout_margin="@dimen/padding_small"
+    android:elevation="4dp"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@id/tv_undo"
+        android:layout_toLeftOf="@id/tv_undo"
+        android:text="@string/this_post_wont_be_shown"
+        android:textColor="@color/med_grey"
+        android:textSize="@dimen/text_large" />
+
+    <TextView
+        android:id="@+id/tv_undo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/app_theme_border"
+        android:paddingLeft="@dimen/padding_medium"
+        android:paddingTop="@dimen/padding_small"
+        android:paddingRight="@dimen/padding_medium"
+        android:paddingBottom="@dimen/padding_small"
+        android:text="@string/undo"
+        android:textColor="@color/med_grey" />
+</RelativeLayout>

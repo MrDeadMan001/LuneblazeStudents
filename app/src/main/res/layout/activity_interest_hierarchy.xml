@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:activity="activities.registration.InterestHierarchyActivity">
+
+    <TextView
+        android:id="@+id/tv_length_getter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/padding_small"
+        android:layout_marginRight="@dimen/padding_small"
+        android:background="@drawable/tag_item_bg"
+        android:paddingLeft="@dimen/padding_medium"
+        android:paddingTop="@dimen/padding_small"
+        android:paddingRight="@dimen/padding_medium"
+        android:paddingBottom="@dimen/padding_small"
+        android:text="Tag name"
+        android:textColor="@color/app_theme_medium"
+        android:textSize="@dimen/text_med"
+        android:visibility="invisible" />
+
+    <RelativeLayout
+        android:id="@+id/rl_content_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/ll_bottom_buttons_wrapper"
+            android:layout_alignParentTop="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.google.android.material.appbar.AppBarLayout
+                    android:id="@+id/app_bar_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.Toolbar
+                        android:id="@+id/tl_top_bar"
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize"
+                        android:background="@color/white"
+                        android:contentInsetStart="0dp"
+                        android:contentInsetLeft="0dp"
+                        app:contentInsetLeft="0dp"
+                        app:contentInsetStart="0dp">
+
+                        <RelativeLayout
+                            android:id="@+id/rl_search_wrapper"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <EditText
+                                android:id="@+id/et_search_bar"
+                                android:layout_width="match_parent"
+                                android:layout_height="?attr/actionBarSize"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@id/ib_back"
+                                android:background="@color/white"
+                                android:focusable="true"
+                                android:focusableInTouchMode="true"
+                                android:gravity="left|center_vertical"
+                                android:hint="@string/search"
+                                android:maxLines="1"
+                                android:paddingLeft="@dimen/padding_large"
+                                android:singleLine="true"
+                                android:textColor="@color/med_grey"
+                                android:textColorHint="@color/light_grey"
+                                android:textSize="@dimen/text_xl" />
+
+                            <ImageButton
+                                android:id="@+id/ib_back"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/padding_large"
+                                android:background="#00ffffff"
+                                android:padding="@dimen/padding_medium"
+                                android:src="@drawable/ic_back_gray" />
+
+                            <ImageButton
+                                android:id="@+id/ib_search"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="@dimen/padding_large"
+                                android:background="#00ffffff"
+                                android:padding="@dimen/padding_medium"
+                                android:src="@drawable/ic_search_gray" />
+
+                        </RelativeLayout>
+                    </androidx.appcompat.widget.Toolbar>
+                </com.google.android.material.appbar.AppBarLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_interest_search_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:paddingLeft="32dp" />
+
+                <LinearLayout
+                    android:id="@+id/ll_interest_not_found_wrapper"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/padding_small"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:text="@string/interest_not_found"
+                        android:textColor="@color/med_grey"
+                        android:textSize="@dimen/text_xl" />
+
+                    <TextView
+                        android:id="@+id/tv_suggest_interest"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:text="@string/click_here_to_suggest_interest"
+                        android:textColor="@color/app_theme_dark"
+                        android:gravity="center"
+                        android:padding="@dimen/padding_small"
+                        android:textSize="@dimen/text_xl" />
+                </LinearLayout>
+
+
+                <!--  <ExpandableListView
+                      android:id="@+id/el_selected_interests"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:divider="@color/med_grey"
+                      android:visibility="gone"
+                      android:dividerHeight="1px"
+                      android:indicatorLeft="?android:attr/expandableListPreferredItemIndicatorLeft" />-->
+
+                <TextView
+                    android:id="@+id/tv_added_interests_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/light_grey"
+                    android:drawableRight="@drawable/ic_collapse"
+                    android:padding="@dimen/padding_medium"
+                    android:text="Selected Interets"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_xl"
+                    android:textStyle="bold" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_interest_to_be_sent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/padding_small"
+                    android:background="@color/white"
+                    android:overScrollMode="never"
+                    android:paddingTop="@dimen/padding_small" />
+
+
+                <TextView
+                    android:id="@+id/tv_select_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/light_grey"
+                    android:padding="@dimen/padding_medium"
+                    android:text="Select your Interests from below"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_xl"
+                    android:textStyle="bold" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_hierarchy_indicator"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white" />
+
+                <include layout="@layout/thinnest_app_theme_color_divider" />
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_list1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@color/app_theme_light"
+                    android:dividerHeight="1px"
+                    android:visibility="visible" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <LinearLayout
+            android:id="@+id/ll_bottom_buttons_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_done_button"
+                style="@style/blue_button_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:text="@string/done" />
+
+            <TextView
+                android:id="@+id/tv_skip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="right"
+                android:padding="@dimen/padding_medium"
+                android:text="@string/skip"
+                android:textColor="@color/app_theme_dark" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/pb_loading_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/ll_loading_wrapper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:orientation="vertical"
+
+        >
+
+        <RelativeLayout
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_gravity="center_horizontal">
+
+            <ImageView
+                android:id="@+id/iv_outer_ring"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/outer_ring" />
+
+            <ImageView
+                android:id="@+id/iv_inner_ring"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/padding_small"
+                android:src="@drawable/inner_ring" />
+
+            <ImageView
+                android:id="@+id/iv_interest_image"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/search_interest" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_small"
+            android:text="@string/loading_interests"
+            android:textColor="@color/med_grey"
+            android:textSize="@dimen/text_xl"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

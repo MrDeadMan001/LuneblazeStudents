@@ -1,0 +1,103 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/ultra_light_grey"
+    tools:activity="com.avadna.luneblaze.fragments.sessions.SessionDiscussionFragment">
+
+<!--    <RelativeLayout
+        android:id="@+id/rl_previous_button_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_load_previous"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@android:drawable/ic_menu_revert"
+            android:gravity="center_vertical"
+            android:text="@string/load_previous"
+            android:textColor="@color/med_grey" />
+
+        <ProgressBar
+            android:id="@+id/pb_loading_previous"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/tv_load_previous"
+            android:layout_alignBottom="@id/tv_load_previous"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>-->
+
+    <RelativeLayout
+        android:id="@+id/rl_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_discussion_comments_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/ultra_light_grey"
+            android:layout_above="@+id/ll_new_comment_wrapper"
+            android:layout_alignParentTop="true"
+
+            />
+
+        <RelativeLayout
+            android:id="@+id/ll_new_comment_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/rounded_light_grey_border"
+            android:visibility="gone"
+            >
+
+            <ImageButton
+                android:id="@+id/ib_send"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="#00ffffff"
+                android:scaleType="fitXY"
+                android:src="@android:drawable/ic_menu_send" />
+            <!--
+                    <ImageView
+                        android:id="@+id/iv_attach"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/edit_text_padding_medium"
+                        android:layout_marginRight="@dimen/edit_text_padding_small"
+                        android:src="@drawable/ic_question" />-->
+
+            <EditText
+                android:id="@+id/et_new_comment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/padding_large"
+                android:layout_toLeftOf="@id/ib_send"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:hint="Add a comment"
+                android:textColor="@color/dark_grey"
+                android:textColorHint="@color/light_grey"
+                android:textSize="@dimen/text_large" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+
+    <ProgressBar
+        android:id="@+id/pb_loading_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/padding_large" />
+    <include layout="@layout/connection_error_sublayout"/>
+</RelativeLayout>
+
+

@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:activity="com.avadna.luneblaze.activities.CreateArticleActivity">
+
+    <TextView
+        android:id="@+id/tv_auto_gen_image"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:padding="@dimen/padding_large"
+        android:text="@string/add_cover_photo"
+        android:textColor="@color/app_theme_medium"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        tools:fontFamily="@font/acme" />
+
+    <TextView
+        android:id="@+id/tv_length_getter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="@dimen/padding_small"
+        android:layout_marginRight="@dimen/padding_small"
+        android:background="@drawable/tag_item_bg"
+        android:enabled="false"
+        android:paddingLeft="@dimen/padding_medium"
+        android:paddingTop="@dimen/padding_small"
+        android:paddingRight="@dimen/padding_medium"
+        android:paddingBottom="@dimen/padding_small"
+        android:text="Tag name"
+        android:textColor="@color/app_theme_medium"
+        android:textSize="@dimen/text_med"
+        android:visibility="invisible" />
+
+    <RelativeLayout
+        android:id="@+id/rl_content_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/sv_parent_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/rl_attachments"
+            android:layout_alignParentTop="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/padding_medium"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:padding="@dimen/padding_large">
+
+                    <!--   <TextView
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:padding="@dimen/edit_text_padding_extra_small"
+                           android:text="@string/article_title"
+                           android:textColor="@color/dark_grey"
+                           android:textSize="@dimen/text_xxl" />-->
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_last_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/padding_large"
+                        android:hint="@string/article_title"
+                        android:textColorHint="@color/light_grey"
+                        app:errorEnabled="true"
+                        app:errorTextAppearance="@style/error_appearance"
+                        app:hintTextAppearance="@style/hint_appearance">
+
+                        <EditText
+                            android:id="@+id/et_article_title"
+                            style="@style/signUpEditTextTheme"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textCapSentences|textMultiLine"
+                            android:textSize="@dimen/text_xxl" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <!--     </LinearLayout>
+
+                         <LinearLayout
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:layout_marginBottom="@dimen/edit_text_padding_medium"
+                             android:background="@color/white"
+                             android:orientation="vertical"
+                             android:padding="@dimen/edit_text_padding_large">-->
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/padding_medium"
+                        android:padding="@dimen/padding_extra_small"
+                        android:text="@string/article_content"
+                        android:textColor="@color/dark_grey"
+                        android:textSize="@dimen/text_large"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/padding_extra_small">
+
+                        <RelativeLayout
+                            android:id="@+id/rl_image_parent"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/iv_article_cover"
+                                android:layout_width="match_parent"
+                                android:layout_height="200dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/placeholder" />
+
+
+                            <ImageButton
+                                android:id="@+id/ib_remove_photo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentRight="true"
+                                android:background="@color/transparent"
+                                android:padding="@dimen/padding_small"
+                                android:src="@drawable/ic_cancel_gray" />
+                        </RelativeLayout>
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/til_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/padding_large"
+                            android:hint="@string/article_content"
+                            android:textColorHint="@color/light_grey"
+                            app:errorEnabled="true"
+                            app:errorTextAppearance="@style/error_appearance"
+                            app:hintTextAppearance="@style/hint_appearance">
+
+                            <EditText
+                                android:id="@+id/et_article_content"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/padding_large"
+                                android:backgroundTint="@color/light_grey"
+                                android:gravity="top"
+                                android:inputType="textCapSentences|textMultiLine"
+                                android:singleLine="false"
+                                android:textColor="@color/dark_grey"
+                                android:textColorHint="@color/light_grey"
+                                android:textSize="@dimen/text_large" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_added_interests"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <RelativeLayout
+            android:id="@+id/rl_attachments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/light_white"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_tag_interests"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/padding_medium"
+                android:background="@color/transparent"
+                android:drawableLeft="@drawable/ic_interest_follow_unfilled"
+                android:drawablePadding="@dimen/padding_small"
+                android:gravity="center_vertical"
+                android:padding="@dimen/padding_medium_small"
+                android:text="@string/tag_interests"
+                android:textColor="@color/med_grey"
+                android:textSize="@dimen/text_large" />
+
+            <TextView
+                android:id="@+id/tv_add_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="end"
+                android:layout_marginRight="@dimen/padding_medium"
+                android:layout_toRightOf="@id/tv_tag_interests"
+                android:background="@color/transparent"
+                android:drawableLeft="@drawable/ic_add_image_gray"
+                android:drawablePadding="@dimen/padding_small"
+                android:gravity="center_vertical"
+                android:padding="@dimen/padding_medium_small"
+                android:text="@string/add_image"
+                android:textColor="@color/med_grey"
+                android:textSize="@dimen/text_large" />
+
+            <TextView
+                android:id="@+id/tv_create_article"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="@dimen/padding_medium"
+                android:padding="@dimen/padding_small"
+                android:text="@string/post"
+                android:textColor="@color/app_theme_dark"
+                android:textSize="@dimen/text_xl"
+                android:textStyle="bold"
+
+                />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/pb_creating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+</RelativeLayout>

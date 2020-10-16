@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background"
+    tools:context=".update.activities.quiz.AttemptQuizActivity">
+
+    <!-- <com.avadna.luneblaze.utils.NonSwipingViewPager
+         android:id="@+id/vp_questions_pager"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         app:layout_behavior="@string/appbar_scrolling_view_behavior" />-->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_question_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <RelativeLayout
+        android:id="@+id/rl_finish_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/padding_xl">
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            app:lottie_loop="true"
+            app:lottie_autoPlay="true"
+            app:lottie_rawRes="@raw/confetti_two"
+            android:layout_gravity="center_horizontal"
+            app:lottie_scale="1.4"
+            />
+        <TextView
+            android:id="@+id/tv_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            style="@style/AppTheme.text.catamaran.dark"
+            android:text="@string/share"
+            android:padding="@dimen/padding_small"
+            />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/ll_bottom_buttons"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="96dp"
+            >
+            <RelativeLayout
+                android:id="@+id/rl_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@color/transparent">
+
+                <com.google.android.material.progressindicator.ProgressIndicator
+                    android:id="@+id/pb_score"
+                    style="@style/Widget.MaterialComponents.ProgressIndicator.Circular.Determinate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:rotation="180"
+                    app:circularRadius="60dp"
+                    app:indicatorWidth="10dp"
+                    app:indicatorColor="@color/icon_light"
+                    app:trackColor="@color/ultra_light_text" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/padding_medium"
+                    >
+                    <TextView
+                        android:id="@+id/tv_time_left"
+                        style="@style/AppTheme.text.catamaran.dark"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="75%"
+                        android:layout_gravity="center_horizontal"
+                        android:textSize="28dp"
+                        android:textStyle="bold" />
+                    <TextView
+                        style="@style/AppTheme.text.catamaran.medDark"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="-6dp"
+                        android:text="3 of 4"
+                        android:textSize="@dimen/text_xxl"
+                        />
+
+                </LinearLayout>
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_progress"
+                android:layout_centerHorizontal="true"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/padding_medium"
+                >
+                <TextView
+                    style="@style/AppTheme.text.catamaran_semi_bold.dark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/congratulations"
+                    android:textSize="@dimen/text_xxxl"
+                    android:padding="@dimen/padding_large"
+                   />
+                <TextView
+                    style="@style/AppTheme.text.catamaran.dark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="-6dp"
+                    android:gravity="center"
+                    android:layout_marginLeft="48dp"
+                    android:layout_marginRight="48dp"
+                    android:text="You answered 3 questions correctly and you earned 20 quiz points"
+                    android:textSize="@dimen/text_xl"
+                    />
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/white_rounded_border_white_fill"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:layout_alignBottom="@id/rl_progress"
+                android:text="+20"
+                style="@style/AppTheme.text.catamaran.medDark"
+                android:textSize="@dimen/text_xxl"
+                android:paddingLeft="@dimen/padding_large"
+                android:paddingRight="@dimen/padding_large"
+                android:paddingBottom="@dimen/padding_small"
+                android:textColor="@color/quantum_yellow"
+                />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_bottom_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/bt_invite"
+                style="@style/screenMainButton"
+                android:layout_marginTop="@dimen/padding_xxxl"
+                android:text="@string/invite_fellows" />
+
+            <Button
+                android:id="@+id/bt_finish"
+                style="@style/screenMainButton"
+                android:layout_marginTop="@dimen/padding_xxxl"
+                android:layout_marginBottom="@dimen/padding_small"
+                android:text="@string/done" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

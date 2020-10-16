@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:padding="16dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/tv_dialog_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_large"
+            android:text="Are you sure?"
+            android:textColor="@color/dark_grey"
+            android:textSize="@dimen/text_xl" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_medium"
+                android:textColor="@color/med_grey"
+                android:textSize="@dimen/text_xl"
+                android:textStyle="bold"
+                android:text="@string/NO" />
+
+            <TextView
+                android:id="@+id/tv_yes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_medium"
+                android:textColor="@color/app_theme_dark"
+                android:layout_marginLeft="@dimen/padding_medium"
+                android:textSize="@dimen/text_xl"
+                android:textStyle="bold"
+                android:text="@string/YES" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

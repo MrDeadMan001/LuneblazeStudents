@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/interest_any"
+        android:title="@string/any"
+        app:showAsAction="never"
+        />
+
+    <item
+        android:id="@+id/my_interest"
+        android:title="@string/my_interests"
+        app:showAsAction="never"
+        />
+    <item
+        android:id="@+id/choose_interest"
+        android:title="@string/choose_interest"
+        app:showAsAction="never"
+        />
+</menu>

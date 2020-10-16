@@ -1,0 +1,529 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="coordinatorLayoutStyle">@style/Widget.Support.CoordinatorLayout</item>
+        <item name="floatingActionButtonStyle">@style/Widget.Design.FloatingActionButton</item>
+        <item name="bottomNavigationStyle">@style/Widget.Design.BottomNavigationView</item>
+        <item name="android:fontFamily">@font/catamaran</item>>
+
+    </style>
+
+    <style name="AppTheme.text.catamaran" parent="AppTheme">
+        <item name="android:fontFamily">@font/catamaran</item>
+        <item name="android:lineSpacingMultiplier">0.8</item>
+    </style>
+
+    <style name="AppTheme.text.montserrat" parent="AppTheme">
+        <item name="android:fontFamily">@font/montserrat</item>
+    </style>
+
+    <style name="AppTheme.text.catamaran.medDark" parent="AppTheme">
+        <item name="android:fontFamily">@font/catamaran</item>
+        <item name="android:textColor">@color/med_dark_text</item>
+    </style>
+
+    <style name="AppTheme.text.catamaran.dark" parent="AppTheme">
+        <item name="android:fontFamily">@font/catamaran</item>
+        <item name="android:textColor">@color/dark_text</item>
+    </style>
+
+    <style name="AppTheme.text.catamaran_semi_bold.dark" parent="AppTheme">
+        <item name="android:fontFamily">@font/catamaran_semibold</item>
+        <item name="android:textColor">@color/dark_text</item>
+    </style>
+
+    <style name="AppTheme.text.catamaran.light" parent="AppTheme">
+        <item name="android:fontFamily">@font/catamaran</item>
+        <item name="android:textColor">@color/light_text</item>
+    </style>
+
+    <style name="quizAnswerItemStyle" parent="AppTheme.text.catamaran.dark">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/rounded_corner_item_bg_fill</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:lineSpacingMultiplier">0.7</item>
+        <item name="android:paddingTop">@dimen/padding_medium</item>
+        <item name="android:paddingBottom">@dimen/padding_medium_large</item>
+        <item name="android:paddingLeft">@dimen/padding_medium_large</item>
+        <item name="android:paddingRight">@dimen/padding_medium_large</item>
+        <item name="android:textSize">@dimen/text_large</item>
+        <item name="autoSizeTextType">uniform</item>
+        <item name="autoSizeMinTextSize">12sp</item>
+        <item name="autoSizeMaxTextSize">16sp</item>
+        <item name="autoSizeStepGranularity">1sp</item>
+    </style>
+
+    <style name="addQuizAnswerStyle" parent="AppTheme.text.catamaran.dark">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:lineSpacingMultiplier">0.7</item>
+        <item name="android:textSize">@dimen/text_large</item>
+        <item name="autoSizeTextType">uniform</item>
+        <item name="autoSizeMinTextSize">12sp</item>
+        <item name="autoSizeMaxTextSize">16sp</item>
+        <item name="autoSizeStepGranularity">1sp</item>
+    </style>
+
+    <style name="textInputLayoutStyle" parent="AppTheme.text.catamaran">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/text_input_layout_height</item>
+        <item name="android:textColorHint">@color/light_text</item>
+        <item name="errorEnabled">true</item>
+        <item name="errorTextAppearance">@style/error_appearance</item>
+        <item name="hintTextAppearance">@style/hint_appearance</item>
+        <item name="android:gravity">bottom</item>
+        <item name="android:layout_marginTop">-4dp</item>
+        <item name="android:layout_marginBottom">-4dp</item>
+    </style>
+
+    <style name="transparentBGButton" parent="AppTheme">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/transparent</item>
+        <item name="android:tint">@color/icon_inactive</item>
+        <item name="android:padding">@dimen/padding_small</item>
+    </style>
+
+    <style name="imageButtonStyle" parent="AppTheme">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/transparent</item>
+        <item name="android:tint">@color/icon_inactive</item>
+        <item name="android:padding">@dimen/padding_small</item>
+    </style>
+
+
+    <!-- stores the style for sections of forms-->
+    <style name="formSectionStyle" parent="AppTheme.text.catamaran">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">@dimen/padding_xxl</item>
+        <item name="android:paddingRight">@dimen/padding_xxl</item>
+        <item name="android:paddingBottom">@dimen/padding_xl</item>
+        <item name="android:paddingTop">@dimen/padding_xl</item>
+        <item name="android:background">@color/item_background_color</item>
+    </style>
+
+   <!-- stores the style for headers of form fields-->
+    <style name="formFieldHeaderStyle" parent="AppTheme.text.catamaran">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">bottom</item>
+        <item name="android:layout_marginTop">-4dp</item>
+        <item name="android:paddingLeft">@dimen/padding_extra_small</item>
+        <item name="android:paddingBottom">@dimen/padding_medium_large</item>
+        <item name="android:background">@color/transparent</item>
+        <item name="android:textSize">@dimen/text_xl</item>
+        <item name="android:textColor">@color/dark_text</item>
+    </style>
+
+
+    <!-- stores the style for character counter of form fields-->
+    <style name="formFieldCharCounterStyle" parent="AppTheme.text.catamaran">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">right</item>
+        <item name="android:paddingRight">@dimen/padding_extra_small</item>
+        <item name="android:background">@color/transparent</item>
+        <item name="android:textSize">@dimen/text_large</item>
+        <item name="android:textColor">@color/light_text</item>
+    </style>
+
+
+    <style name="formEditTextStyleInactive" parent="AppTheme.text.catamaran">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:padding">@dimen/padding_large</item>
+        <item name="android:background">@drawable/form_item_inactive_bg</item>
+        <item name="android:textSize">@dimen/text_xl</item>
+        <item name="android:textColor">@color/dark_text</item>
+    </style>
+
+    <style name="formEditTextStyleActive" parent="AppTheme.text.catamaran">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:padding">@dimen/padding_large</item>
+        <item name="android:background">@drawable/form_item_active_bg</item>
+        <item name="android:textSize">@dimen/text_xl</item>
+        <item name="android:textColor">@color/dark_text</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="screenMainButton" parent="AppTheme.text.montserrat">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">@dimen/padding_large</item>
+        <item name="android:background">@drawable/light_blue_rounded_button</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/text_xl</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="lightItemRoundedCorner" parent="AppTheme.text.montserrat">
+        <item name="android:padding">@dimen/padding_large</item>
+        <item name="android:background">@drawable/rounded_corner_item_bg_fill</item>
+    </style>
+
+    <style name="screenMainWhiteButton" parent="AppTheme.text.montserrat">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">@dimen/padding_large</item>
+        <item name="android:background">@drawable/light_grey_border_app_bg_fill</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/text_xl</item>
+        <item name="android:textColor">@color/dark_text</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="settingsGroupHeader" parent="AppTheme.text.catamaran">
+        <item name="android:paddingTop">@dimen/padding_large</item>
+        <item name="android:paddingBottom">@dimen/padding_medium_small</item>
+        <item name="android:paddingLeft">@dimen/padding_large</item>
+        <item name="android:background">@color/item_background_color</item>
+        <item name="android:gravity">left</item>
+        <item name="android:textSize">@dimen/text_xl</item>
+        <item name="android:textColor">@color/med_dark_text</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="screenHeader" parent="AppTheme.text.catamaran">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/padding_large</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/text_xl</item>
+        <item name="android:textColor">@color/dark_text</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="screenDescription" parent="AppTheme.text.catamaran">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">@dimen/padding_xxxl</item>
+        <item name="android:paddingRight">@dimen/padding_xxxl</item>
+        <item name="android:layout_marginTop">@dimen/padding_large</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/text_xl</item>
+        <item name="android:textColor">@color/med_dark_text</item>
+        <item name="android:fontFamily">@font/catamaran</item>
+    </style>
+
+
+    <style name="settingsItemStyleNew" parent="AppTheme.text.catamaran">
+        <item name="android:paddingLeft">@dimen/padding_xxxl</item>
+        <item name="android:paddingRight">@dimen/padding_large</item>
+        <item name="android:paddingTop">@dimen/padding_medium</item>
+        <item name="android:paddingBottom">@dimen/padding_xl</item>
+        <item name="android:background">@color/item_background_color</item>
+        <item name="android:clickable">true</item>
+        <item name="android:gravity">left</item>
+
+    </style>
+
+
+    <style name="settingsItemNameStyle" parent="AppTheme.text.catamaran">
+        <item name="android:fontFamily">@font/catamaran_medium</item>
+        <item name="android:drawablePadding">@dimen/padding_xl</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textSize">@dimen/text_xl</item>
+        <item name="android:textColor">@color/med_dark_text</item>
+    </style>
+
+
+    <style name="settingsItemDescriptionStyle" parent="AppTheme.text.catamaran">
+        <item name="android:fontFamily">@font/catamaran</item>
+        <item name="android:gravity">left</item>
+        <item name="android:textSize">@dimen/text_large</item>
+        <item name="android:textColor">@color/light_text</item>
+        <item name="android:layout_marginTop">-2dp</item>
+        <item name="android:paddingLeft">40dp</item>
+
+    </style>
+
+
+    <style name="CustomRatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/venue_rating_bar</item>
+        <item name="android:minHeight">40dp</item>
+        <item name="android:maxHeight">40dp</item>
+    </style>
+
+    <style name="CustomSlider" parent="AppTheme">
+
+    </style>
+
+    <style name="Theme.Transparent" parent="AppTheme">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="Theme.Translucent" parent="AppTheme">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+
+    </style>
+
+    <style name="MyDatePickerDialogTheme" parent="Theme.AppCompat.Light.Dialog">
+        <!-- this is new -->
+        <item name="colorAccent">@color/app_theme_medium</item>
+        <item name="android:datePickerStyle">@style/MyDatePickerStyle</item>
+    </style>
+
+    <style name="NoTitleDialogTheme" parent="Theme.AppCompat.Light.Dialog">
+        <!-- this is new -->
+        <item name="colorAccent">@color/app_theme_medium</item>
+        <item name="android:datePickerStyle">@style/MyDatePickerStyle</item>
+    </style>
+
+    <style name="fullWidthDialogTheme" parent="Base.Theme.AppCompat.Light.Dialog.Alert">
+        <item name="windowFixedWidthMajor">100%</item>
+        <item name="windowFixedWidthMinor">100%</item>
+    </style>
+
+
+    <style name="MyDatePickerStyle" parent="AlertDialog.AppCompat.Light">
+            <item name="android:headerBackground">@color/app_theme_medium</item>
+            <item name="android:minDate">01/01/2000</item>
+        </style>
+
+    <style name="HorizontalProgressCustom" parent="Widget.AppCompat.ProgressBar.Horizontal">
+        <item name="android:minHeight">4dp</item>
+        <item name="android:maxHeight">4dp</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:layout_margin">0dp</item>
+        <item name="colorAccent">@color/light_grey</item>
+    </style>
+
+    <style name="SearchHorizontalProgressCustom" parent="Widget.AppCompat.ProgressBar.Horizontal">
+        <item name="android:minHeight">6dp</item>
+        <item name="android:maxHeight">6dp</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:layout_margin">0dp</item>
+    </style>
+
+    <style name="editTextThemeMedGrey" parent="AlertDialog.AppCompat.Light">
+        <item name="android:layout_margin">@dimen/padding_medium</item>
+        <item name="android:background">@drawable/grey_border_white_fill</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:paddingBottom">@dimen/padding_medium</item>
+        <item name="android:paddingLeft">@dimen/padding_large</item>
+        <item name="android:paddingRight">@dimen/padding_large</item>
+        <item name="android:paddingTop">@dimen/padding_medium</item>
+        <item name="android:textColorHint">@color/light_grey</item>
+        <item name="android:textColor">@color/med_grey</item>
+        <item name="android:textSize">@dimen/text_xl</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:imeOptions">flagNoExtractUi</item>
+    </style>
+
+    <style name="editTextThemeAppThemeMed" parent="AlertDialog.AppCompat.Light">
+        <item name="android:layout_margin">@dimen/padding_medium</item>
+        <item name="android:background">@drawable/app_theme_border</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:paddingBottom">@dimen/padding_medium</item>
+        <item name="android:paddingLeft">@dimen/padding_large</item>
+        <item name="android:paddingRight">@dimen/padding_large</item>
+        <item name="android:paddingTop">@dimen/padding_medium</item>
+        <item name="android:textColorHint">@color/light_grey</item>
+        <item name="android:textColor">@color/med_grey</item>
+        <item name="android:textSize">@dimen/text_xl</item>
+    </style>
+
+    <style name="signUpEditTextTheme" parent="AppTheme">
+        <item name="android:layout_margin">0dp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColorHint">@color/light_grey</item>
+        <item name="android:hint">""</item>
+        <item name="android:textColor">@color/med_grey</item>
+        <item name="android:textSize">@dimen/text_xl</item>
+
+    </style>
+
+    <style name="editProfileEditTextTheme" parent="AppTheme">
+        <item name="android:layout_margin">0dp</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textColorHint">@color/light_grey</item>
+        <item name="android:hint">""</item>
+        <item name="android:textColor">@color/med_grey</item>
+        <item name="android:textSize">@dimen/text_xl</item>
+        <item name="android:paddingRight">32dp</item>
+
+    </style>
+
+    <style name="hint_appearance" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/app_theme_medium</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="error_appearance" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/error_red</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="popupMenuStyle" parent="@android:style/Widget.PopupMenu">
+        <item name="android:listPreferredItemHeightSmall">32dp</item>
+        <item name="android:width">100dp</item>
+
+        <item name="android:listPreferredItemPaddingLeft">5dp</item>
+        <item name="android:listPreferredItemPaddingRight">5dp</item>
+
+    </style>
+
+
+
+    <style name="blue_button_style" parent="AlertDialog.AppCompat.Light">
+        <item name="android:layout_margin">@dimen/padding_medium</item>
+        <item name="android:background">@drawable/light_blue_rounded_button</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingLeft">@dimen/padding_medium</item>
+        <item name="android:paddingRight">@dimen/padding_medium</item>
+        <item name="android:paddingTop">@dimen/padding_medium</item>
+        <item name="android:paddingBottom">@dimen/padding_medium</item>
+
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/text_xl</item>
+    </style>
+
+
+    <style name="blue_border_button_style" parent="AlertDialog.AppCompat.Light">
+        <item name="android:background">@drawable/app_theme_border</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingLeft">@dimen/padding_medium</item>
+        <item name="android:paddingRight">@dimen/padding_medium</item>
+        <item name="android:paddingTop">@dimen/padding_small</item>
+        <item name="android:paddingBottom">@dimen/padding_small</item>
+        <item name="android:textColor">@color/app_theme_medium</item>
+    </style>
+
+    <style name="grey_border_button_style" parent="AlertDialog.AppCompat.Light">
+        <item name="android:background">@drawable/grey_border_white_fill</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingLeft">@dimen/padding_medium</item>
+        <item name="android:paddingRight">@dimen/padding_medium</item>
+        <item name="android:paddingTop">@dimen/padding_small</item>
+        <item name="android:paddingBottom">@dimen/padding_small</item>
+        <item name="android:textColor">@color/med_grey</item>
+    </style>
+
+    <style name="tableHeaderStyle" parent="Base.Theme.AppCompat.Light">
+        <item name="android:paddingTop">@dimen/padding_medium</item>
+        <item name="android:paddingBottom">@dimen/padding_medium</item>
+        <item name="android:paddingLeft">@dimen/padding_large</item>
+        <item name="android:paddingRight">@dimen/padding_large</item>
+        <item name="android:background">@color/app_theme_medium</item>
+        <item name="android:gravity">left</item>
+        <item name="android:textSize">@dimen/text_large</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="AppThemeRatingBar" parent="Widget.AppCompat.RatingBar.Small">
+        <item name="colorControlNormal">@color/light_grey</item>
+        <item name="colorControlActivated">@color/app_theme_dark</item>
+    </style>
+
+    <style name="settingsItemStyle" parent="Base.Theme.AppCompat.Light">
+        <item name="android:padding">12dp</item>
+        <item name="android:layout_marginLeft">@dimen/padding_extra_small</item>
+        <item name="android:layout_marginRight">@dimen/padding_extra_small</item>
+        <item name="android:background">@drawable/grey_ripple_effect</item>
+        <item name="android:clickable">true</item>
+        <item name="android:gravity">left</item>
+        <item name="android:textSize">@dimen/text_xl</item>
+        <item name="android:textColor">@color/med_grey</item>
+    </style>
+
+
+
+    <style name="MyTheme.Switch" parent="Widget.AppCompat.CompoundButton.Switch">
+        <item name="colorControlActivated">@color/app_theme_dark</item>
+        <item name="colorControlNormal">@color/app_theme_dark</item>
+        <item name="colorControlHighlight">@color/app_theme_dark</item>
+        <item name="colorSwitchThumbNormal">@color/app_theme_dark</item>
+        <item name="colorAccent">@color/app_theme_dark</item>
+    </style>
+
+    <style name="MenuBarTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:itemBackground">@color/white</item>
+        <item name="android:textColor">@color/dark_grey</item>
+
+    </style>
+
+    <style name="SearchViewStyle" parent="Widget.AppCompat.SearchView">
+        <!--This line changes the color of text in Toolbar-->
+        <item name="android:textColorPrimary">@color/med_grey</item>
+        <!--This line changes the color of icons in toolbar (back, overflow menu icons)-->
+        <item name="android:textColorSecondary">@color/med_grey</item>
+    </style>
+
+    <style name="MenuBarThemeNoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:itemBackground">@color/white</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="colorControlNormal">#fff</item>
+
+    </style>
+
+    <style name="OverLappingMenuBarTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:windowActionBarOverlay">true</item>
+        <!-- Support library compatibility -->
+        <item name="windowActionBarOverlay">true</item>
+        <!-- To change the background of options menu-->
+        <item name="android:itemBackground">@color/white</item>
+        <item name="android:textColor">@color/dark_grey</item>
+
+    </style>
+
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_in_from_right</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_to_right</item>
+    </style>
+
+    <style name="AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="Custom_Dialog" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="windowMinWidthMajor">100%</item>
+        <item name="windowMinWidthMinor">85%</item>
+    </style>
+
+    <style name="BottomNavigation">
+        <item name="android:background">@color/white</item>
+        <item name="itemBackground">@color/white</item>
+        <item name="itemIconTint">@drawable/navigation_bar_item_state</item>
+        <item name="itemTextColor">@color/med_grey</item>
+    </style>
+
+    <style name="TransparentDialogBG" parent="android:Theme.Holo.Dialog.NoActionBar">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+    </style>
+
+    <style name="NoActionBar" parent="Theme.AppCompat.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+
+</resources>

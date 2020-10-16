@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_venue_wrapper"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/ultra_light_grey"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/padding_medium"
+    android:paddingRight="@dimen/padding_medium">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_above="@id/rl_bottom_bar"
+        >
+
+
+        <ImageView
+            android:id="@+id/iv_photo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:src="@drawable/placeholder" />
+    </ScrollView>
+
+    <!-- <ImageView
+         android:id="@+id/iv_prescription"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:src="@drawable/places_ic_search"
+         android:layout_above="@id/tb_close"
+         />-->
+    <RelativeLayout
+        android:id="@+id/rl_bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_upload"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="@dimen/padding_medium"
+            android:src="@drawable/ic_send"
+            app:backgroundTint="@color/app_theme_dark"
+            app:elevation="0dp"
+            app:fabCustomSize="48dp" />
+
+        <EditText
+            android:id="@+id/et_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/padding_medium"
+            android:layout_toLeftOf="@id/fab_upload"
+            android:background="@drawable/white_rounded_border_white_fill"
+            android:hint="@string/add_a_message"
+            android:padding="10dp"
+            android:textColor="@color/dark_grey"
+            android:textColorHint="@color/light_grey"
+            android:textSize="@dimen/text_large"
+
+            />
+
+    </RelativeLayout>
+</RelativeLayout>

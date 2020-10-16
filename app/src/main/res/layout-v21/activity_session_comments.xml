@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/white_rounded_border_white_fill"
+    android:padding="@dimen/padding_extra_small"
+    tools:activity=".activities.sessions.SessionCommentsListActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_content_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/ll_top_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/padding_small">
+
+            <TextView
+                android:id="@+id/tv_dialog_like_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:background="@color/white"
+                android:paddingBottom="@dimen/padding_small"
+                android:paddingRight="@dimen/padding_medium"
+                android:text="00 Likes"
+                android:textColor="@color/med_grey"
+                android:textSize="@dimen/text_med" />
+
+            <TextView
+                android:id="@+id/tv_dialog_comment_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/tv_num_of_likes"
+                android:background="@color/white"
+                android:paddingBottom="@dimen/padding_small"
+                android:paddingRight="@dimen/padding_medium"
+                android:text="00 Replies"
+                android:textColor="@color/med_grey"
+                android:textSize="@dimen/text_med" />
+
+        </LinearLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_comments_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/rl_bottom_bar"
+            android:layout_below="@id/ll_top_bar"
+            android:layout_marginBottom="0dp" />
+
+        <RelativeLayout
+            android:id="@+id/rl_bottom_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/rounded_light_grey_border"
+            android:paddingLeft="@dimen/padding_large"
+            >
+
+            <ImageButton
+                android:id="@+id/ib_send"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="#00ffffff"
+                android:scaleType="fitXY"
+                android:src="@android:drawable/ic_menu_send" />
+            <!--
+                    <ImageView
+                        android:id="@+id/iv_attach"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/edit_text_padding_medium"
+                        android:layout_marginRight="@dimen/edit_text_padding_small"
+                        android:src="@drawable/ic_question" />-->
+
+            <EditText
+                android:id="@+id/et_comment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/padding_small"
+                android:layout_margin="@dimen/padding_extra_small"
+                android:maxLines="5"                    android:layout_toLeftOf="@id/ib_send"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:hint="Add a comment"
+                android:textColor="@color/dark_grey"
+                android:textColorHint="@color/light_grey"
+                android:textSize="@dimen/text_large" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/pb_loading_comments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+</RelativeLayout>

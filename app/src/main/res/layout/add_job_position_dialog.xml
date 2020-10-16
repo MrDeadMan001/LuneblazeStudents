@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/white_rounded_border_white_fill"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/white_rounded_border_white_fill"
+        android:orientation="vertical">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_position"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_medium"
+            android:hint="@string/position_name"
+            android:textColorHint="@color/light_grey"
+            app:errorEnabled="true"
+            app:errorTextAppearance="@style/error_appearance"
+            app:hintTextAppearance="@style/hint_appearance">
+
+            <EditText
+                android:id="@+id/et_position"
+                style="@style/signUpEditTextTheme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingRight="32dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_medium"
+            android:hint="@string/description"
+            android:textColorHint="@color/light_grey"
+            app:errorEnabled="true"
+            app:errorTextAppearance="@style/error_appearance"
+            app:hintTextAppearance="@style/hint_appearance">
+
+            <EditText
+                android:id="@+id/et_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0dp"
+                android:textColorHint="@color/light_grey"
+                android:textColor="@color/med_grey"
+                android:textSize="@dimen/text_xl"
+                app:backgroundTint="@color/light_grey"
+                android:maxLines="5"
+                android:paddingRight="32dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_position_count"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_medium"
+            android:hint="@string/number_of_positions"
+            android:textColorHint="@color/light_grey"
+            app:errorEnabled="true"
+            app:errorTextAppearance="@style/error_appearance"
+            app:hintTextAppearance="@style/hint_appearance">
+
+            <EditText
+                android:id="@+id/et_position_count"
+                style="@style/signUpEditTextTheme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:paddingRight="32dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/bt_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="24dp"
+            android:background="@color/transparent"
+            android:elevation="0dp"
+            android:text="@string/OK"
+            android:textColor="@color/app_theme_dark"
+            android:textSize="@dimen/text_xl" />
+
+
+    </LinearLayout>
+</RelativeLayout>

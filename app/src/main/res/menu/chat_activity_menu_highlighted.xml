@@ -1,0 +1,18 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/info"
+        android:icon="@drawable/ic_info_white"
+        android:title=""
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/copy"
+        android:icon="@drawable/ic_copy_content_white"
+        android:title=""
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/forward"
+        android:icon="@drawable/ic_forward_chat_white"
+        android:title=""
+        app:showAsAction="always" />
+</menu>

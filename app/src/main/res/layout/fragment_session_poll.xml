@@ -1,0 +1,84 @@
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:activity="com.avadna.luneblaze.fragments.sessions.SessionPollFragment"
+    android:background="@color/ultra_light_grey"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/ultra_light_grey"
+        >
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_poll_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/ultra_light_grey"
+            android:layout_alignParentTop="true"
+            android:visibility="gone"
+            />
+
+
+
+      <!--  <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_discussion_comments_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/ultra_light_grey"
+            android:layout_below="@id/rv_poll_list"
+            android:layout_above="@id/ll_new_comment_wrapper"
+            />-->
+
+
+     <!--   <LinearLayout
+            android:id="@+id/ll_new_comment_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/grey_border_white_fill"
+            android:layout_alignParentBottom="true"
+            >
+            <EditText
+                android:id="@+id/et_new_comment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/med_grey"
+                android:textSize="@dimen/text_large"
+                android:paddingLeft="@dimen/edit_text_padding_medium"
+                android:paddingRight="@dimen/edit_text_padding_medium"
+                android:paddingTop="@dimen/edit_text_padding_medium"
+                android:hint="Add new comment"
+                android:textColorHint="@color/light_grey"
+                android:maxLines="6"
+                android:background="@color/white"
+                android:layout_margin="2dp"
+                />
+            <TextView
+                android:id="@+id/tv_post"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:text="Post"
+                android:textColor="@color/app_theme_dark"
+                android:paddingLeft="@dimen/edit_text_padding_large"
+                android:paddingRight="@dimen/edit_text_padding_large"
+                android:paddingTop="@dimen/edit_text_padding_small"
+                android:paddingBottom="@dimen/edit_text_padding_medium"
+                />
+
+        </LinearLayout>-->
+        <ProgressBar
+            android:id="@+id/pb_loading_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="@dimen/padding_large"
+            android:layout_centerHorizontal="true"
+            />
+        <include layout="@layout/connection_error_sublayout"/>
+    </RelativeLayout>
+
+</androidx.core.widget.NestedScrollView>

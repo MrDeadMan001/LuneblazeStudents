@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_content_wrapper"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:elevation="2dp"
+    android:orientation="vertical"
+    android:padding="@dimen/padding_small">
+
+    <RelativeLayout
+        android:id="@+id/rl_content_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       >
+
+        <RadioGroup
+            android:id="@+id/rg_options"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_above"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:padding="@dimen/padding_extra_small"
+                android:text="@string/above_average"
+                android:textColor="@color/med_grey"
+                android:textSize="@dimen/text_large"
+                app:buttonTint="@color/app_theme_medium" />
+
+            <RadioButton
+                android:id="@+id/rb_any"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="@dimen/padding_medium"
+                android:layout_marginRight="@dimen/padding_large"
+                android:paddingTop="@dimen/padding_extra_small"
+                android:paddingBottom="@dimen/padding_extra_small"
+                android:text="@string/any"
+                android:textSize="@dimen/text_large"
+                android:textColor="@color/med_grey"
+                app:buttonTint="@color/app_theme_medium" />
+        </RadioGroup>
+
+        <CheckBox
+            android:id="@+id/cb_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/padding_small"
+            android:layout_toLeftOf="@id/rg_options"
+            android:padding="@dimen/padding_extra_small"
+            android:text="name"
+            android:textColor="@color/app_theme_dark"
+            android:textSize="@dimen/text_large"
+            android:textStyle="bold"
+            app:buttonTint="@color/app_theme_medium" />
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_sub_categories"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:background="#fff"
+    >
+    <TextView
+        android:id="@+id/tv_length_getter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/padding_small"
+        android:layout_marginRight="@dimen/padding_small"
+        android:background="@drawable/tag_item_bg"
+        android:paddingLeft="@dimen/padding_medium"
+        android:paddingRight="@dimen/padding_medium"
+        android:paddingTop="@dimen/padding_small"
+        android:paddingBottom="@dimen/padding_small"
+        android:text="Tag name"
+        android:textColor="@color/app_theme_medium"
+        android:textSize="@dimen/text_med"
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_added_interests"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/ultra_light_grey"
+        android:paddingTop="@dimen/padding_medium"
+        android:paddingBottom="@dimen/padding_medium"
+        android:nestedScrollingEnabled="true"
+        />
+  <!--  <TextView
+        android:id="@+id/tv_interest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"a
+        android:paddingLeft="16dp"
+        android:textColor="@color/med_grey"
+        android:layout_centerVertical="true"
+        android:text="Interests"
+        android:textSize="12sp"
+
+        />
+    <ImageView
+        android:id="@+id/iv_remove"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:src="@android:drawable/ic_menu_close_clear_cancel"
+        android:layout_marginRight="@dimen/edit_text_padding_medium"
+        />-->
+
+</RelativeLayout>

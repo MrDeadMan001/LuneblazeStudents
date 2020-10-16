@@ -1,0 +1,41 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ultra_light_grey"
+    tools:activity="com.avadna.luneblaze.fragments.search.QuestionSearchResultFragment">
+
+    <!--  <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:visibility="gone">
+
+          <ImageView
+              android:id="@+id/iv_filter"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentRight="true"
+              android:padding="@dimen/edit_text_padding_small"
+              android:src="@android:drawable/ic_menu_sort_by_size" />
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_centerVertical="true"
+              android:layout_marginRight="@dimen/edit_text_padding_medium"
+              android:layout_toLeftOf="@id/iv_filter"
+              android:text="@string/filter"
+              android:textColor="@color/med_grey"
+              android:textSize="@dimen/text_xl" />
+      </RelativeLayout>-->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_question_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/ultra_light_grey" />
+
+    <include layout="@layout/connection_error_sublayout" />
+
+
+</RelativeLayout>

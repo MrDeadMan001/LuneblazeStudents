@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:activity=".activities.profileInfo.EditProfileActivity">
+
+    <ScrollView
+        android:id="@+id/sv_content_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/tv_done"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:paddingTop="16dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="32dp">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_small">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_first_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/first_name"
+                    android:textColorHint="@color/light_grey"
+                    app:errorEnabled="true"
+                    app:errorTextAppearance="@style/error_appearance"
+                    app:hintTextAppearance="@style/hint_appearance">
+
+                    <EditText
+                        android:id="@+id/et_first_name"
+                        style="@style/editProfileEditTextTheme"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:inputType="textCapSentences|textMultiLine" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <ImageButton
+                    android:id="@+id/ib_done_first_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@color/transparent"
+                    android:paddingBottom="@dimen/padding_medium"
+                    android:src="@drawable/ic_thanks_unfilled"
+                    android:visibility="gone" />
+
+                <ImageButton
+                    android:id="@+id/ib_edit_first_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@color/transparent"
+                    android:paddingBottom="@dimen/padding_medium"
+                    android:src="@drawable/ic_edit_grey" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_small">
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_last_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/last_name"
+                    android:textColorHint="@color/light_grey"
+                    app:errorEnabled="true"
+                    app:errorTextAppearance="@style/error_appearance"
+                    app:hintTextAppearance="@style/hint_appearance">
+
+                    <EditText
+                        android:id="@+id/et_last_name"
+                        style="@style/editProfileEditTextTheme"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:inputType="textCapSentences|textMultiLine" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <ImageButton
+                    android:id="@+id/ib_done_last_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@color/transparent"
+                    android:paddingBottom="@dimen/padding_medium"
+                    android:src="@drawable/ic_thanks_unfilled"
+                    android:visibility="gone" />
+
+                <ImageButton
+                    android:id="@+id/ib_edit_last_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@color/transparent"
+                    android:paddingBottom="@dimen/padding_medium"
+                    android:src="@drawable/ic_edit_grey" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_small">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_designation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/designation"
+                    android:textColorHint="@color/light_grey"
+                    app:errorEnabled="true"
+                    app:errorTextAppearance="@style/error_appearance"
+                    app:hintTextAppearance="@style/hint_appearance">
+
+                    <EditText
+                        android:id="@+id/et_designation"
+                        style="@style/editProfileEditTextTheme"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:inputType="textCapSentences|textMultiLine" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <ImageButton
+                    android:id="@+id/ib_done_designation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@color/transparent"
+                    android:paddingBottom="@dimen/padding_medium"
+                    android:src="@drawable/ic_thanks_unfilled"
+                    android:visibility="gone" />
+
+                <ImageButton
+                    android:id="@+id/ib_edit_designation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@color/transparent"
+                    android:paddingBottom="@dimen/padding_medium"
+                    android:src="@drawable/ic_edit_grey" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_small">
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_organisation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/organisation"
+                    android:textColorHint="@color/light_grey"
+                    app:errorEnabled="true"
+                    app:errorTextAppearance="@style/error_appearance"
+                    app:hintTextAppearance="@style/hint_appearance">
+
+                    <EditText
+                        android:id="@+id/et_organisation"
+                        style="@style/signUpEditTextTheme"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="32dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <ProgressBar
+                    android:id="@+id/pb_loading_venues"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginRight="24dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:paddingRight="@dimen/padding_small"
+                    android:paddingBottom="@dimen/padding_medium" />
+
+
+                <ImageButton
+                    android:id="@+id/ib_done_organisation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@color/transparent"
+                    android:paddingBottom="@dimen/padding_medium"
+                    android:src="@drawable/ic_thanks_unfilled"
+                    android:visibility="gone" />
+
+                <ImageButton
+                    android:id="@+id/ib_edit_organisation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@color/transparent"
+                    android:paddingBottom="@dimen/padding_medium"
+                    android:src="@drawable/ic_edit_grey" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_small">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_area"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/current_area"
+                    android:textColorHint="@color/light_grey"
+                    app:errorEnabled="true"
+                    app:errorTextAppearance="@style/error_appearance"
+                    app:hintTextAppearance="@style/hint_appearance">
+
+                    <EditText
+                        android:id="@+id/et_area"
+                        style="@style/editProfileEditTextTheme"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:inputType="textCapSentences|textMultiLine" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <ImageButton
+                    android:id="@+id/ib_done_area"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@color/transparent"
+                    android:paddingBottom="@dimen/padding_medium"
+                    android:src="@drawable/ic_thanks_unfilled"
+                    android:visibility="gone" />
+
+                <ImageButton
+                    android:id="@+id/ib_edit_area"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@color/transparent"
+                    android:paddingBottom="@dimen/padding_medium"
+                    android:src="@drawable/ic_edit_grey" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_small">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_foi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/field_of_interest"
+                    android:textColorHint="@color/light_grey"
+                    app:errorEnabled="true"
+                    app:errorTextAppearance="@style/error_appearance"
+                    app:hintTextAppearance="@style/hint_appearance">
+
+                    <EditText
+                        android:id="@+id/et_foi"
+                        style="@style/editProfileEditTextTheme"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:inputType="textCapSentences|textMultiLine" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <ImageButton
+                    android:id="@+id/ib_done_foi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@color/transparent"
+                    android:paddingBottom="@dimen/padding_medium"
+                    android:src="@drawable/ic_thanks_unfilled"
+                    android:visibility="gone" />
+
+                <ImageButton
+                    android:id="@+id/ib_edit_foi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@color/transparent"
+                    android:paddingBottom="@dimen/padding_medium"
+                    android:src="@drawable/ic_edit_grey" />
+            </RelativeLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="16dp"
+                android:background="#fff" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/tv_done"
+        style="@style/blue_button_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:elevation="2dp"
+        android:text="@string/done"
+        android:visibility="gone" />
+
+    <ProgressBar
+        android:id="@+id/pb_loading_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+</RelativeLayout>

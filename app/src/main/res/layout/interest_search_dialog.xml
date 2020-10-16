@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="@dimen/padding_large">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/tv_done_button"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_added_interests"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/padding_small"
+                android:background="@color/white"
+                android:overScrollMode="never"
+                android:paddingTop="@dimen/padding_medium" />
+
+            <RelativeLayout
+                android:id="@+id/rl_bottom_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="@dimen/padding_small"
+                android:background="@drawable/grey_border_white_fill"
+                android:padding="1dp">
+
+                <ImageButton
+                    android:id="@+id/ib_send"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="#00ffffff"
+                    android:scaleType="fitXY"
+                    android:src="@android:drawable/ic_menu_send" />
+
+                <EditText
+                    android:id="@+id/et_interest_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/ib_send"
+                    android:background="@color/white"
+                    android:hint="@string/search_interest"
+                    android:maxLines="1"
+                    android:padding="@dimen/padding_medium"
+                    android:singleLine="true"
+                    android:textColor="@color/med_grey"
+                    android:textColorHint="@color/light_grey"
+                    android:textSize="@dimen/text_large" />
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_interest_search_result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding_medium"
+                android:layout_marginRight="@dimen/padding_medium"
+                android:hint="@string/search_interest"
+                android:padding="@dimen/padding_small"
+                android:textColor="@color/med_grey"
+                android:textColorHint="@color/light_grey"
+                android:textSize="@dimen/text_large" />
+
+            <TextView
+                android:id="@+id/tv_length_getter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding_small"
+                android:layout_marginRight="@dimen/padding_small"
+                android:background="@drawable/tag_item_bg"
+                android:paddingLeft="@dimen/padding_medium"
+                android:paddingTop="@dimen/padding_small"
+                android:paddingRight="@dimen/padding_medium"
+                android:paddingBottom="@dimen/padding_small"
+                android:text="Tag name"
+                android:textColor="@color/app_theme_medium"
+                android:textSize="@dimen/text_med"
+                android:visibility="invisible" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <TextView
+        android:id="@+id/tv_done_button"
+        style="@style/blue_button_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="@string/done" />
+</RelativeLayout>

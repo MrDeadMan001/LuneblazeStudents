@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="@dimen/all_activity_margin_small"
+    tools:activity="com.avadna.luneblaze.activities.settingActivities.FeedBackActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/tv_submit"
+        >
+
+        <RelativeLayout
+            android:id="@+id/rl_parent_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/all_activity_margin_small"
+            android:layout_marginLeft="@dimen/all_activity_margin_small"
+            android:layout_marginRight="@dimen/all_activity_margin_small"
+            android:background="@color/white"
+            android:padding="@dimen/padding_large">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/padding_medium"
+                    android:text="Please select the section that you would like to give feedback about"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="@dimen/text_large" />
+
+                <Spinner
+                    android:id="@+id/sp_feedback_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/padding_medium"
+                    android:layout_marginTop="@dimen/padding_large"
+                    android:text="Please enter the feedback in the following"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="@dimen/text_large" />
+
+                <EditText
+                    android:id="@+id/et_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/grey_border_white_fill"
+                    android:hint="enter bug description here"
+                    android:maxLines="10"
+                    android:padding="@dimen/padding_medium"
+                    android:textColor="@color/dark_grey"
+                    android:textColorHint="@color/light_grey"
+                    android:textSize="@dimen/text_large" />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+    </ScrollView>
+    <TextView
+        android:id="@+id/tv_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/padding_medium"
+        android:background="@color/app_theme_medium"
+        android:gravity="center"
+        android:padding="@dimen/padding_large"
+        android:text="Submit"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_xl"
+        android:textColor="@color/white"
+        />
+    <ProgressBar
+        android:id="@+id/pb_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+</RelativeLayout>

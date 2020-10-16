@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <shortcut
+        android:enabled="true"
+        android:icon="@drawable/ic_article_blue"
+        android:shortcutDisabledMessage="@string/create_article"
+        android:shortcutId="create_article"
+        android:shortcutLongLabel="@string/create_article"
+        android:shortcutShortLabel="@string/create_article">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetClass="com.avadna.luneblaze.activities.CreateArticleActivity"
+            android:targetPackage="com.avadna.luneblaze" />
+        <!-- If your shortcut is associated with multiple intents, include them
+             here. The last intent in the list determines what the user sees when
+             they launch this shortcut. -->
+        <categories android:name="android.shortcut.conversation" />
+    </shortcut>
+
+    <shortcut
+        android:enabled="true"
+        android:icon="@drawable/ic_create_blue"
+        android:shortcutDisabledMessage="@string/post"
+        android:shortcutId="create_post"
+        android:shortcutLongLabel="@string/post"
+        android:shortcutShortLabel="@string/post">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetClass="com.avadna.luneblaze.activities.PostCreationActivity"
+            android:targetPackage="com.avadna.luneblaze" />
+        <!-- If your shortcut is associated with multiple intents, include them
+             here. The last intent in the list determines what the user sees when
+             they launch this shortcut. -->
+        <categories android:name="android.shortcut.conversation" />
+    </shortcut>
+
+    <shortcut
+        android:enabled="true"
+        android:icon="@drawable/ic_session_filled"
+        android:shortcutDisabledMessage="@string/create_session"
+        android:shortcutId="initiate_session"
+        android:shortcutLongLabel="@string/create_session"
+        android:shortcutShortLabel="@string/create_session">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetClass="com.avadna.luneblaze.activities.sessionCreation.SessionCreationPart1"
+            android:targetPackage="com.avadna.luneblaze" />
+        <!-- If your shortcut is associated with multiple intents, include them
+             here. The last intent in the list determines what the user sees when
+             they launch this shortcut. -->
+        <categories android:name="android.shortcut.conversation" />
+    </shortcut>
+    <!-- Specify more shortcuts here. -->
+</shortcuts>

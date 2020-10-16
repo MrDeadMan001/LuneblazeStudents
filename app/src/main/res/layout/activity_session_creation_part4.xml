@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ultra_light_grey"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/padding_medium"
+    android:paddingRight="@dimen/padding_medium"
+    tools:activity="com.avadna.luneblaze.activities.sessionCreation.SessionCreationPart4">
+
+
+    <ScrollView
+        android:id="@+id/sv_content_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="top"
+            android:orientation="vertical"
+            android:layout_marginTop="32dp"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/padding_medium"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="@dimen/padding_large">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/padding_extra_small"
+                    android:text="Please briefly explain why you think, you can share the listed topics and help the attendees."
+                    android:textColor="@color/dark_grey"
+                    android:textSize="@dimen/text_large" />
+
+                <EditText
+                    android:id="@+id/et_accepting_reason"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/padding_large"
+                    android:inputType="textCapSentences|textMultiLine"
+                    android:background="@drawable/grey_border_white_fill"
+                    android:maxLines="6"
+                    android:padding="@dimen/padding_medium"
+                    android:textColor="@color/dark_grey"
+                    android:textColorHint="@color/light_grey"
+                    android:textSize="@dimen/text_large" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/padding_extra_small"
+                    android:text="@string/explain_session_highlights"
+                    android:textColor="@color/dark_grey"
+                    android:layout_marginTop="24dp"
+                    android:textSize="@dimen/text_large" />
+
+                <EditText
+                    android:id="@+id/et_highlights"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/padding_large"
+                    android:background="@drawable/grey_border_white_fill"
+                    android:maxLines="6"
+                    android:inputType="textCapSentences|textMultiLine"
+                    android:padding="@dimen/padding_medium"
+                    android:textColor="@color/dark_grey"
+                    android:textColorHint="@color/light_grey"
+                    android:textSize="@dimen/text_large" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/padding_extra_small"
+                    android:text="@string/number_of_attendees_allowed_minimum_25"
+                    android:textColor="@color/dark_grey"
+                    android:layout_marginTop="24dp"
+                    android:textSize="@dimen/text_large" />
+
+                <EditText
+                    android:id="@+id/et_num_attendees"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="32dp"
+                    android:background="@drawable/grey_border_white_fill"
+                    android:hint="@string/enter_total_number_of_attendees_allowed_here"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:padding="@dimen/padding_medium"
+                    android:textColor="@color/dark_grey"
+                    android:textColorHint="@color/light_grey"
+                    android:textSize="@dimen/text_large"
+                    />
+
+
+                <TextView
+                    android:id="@+id/tv_verify_otp"
+                    style="@style/blue_button_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Verify with OTP"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/pb_calling_api"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+</RelativeLayout>

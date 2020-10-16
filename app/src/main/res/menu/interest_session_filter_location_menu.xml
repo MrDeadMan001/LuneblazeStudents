@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/location_any"
+        android:title="@string/any"
+        app:showAsAction="never"
+        />
+    <item
+        android:id="@+id/location_near_me"
+        android:title="@string/near_me"
+        app:showAsAction="never"
+        />
+    <item
+        android:id="@+id/location_near_custom"
+        android:title="@string/pick_location"
+        app:showAsAction="never"
+        />
+    <item
+        android:id="@+id/venue_select"
+        android:title="@string/select_venue"
+        app:showAsAction="never"
+        />
+    <item
+        android:id="@+id/my_venues"
+        android:title="@string/my_venues"
+        app:showAsAction="never"
+        />
+</menu>

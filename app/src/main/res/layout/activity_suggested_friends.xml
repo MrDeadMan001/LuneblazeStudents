@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:activity="com.avadna.luneblaze.activities.registration.SuggestedFriendsActivity"
+    android:background="@color/ultra_light_grey"
+
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/padding_medium"
+        android:layout_marginRight="@dimen/padding_medium"
+        >
+        <TextView
+            android:id="@+id/tv_next"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/light_blue_rounded_button"
+            android:gravity="center"
+            android:padding="@dimen/padding_medium"
+            android:textColor="@color/white"
+            android:text="Next"
+            android:elevation="2dp"
+            android:layout_marginBottom="@dimen/padding_medium"
+            android:layout_alignParentBottom="true"
+            />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_suggested_friends_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/tv_next"
+            android:layout_alignParentTop="true"
+            android:background="@color/ultra_light_grey"
+            />
+    </RelativeLayout>
+
+
+</RelativeLayout>

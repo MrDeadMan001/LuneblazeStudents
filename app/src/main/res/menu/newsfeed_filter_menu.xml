@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/all"
+        android:title="@string/all"
+        app:showAsAction="never"
+        android:icon="@drawable/ic_feeds_unfilled"
+        />
+
+    <item
+        android:id="@+id/post"
+        android:title="@string/posts"
+        app:showAsAction="never"
+        android:icon="@drawable/ic_create_post_gray"
+        />
+
+    <item
+        android:id="@+id/sessions"
+        android:title="@string/sessions"
+        app:showAsAction="never"
+        android:icon="@drawable/ic_session_unfilled"
+        />
+    <item
+        android:id="@+id/article"
+        android:title="@string/articles"
+        app:showAsAction="never"
+        android:icon="@drawable/ic_article_gray"
+        />
+    <item
+        android:id="@+id/question"
+        android:title="@string/questions"
+        app:showAsAction="never"
+        android:icon="@drawable/ic_question_unfilled"
+        />
+    <item
+        android:id="@+id/poll"
+        android:title="@string/polls"
+        app:showAsAction="never"
+        android:icon="@drawable/ic_poll_gray"
+        />
+</menu>

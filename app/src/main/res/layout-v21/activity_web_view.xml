@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:activity=".activities.WebViewActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tl_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:contentInsetStart="0dp"
+        android:contentInsetLeft="0dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/action_bar_color">
+            <ImageButton
+                android:id="@+id/ib_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:src="@drawable/ic_back_white"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/padding_medium"
+                />
+            <TextView
+                android:id="@+id/et_url"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@id/ib_back"
+                android:hint="URL"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:padding="@dimen/padding_medium"
+                android:textColor="@color/white"
+                android:textColorHint="@color/light_grey"
+                android:gravity="center_vertical"
+                android:layout_marginRight="32dp"
+                android:textSize="@dimen/text_large" />
+<!--
+            <ImageButton
+                android:id="@+id/ib_go"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@color/transparent"
+                android:padding="@dimen/edit_text_padding_small"
+                android:src="@android:drawable/ic_menu_send"
+                />-->
+
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@style/HorizontalProgressCustom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:indeterminate="false"
+        android:max="100"
+        android:progress="10" />
+
+    <WebView
+        android:id="@+id/webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

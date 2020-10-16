@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_light_grey_border"
+    android:layout_margin="@dimen/padding_extra_small"
+    android:elevation="2dp"
+    >
+    <ImageView
+        android:id="@+id/iv_more_options"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:padding="@dimen/padding_extra_small"
+        android:src="@drawable/ic_vertical_dots"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_large"
+        android:layout_toLeftOf="@id/iv_more_options"
+        >
+        <TextView
+            android:id="@+id/tv_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_xl"
+            android:textStyle="bold"
+            android:textColor="@color/dark_grey"
+            android:text="Show email address here"
+            />
+
+        <TextView
+            android:id="@+id/tv_primary_or_other"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_med"
+            android:textColor="@color/med_grey"
+            android:text="primary or other email"
+            />
+
+        <TextView
+            android:id="@+id/tv_verified_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_med"
+            android:textColor="@color/med_grey"
+            android:text="verification status"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>

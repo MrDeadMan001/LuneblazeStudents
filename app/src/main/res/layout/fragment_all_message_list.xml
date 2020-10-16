@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/ultra_light_grey"
+    tools:activity=".fragments.AllMessageListFragment">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+
+        android:id="@+id/srl_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/ultra_light_grey"
+        tools:activity=".fragments.AllMessageListFragment">
+
+        <RelativeLayout
+            android:id="@+id/rl_parent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/tv_no_conversation_present"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_xl"
+                android:textColor="@color/med_grey"
+                android:textStyle="bold"
+                android:text="@string/no_conversations_present"
+                android:gravity="center_horizontal"
+                android:padding="@dimen/padding_medium"
+                android:visibility="gone"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_msg_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="@dimen/padding_small"
+                android:paddingRight="@dimen/padding_small"
+                android:paddingBottom="@dimen/padding_small"/>
+            <include layout="@layout/connection_error_sublayout"/>
+            <include layout="@layout/guest_login_request_sublayout"/>
+
+
+        </RelativeLayout>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+<!--    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fb_create"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="64dp"
+        app:layout_anchor="@id/rv_msg_list"
+        app:layout_anchorGravity="bottom|right|end"
+        android:src="@drawable/ic_add_conversation_white" />-->
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_item_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/padding_extra_small"
+        android:background="@drawable/white_rounded_border_white_fill"
+        android:elevation="2dp"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/padding_large"
+        android:paddingTop="@dimen/padding_medium"
+        android:paddingRight="@dimen/padding_large"
+
+        android:paddingBottom="@dimen/padding_medium">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_notification_image"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/padding_medium"
+                android:src="@drawable/placeholder" />
+
+            <TextView
+                android:id="@+id/tv_notification_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@id/iv_notification_image"
+                android:text="Notification name"
+                android:textColor="@color/dark_grey"
+                android:textSize="@dimen/text_large"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_notification_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_notification_name"
+                android:layout_toRightOf="@id/iv_notification_image"
+                android:text="Notification description Notification description Notification description Notification description"
+                android:textColor="@color/med_grey"
+                android:maxLines="3"
+                android:ellipsize="end"
+                android:textSize="@dimen/text_large" />
+
+            <TextView
+                android:id="@+id/tv_notification_time_stamp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_notification_description"
+                android:layout_toRightOf="@id/iv_notification_image"
+                android:text="time"
+                android:textColor="@color/med_grey"
+                android:textSize="@dimen/text_med"
+
+                />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_yes_no_wrapper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_yes"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/app_theme_border"
+                android:gravity="center"
+                android:paddingTop="@dimen/padding_small"
+                android:paddingBottom="@dimen/padding_small"
+                android:text="@string/yes"
+                android:textColor="@color/med_grey"
+                android:textSize="@dimen/text_large" />
+
+            <TextView
+                android:id="@+id/tv_no"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding_large"
+                android:background="@drawable/grey_border_white_fill"
+                android:gravity="center"
+                android:paddingTop="@dimen/padding_small"
+                android:paddingBottom="@dimen/padding_small"
+                android:text="@string/no"
+                android:textColor="@color/med_grey" />
+        </LinearLayout>
+    </LinearLayout>
+    <ProgressBar
+        android:id="@+id/pb_loading_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:elevation="2dp" />
+
+    <TextView
+        android:id="@+id/tv_no_more_results"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:elevation="2dp"
+        android:padding="@dimen/padding_medium"
+        android:text="@string/no_more_results_found"
+        android:textColor="@color/med_grey"
+        android:textSize="@dimen/text_large" />
+</RelativeLayout>

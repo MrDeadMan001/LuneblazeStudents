@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ultra_light_grey"
+    tools:context=".activities.assessment.AssessmentListActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_content_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_extra_small"
+        >
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_assessment_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/tv_new_assessment" />
+
+        <TextView
+            android:id="@+id/tv_new_assessment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/padding_extra_small"
+            android:background="@drawable/light_blue_rounded_button"
+            android:gravity="center"
+            android:padding="@dimen/padding_medium"
+            android:text="@string/apply_for_assessment"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_xl"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/pb_loading_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp" />
+    <TextView
+        android:id="@+id/tv_no_assessment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_xl"
+        android:text="@string/assessment_not_applied"
+        android:layout_marginTop="@dimen/padding_large"
+        android:gravity="center"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    tools:activity=".activities.organisation.FilterStudentsActivity">
+
+    <TextView
+        android:id="@+id/tv_dialog_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/app_theme_dark"
+        android:padding="@dimen/padding_large"
+        android:text="@string/eligibility_criteria"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_xxxl"
+        android:textStyle="bold" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_dialog_title"
+        android:background="@color/white"
+        tools:activity=".activities.organisation.FilterStudentsActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/padding_large"
+            android:paddingTop="32dp"
+            android:paddingRight="@dimen/padding_large"
+            tools:activity=".activities.organisation.FilterStudentsActivity">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/number_of_sessions"
+                    android:textColor="@color/med_grey"
+                    android:textSize="@dimen/text_xl"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et_number_of_sessions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/padding_large"
+                    android:background="@drawable/grey_border_white_fill"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:minWidth="50dp"
+                    android:padding="@dimen/padding_medium"
+                    android:textSize="@dimen/text_xxl"
+                    android:textColor="@color/med_grey" />
+            </LinearLayout>
+
+
+            <androidx.appcompat.widget.AppCompatSeekBar
+                android:id="@+id/sb_session_count_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="90"
+                android:layout_marginTop="@dimen/padding_medium"
+                android:paddingLeft="@dimen/padding_medium"
+                android:paddingRight="@dimen/all_activity_margin_medium"
+                android:progressBackgroundTint="@color/light_grey"
+                android:progressTint="@color/app_theme_light"
+                android:thumbTint="@color/app_theme_medium" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="0"
+                    android:textColor="@color/med_grey"
+                    android:textSize="@dimen/text_xl"
+                    android:paddingLeft="@dimen/padding_medium"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="100"
+                    android:textColor="@color/med_grey"
+                    android:textSize="@dimen/text_xl"
+                    android:gravity="right"
+
+                    />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding_small"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="@dimen/padding_medium"
+                android:elevation="1dp"
+                android:paddingTop="@dimen/padding_medium"
+                android:paddingRight="@dimen/padding_medium"
+                android:text="@string/roles_in_session"
+                android:textColor="@color/med_grey"
+                android:textSize="@dimen/text_xl"
+                android:textStyle="bold"
+
+                />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/padding_medium"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/rb_conduct"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/padding_medium"
+                    android:buttonTint="@color/app_theme_medium"
+                    android:text="@string/conducted"
+                    android:checked="true"
+                    android:textColor="@color/med_grey" />
+
+
+                <RadioButton
+                    android:id="@+id/rb_attend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/padding_medium"
+                    android:buttonTint="@color/app_theme_medium"
+                    android:text="@string/attended"
+                    android:textColor="@color/med_grey" />
+                <RadioButton
+                    android:id="@+id/rb_both"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/padding_medium"
+                    android:buttonTint="@color/app_theme_medium"
+                    android:text="@string/any"
+                    android:textColor="@color/med_grey" />
+
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tv_length_getter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding_small"
+                android:layout_marginRight="@dimen/padding_small"
+                android:background="@drawable/tag_item_bg"
+                android:paddingLeft="@dimen/padding_medium"
+                android:paddingTop="@dimen/padding_small"
+                android:paddingRight="@dimen/padding_medium"
+                android:paddingBottom="@dimen/padding_small"
+                android:text="Tag name"
+                android:textColor="@color/app_theme_medium"
+                android:textSize="@dimen/text_med"
+                android:visibility="invisible" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                >
+
+                <TextView
+                    android:id="@+id/tv_tagged"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:text="@string/tagged_interests"
+                    android:textColor="@color/med_grey"
+                    android:textSize="@dimen/text_xl"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_toRightOf="@id/tv_tagged"
+                    android:gravity="right"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_interests"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/padding_medium"
+                        android:drawableLeft="@drawable/ic_interest_follow_unfilled"
+                        android:drawablePadding="@dimen/padding_small"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/padding_medium"
+                        android:paddingTop="@dimen/padding_small"
+                        android:paddingRight="@dimen/padding_medium"
+                        android:paddingBottom="@dimen/padding_small"
+                        android:text="@string/add"
+                        android:textColor="@color/med_grey"
+                        android:textSize="@dimen/text_large"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_remove_interests"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/padding_medium"
+                        android:drawableLeft="@drawable/ic_gray_cross"
+                        android:drawablePadding="@dimen/padding_small"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/padding_medium"
+                        android:paddingTop="@dimen/padding_small"
+                        android:paddingRight="@dimen/padding_medium"
+                        android:paddingBottom="@dimen/padding_small"
+                        android:text="@string/clear"
+                        android:textColor="@color/med_grey"
+                        android:textSize="@dimen/text_large"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_added_interests"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_medium"
+                android:layout_marginBottom="@dimen/padding_small"
+                android:background="@color/white"
+                android:overScrollMode="never" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginTop="@dimen/padding_small"
+                android:layout_marginBottom="@dimen/padding_medium"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_see_results"
+                    style="@style/blue_button_style"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textStyle="bold"
+                    android:text="@string/see_filter_results" />
+
+                <TextView
+                    android:id="@+id/tv_done"
+                    style="@style/blue_button_style"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    android:text="@string/done" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>

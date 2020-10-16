@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+    android:id="@+id/tv_answer"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    style="@style/AppTheme.text.catamaran.dark"
+    android:maxHeight="120dp"
+    android:background="@drawable/rounded_corner_item_bg_fill"
+    android:padding="@dimen/padding_large"
+    android:textSize="@dimen/text_large"
+    android:lineSpacingMultiplier="0.7"
+    android:text="textanswer textanswer textanswer textanswer textanswer textanswer textanswer textanswer textanswer text"
+    >
+</TextView>

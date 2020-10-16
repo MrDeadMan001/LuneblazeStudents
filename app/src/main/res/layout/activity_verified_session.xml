@@ -1,0 +1,304 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ultra_light_grey"
+   >
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/ultra_light_grey"
+        android:padding="@dimen/padding_small">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/ultra_light_grey"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/collapsing_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/padding_small"
+                app:contentScrim="?attr/colorPrimary"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/main.toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_marginBottom="-5dp"
+                    app:layout_collapseMode="pin"
+                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_collapseMode="parallax">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white">
+
+                        <ImageView
+                            android:id="@+id/iv_cover_photo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:maxHeight="230dp"
+                            android:adjustViewBounds="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:background="@drawable/placeholder"
+                            android:scaleType="centerCrop" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:background="@drawable/black_gradient"
+                            android:orientation="vertical"
+                            android:paddingBottom="@dimen/padding_extra_small"
+                            android:paddingLeft="@dimen/padding_large"
+                            android:paddingRight="@dimen/padding_large"
+                            android:paddingTop="@dimen/padding_medium">
+
+
+                            <TextView
+                                android:id="@+id/tv_session_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:paddingBottom="@dimen/padding_small"
+                                android:paddingTop="@dimen/padding_small"
+                                android:text="Session Name"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/text_xxxl"
+                                android:textStyle="bold" />
+
+
+                            <TextView
+                                android:id="@+id/tv_sharer_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:text="Shared by :"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/text_large"
+                                android:visibility="gone" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="-4dp"
+                                android:background="#00ffffff"
+                                android:orientation="horizontal"
+                                android:visibility="gone">
+
+                                <TextView
+                                    android:id="@+id/tv_num_attending"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:padding="@dimen/padding_small"
+                                    android:text="00 Attending"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/text_med" />
+
+                                <TextView
+                                    android:id="@+id/tv_num_shares"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/padding_medium"
+                                    android:gravity="center"
+                                    android:padding="@dimen/padding_small"
+                                    android:text="00 Shares"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/text_med" />
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="horizontal">
+
+                        <FrameLayout
+                            android:id="@+id/fl_attend_button"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:id="@+id/tv_attend"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:drawableLeft="@drawable/ic_attend_unfilled"
+                                android:drawablePadding="@dimen/padding_small"
+                                android:padding="@dimen/padding_small"
+                                android:gravity="center_vertical"
+                                android:text="@string/attend"
+                                android:textColor="@color/med_grey"
+                                android:textSize="@dimen/text_large"
+                                android:textStyle="bold" />
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/fl_invite_button"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:id="@+id/tv_invite"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:drawableLeft="@drawable/ic_attend_unfilled"
+                                android:drawablePadding="@dimen/padding_small"
+                                android:padding="@dimen/padding_small"
+                                android:gravity="center_vertical"
+                                android:text="@string/invite"
+                                android:textColor="@color/med_grey"
+                                android:textSize="@dimen/text_large"
+                                android:textStyle="bold" />
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/fl_accept_button"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:id="@+id/tv_accept"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:drawableLeft="@drawable/ic_attend_unfilled"
+                                android:drawablePadding="@dimen/padding_small"
+                                android:padding="@dimen/padding_small"
+                                android:gravity="center_vertical"
+                                android:text="@string/accept"
+                                android:textColor="@color/med_grey"
+                                android:textSize="@dimen/text_large"
+                                android:textStyle="bold" />
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/fl_share_button"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:id="@+id/tv_share"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:drawableLeft="@drawable/ic_share"
+                                android:drawablePadding="@dimen/padding_small"
+                                android:padding="@dimen/padding_small"
+                                android:gravity="center_vertical"
+                                android:text="@string/share"
+                                android:textColor="@color/med_grey"
+                                android:textSize="@dimen/text_large"
+                                android:textStyle="bold" />
+                        </FrameLayout>
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tl_tabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    app:tabMode="fixed"
+                    app:tabSelectedTextColor="@color/app_theme_dark"
+                    app:tabTextColor="@color/med_grey" />
+
+                <include layout="@layout/thinnest_light_grey_divider" />
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/vp_tab_item_pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/white" />
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    <RelativeLayout
+        android:id="@+id/rl_new_comment_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/rounded_light_grey_border"
+        android:paddingLeft="@dimen/padding_large"
+        android:layout_margin="@dimen/padding_extra_small"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/ib_send"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="#00ffffff"
+            android:scaleType="fitXY"
+            android:src="@android:drawable/ic_menu_send" />
+
+
+        <EditText
+            android:id="@+id/et_new_comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/padding_small"
+            android:layout_margin="@dimen/padding_extra_small"
+            android:maxLines="5"
+            android:layout_toLeftOf="@id/ib_send"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:hint="@string/add_a_comment"
+            android:textColor="@color/dark_grey"
+            android:textColorHint="@color/light_grey"
+            android:textSize="@dimen/text_large" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

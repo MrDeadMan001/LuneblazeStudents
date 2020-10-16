@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: com.instamojo:android-sdk:3.4.0@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3713a140f1ad9237aec4c258fa66dccf/jetified-android-sdk-3.4.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3713a140f1ad9237aec4c258fa66dccf/jetified-android-sdk-3.4.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3713a140f1ad9237aec4c258fa66dccf/jetified-android-sdk-3.4.0/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.instamojo/android-sdk/3.4.0/940bd0a1a4dcc3a4cfdfec84bc2a767c718cdc8a/android-sdk-3.4.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.instamojo/android-sdk/3.4.0/3c0bdcc2a9c499670f1d505280ef02bf3dbd44a6/android-sdk-3.4.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

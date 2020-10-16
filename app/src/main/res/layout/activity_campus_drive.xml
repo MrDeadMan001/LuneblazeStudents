@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:activity=".activities.organisation.CampusDriveActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/tv_done"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/padding_large"
+        android:paddingRight="@dimen/padding_large"
+        tools:activity=".activities.organisation.CampusDriveActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/text_large">
+
+                <TextView
+                    android:id="@+id/tv_positions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/tv_add_more_job_top"
+                    android:padding="@dimen/padding_small"
+                    android:text="@string/job_positions"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="@dimen/text_xl"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_add_more_job_top"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/app_theme_dark_border"
+                    android:paddingLeft="@dimen/padding_large"
+                    android:paddingTop="@dimen/padding_small"
+                    android:paddingRight="@dimen/padding_large"
+                    android:paddingBottom="@dimen/padding_small"
+                    android:text="@string/add_job"
+                    android:textColor="@color/app_theme_dark" />
+            </RelativeLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_vacancy_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white" />
+
+            <TextView
+                android:id="@+id/tv_add_more_job_bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginTop="@dimen/padding_medium"
+                android:background="@drawable/app_theme_dark_border"
+                android:paddingLeft="@dimen/padding_large"
+                android:paddingTop="@dimen/padding_small"
+                android:paddingRight="@dimen/padding_large"
+                android:paddingBottom="@dimen/padding_small"
+                android:text="@string/add_job"
+                android:textColor="@color/app_theme_dark" />
+
+            <TextView
+                android:id="@+id/tv_venue_placeholder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginTop="@dimen/padding_medium"
+                android:paddingLeft="@dimen/padding_large"
+                android:paddingTop="@dimen/padding_small"
+                android:paddingRight="@dimen/padding_large"
+                android:paddingBottom="@dimen/padding_small"
+                android:text="@string/venue"
+                android:textColor="@color/med_grey"
+                android:textSize="@dimen/text_xl"
+                android:textStyle="bold"
+
+                />
+
+            <RadioGroup
+                android:id="@+id/rg_venue_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb_on_campus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="@string/on_campus"
+                    android:textColor="@color/med_grey"
+                    android:textSize="@dimen/text_xl"
+                    android:textStyle="bold"
+                    app:buttonTint="@color/app_theme_medium" />
+
+                <RadioButton
+                    android:id="@+id/rb_off_campus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/off_campus"
+                    android:textColor="@color/med_grey"
+                    android:textSize="@dimen/text_xl"
+                    android:textStyle="bold"
+                    app:buttonTint="@color/app_theme_medium" />
+            </RadioGroup>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_venue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/venue"
+                    android:textColorHint="@color/light_grey"
+                    app:errorEnabled="true"
+                    app:errorTextAppearance="@style/error_appearance"
+                    app:hintTextAppearance="@style/hint_appearance">
+
+                    <EditText
+                        android:id="@+id/et_venue"
+                        style="@style/signUpEditTextTheme"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="32dp"
+                        android:singleLine="false" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:orientation="horizontal">
+
+                    <ProgressBar
+                        android:id="@+id/pb_loading_venues"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:paddingRight="@dimen/padding_small"
+                        android:paddingBottom="@dimen/padding_medium" />
+
+                    <ImageButton
+                        android:id="@+id/ib_clear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/transparent"
+                        android:paddingRight="@dimen/padding_small"
+                        android:paddingBottom="@dimen/padding_medium"
+                        android:src="@drawable/ic_cancel_gray" />
+                </LinearLayout>
+            </RelativeLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_medium"
+                android:hint="@string/date"
+                android:textColorHint="@color/light_grey"
+                android:visibility="gone"
+                app:errorEnabled="true"
+                app:errorTextAppearance="@style/error_appearance"
+                app:hintTextAppearance="@style/hint_appearance">
+
+                <EditText
+                    android:id="@+id/et_date"
+                    style="@style/signUpEditTextTheme"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@drawable/ic_calender"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_max_allowed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_medium"
+                android:hint="@string/number_of_students_allowed"
+                android:textColorHint="@color/light_grey"
+                android:visibility="gone"
+                app:errorEnabled="true"
+                app:errorTextAppearance="@style/error_appearance"
+                app:hintTextAppearance="@style/hint_appearance">
+
+                <EditText
+                    android:id="@+id/et_max_allowed"
+                    style="@style/signUpEditTextTheme"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:paddingRight="32dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/text_large">
+
+                <TextView
+                    android:id="@+id/tv_criteria"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/padding_small"
+                    android:text="@string/eligibility_criteria"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="@dimen/text_xl"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_eligible"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/app_theme_dark_border"
+                    android:paddingLeft="@dimen/padding_large"
+                    android:paddingTop="@dimen/padding_small"
+                    android:paddingRight="@dimen/padding_large"
+                    android:paddingBottom="@dimen/padding_small"
+                    android:text="@string/add_criteria"
+                    android:textColor="@color/app_theme_dark" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rl_num_session_wrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding_medium">
+
+                <TextView
+                    android:id="@+id/tv_num_session_placeholder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/number_of_sessions"
+                    android:textColor="@color/med_grey"
+                    android:textSize="@dimen/text_large" />
+
+                <TextView
+                    android:id="@+id/tv_num_sessions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/padding_large"
+                    android:layout_toRightOf="@id/tv_num_session_placeholder"
+                    android:text="5"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="@dimen/text_xl"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:id="@+id/ib_clear_num_sessions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="0dp"
+                    android:background="@color/transparent"
+                    android:padding="@dimen/padding_small"
+                    android:src="@drawable/ic_cancel_gray" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_roles_wrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding_medium">
+
+                <TextView
+                    android:id="@+id/tv_role_placeholder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/roles_in_session"
+                    android:textColor="@color/med_grey"
+                    android:textSize="@dimen/text_large" />
+
+                <TextView
+                    android:id="@+id/tv_session_role"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/padding_large"
+                    android:layout_toRightOf="@id/tv_role_placeholder"
+                    android:text="Any"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="@dimen/text_xl"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:id="@+id/ib_clear_session_role"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@color/transparent"
+                    android:padding="@dimen/padding_small"
+                    android:src="@drawable/ic_cancel_gray" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_tagged_categories_wrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding_medium">
+
+                <TextView
+                    android:id="@+id/tv_tagged_categories"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="@dimen/padding_extra_small"
+                    android:text="@string/assessment_categories"
+                    android:textColor="@color/med_grey"
+                    android:textSize="@dimen/text_large" />
+
+                <ImageButton
+                    android:id="@+id/ib_clear_tagged_categories"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/transparent"
+                    android:padding="@dimen/padding_small"
+                    android:src="@drawable/ic_cancel_gray" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_tagged_categories_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ib_clear_tagged_categories" />
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/tv_length_getter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding_small"
+                android:layout_marginRight="@dimen/padding_small"
+                android:background="@drawable/tag_item_bg"
+                android:paddingLeft="@dimen/padding_medium"
+                android:paddingTop="@dimen/padding_small"
+                android:paddingRight="@dimen/padding_medium"
+                android:paddingBottom="@dimen/padding_small"
+                android:text="Tag name"
+                android:textColor="@color/app_theme_medium"
+                android:textSize="@dimen/text_med"
+                android:visibility="invisible" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <TextView
+        android:id="@+id/tv_done"
+        style="@style/blue_button_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="@string/proceed"
+        android:textStyle="bold" />
+</RelativeLayout>

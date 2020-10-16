@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="200dp"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="@dimen/padding_medium">
+
+    <LinearLayout
+        android:id="@+id/ll_initiate_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_medium"
+        android:layout_marginLeft="@dimen/padding_large"
+        android:layout_marginRight="@dimen/padding_large">
+
+        <TextView
+            android:id="@+id/tv_initiate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:drawableLeft="@drawable/ic_learn_gray"
+            android:drawablePadding="@dimen/padding_medium"
+            android:text="@string/initiate"
+            android:textColor="@color/med_grey"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_xl" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/organise_to_learn"
+            android:textColor="@color/light_grey"
+            android:textSize="@dimen/text_large"
+            />
+    </LinearLayout>
+
+    <include layout="@layout/thinnest_light_grey_divider_with_margin" />
+
+    <LinearLayout
+        android:id="@+id/ll_conduct_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_medium"
+        android:layout_marginLeft="@dimen/padding_large"
+        android:layout_marginRight="@dimen/padding_large">
+
+        <TextView
+            android:id="@+id/tv_conduct"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:drawableLeft="@drawable/ic_share_session_gray"
+            android:drawablePadding="@dimen/padding_medium"
+            android:text="@string/conduct"
+            android:textColor="@color/med_grey"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_xl" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/organize_to_share"
+            android:textColor="@color/light_grey"
+            android:textSize="@dimen/text_large"
+
+            />
+    </LinearLayout>
+
+
+</LinearLayout>

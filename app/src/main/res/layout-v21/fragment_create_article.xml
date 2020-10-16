@@ -1,0 +1,191 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/sv_parent_wrapper"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ultra_light_grey"
+    android:orientation="vertical"
+    android:padding="@dimen/padding_small"
+    tools:activity="com.avadna.luneblaze.fragments.CreateArticleFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/padding_medium"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:padding="@dimen/padding_large"
+
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_extra_small"
+                android:text="@string/article_title"
+                android:textColor="@color/dark_grey"
+                android:textSize="@dimen/text_large" />
+
+            <EditText
+                android:id="@+id/et_article_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/padding_large"
+                android:background="@drawable/grey_border_white_fill"
+                android:hint="@string/enter_title_for_article"
+                android:inputType="text"
+                android:padding="@dimen/padding_medium"
+                android:singleLine="true"
+                android:textColor="@color/dark_grey"
+                android:textColorHint="@color/light_grey"
+                android:textSize="@dimen/text_large" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/padding_medium"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:padding="@dimen/padding_large">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_extra_small"
+                android:text="@string/article_content"
+                android:textColor="@color/dark_grey"
+                android:textSize="@dimen/text_large" />
+
+            <EditText
+                android:id="@+id/et_article_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/padding_large"
+                android:background="@drawable/grey_border_white_fill"
+                android:hint="@string/enter_content_for_article"
+                android:inputType="text"
+                android:maxLines="20"
+                android:padding="@dimen/padding_medium"
+                android:textColor="@color/dark_grey"
+                android:textColorHint="@color/light_grey"
+                android:textSize="@dimen/text_large" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_interest_search_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/padding_medium"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:padding="@dimen/padding_large">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_extra_small"
+                android:text="Interests"
+                android:textColor="@color/dark_grey"
+                android:textSize="@dimen/text_large" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_added_interests"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/padding_small"
+                android:background="@color/white"
+                android:overScrollMode="never"
+                android:paddingTop="@dimen/padding_small" />
+
+            <RelativeLayout
+                android:id="@+id/rl_interest_search_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_length_getter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/padding_small"
+                    android:layout_marginRight="@dimen/padding_small"
+                    android:background="@drawable/tag_item_bg"
+                    android:paddingBottom="@dimen/padding_small"
+                    android:paddingLeft="@dimen/padding_medium"
+                    android:paddingRight="@dimen/padding_medium"
+                    android:paddingTop="@dimen/padding_small"
+                    android:text="Tag name"
+                    android:textColor="@color/app_theme_medium"
+                    android:textSize="@dimen/text_med" />
+
+                <TextView
+                    android:id="@+id/tv_interest_search_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/padding_medium"
+                    android:background="@color/app_theme_medium"
+                    android:paddingBottom="@dimen/padding_small"
+                    android:paddingLeft="@dimen/padding_medium"
+                    android:paddingRight="@dimen/padding_medium"
+                    android:paddingTop="@dimen/padding_small"
+                    android:text="Search"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_large" />
+
+                <EditText
+                    android:id="@+id/et_interest_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_alignParentLeft="true"
+
+                    android:layout_toLeftOf="@id/tv_interest_search_button"
+                    android:background="@drawable/grey_border_white_fill"
+                    android:gravity="center_vertical"
+                    android:hint="Enter interest name here"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:padding="@dimen/padding_medium"
+                    android:textColor="@color/dark_grey"
+                    android:textColorHint="@color/light_grey"
+                    android:textSize="@dimen/text_large" />
+
+
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_interest_search_result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/ultra_light_grey" />
+
+        </LinearLayout>
+        <Button
+            android:id="@+id/bt_add_article_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_image"
+            />
+        <ImageView
+            android:id="@+id/iv_article_cover"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/placeholder"
+            />
+        <Button
+            android:id="@+id/bt_create_article"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/create_article"/>
+    </LinearLayout>
+</ScrollView>

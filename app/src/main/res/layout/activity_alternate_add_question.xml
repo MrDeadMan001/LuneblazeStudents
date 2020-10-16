@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background"
+    android:paddingLeft="@dimen/padding_xxl"
+    android:paddingTop="@dimen/padding_xxl"
+    android:paddingRight="@dimen/padding_xxl"
+    android:paddingBottom="@dimen/padding_large"
+   >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="36dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rl_question_wrapper"
+                style="@style/lightItemRoundedCorner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="0dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_text_count"
+                        style="@style/formFieldCharCounterStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="-2dp"
+                        android:layout_marginRight="@dimen/padding_medium"
+                        android:text="0/100" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/et_question_text"
+                        style="@style/AppTheme.text.catamaran.medDark"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:background="@color/transparent"
+                        android:gravity="center"
+                        android:hint="Add Question text"
+                        android:letterSpacing="0.02"
+                        android:lineSpacingMultiplier="0.8"
+                        android:maxHeight="150dp"
+                        android:minHeight="64dp"
+                        android:paddingLeft="@dimen/padding_large"
+                        android:paddingTop="@dimen/padding_medium"
+                        android:paddingRight="@dimen/padding_large"
+                        android:textSize="@dimen/text_xl"
+                        android:textStyle="bold" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cv_image_wrapper"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/et_question_text"
+                        android:layout_margin="@dimen/padding_medium"
+                        android:layout_marginTop="@dimen/padding_small"
+                        app:cardCornerRadius="@dimen/button_corner_radius">
+
+
+                        <ImageView
+                            android:id="@+id/iv_question_image"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:scaleType="centerCrop"
+                            android:background="@drawable/dotted_grey_border_grey_fill"
+                            android:minHeight="180dp" />
+                        <TextView
+                            android:id="@+id/tv_add_question_image"
+                            style="@style/transparentBGButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="@string/tap_to_add_image"
+                            android:textSize="@dimen/text_xxl"
+                            app:drawableTopCompat="@drawable/ic_add_image_gray" />
+                    </androidx.cardview.widget.CardView>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/padding_medium"
+                    android:layout_marginRight="@dimen/padding_small"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/padding_small">
+
+                        <RelativeLayout
+                            android:id="@+id/rl_answer1_wrapper"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_marginTop="@dimen/padding_medium"
+                            android:layout_marginEnd="@dimen/padding_medium"
+                            android:layout_marginRight="@dimen/padding_medium"
+                            android:background="@drawable/rounded_corner_item_bg_fill">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:orientation="vertical"
+                                android:padding="@dimen/padding_medium">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_above="@id/tv_answer1"
+                                    android:layout_gravity="center_horizontal"
+                                    app:srcCompat="@drawable/ic_plus_app_theme" />
+
+                                <TextView
+                                    android:id="@+id/tv_answer1"
+                                    style="@style/addQuizAnswerStyle"
+                                    android:text="@string/add_answer" />
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
+
+                        <ImageView
+                            android:id="@+id/iv_ans1_correct"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/ic_tick_mark" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/padding_small">
+
+                        <RelativeLayout
+                            android:id="@+id/rl_answer3_wrapper"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_marginTop="@dimen/padding_medium"
+                            android:layout_marginEnd="@dimen/padding_medium"
+                            android:layout_marginRight="@dimen/padding_medium"
+                            android:background="@drawable/rounded_corner_item_bg_fill">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:orientation="vertical"
+                                android:padding="@dimen/padding_medium">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_above="@id/tv_answer1"
+                                    android:layout_gravity="center_horizontal"
+                                    app:srcCompat="@drawable/ic_plus_app_theme" />
+
+                                <TextView
+                                    android:id="@+id/tv_answer3"
+                                    style="@style/addQuizAnswerStyle"
+                                    android:gravity="center"
+                                    android:text="@string/add_answer_optional" />
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
+
+
+                        <ImageView
+                            android:id="@+id/iv_ans3_correct"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/ic_tick_mark" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/padding_medium"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/padding_small">
+
+                        <RelativeLayout
+                            android:id="@+id/rl_answer2_wrapper"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_marginTop="@dimen/padding_medium"
+                            android:layout_marginEnd="@dimen/padding_medium"
+                            android:layout_marginRight="@dimen/padding_medium"
+                            android:background="@drawable/rounded_corner_item_bg_fill">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:orientation="vertical"
+                                android:padding="@dimen/padding_medium">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_above="@id/tv_answer1"
+                                    android:layout_gravity="center_horizontal"
+                                    app:srcCompat="@drawable/ic_plus_app_theme" />
+
+                                <TextView
+                                    android:id="@+id/tv_answer2"
+                                    style="@style/addQuizAnswerStyle"
+                                    android:text="@string/add_answer" />
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
+
+
+                        <ImageView
+                            android:id="@+id/iv_ans2_correct"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/ic_tick_mark" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/padding_small">
+
+                        <RelativeLayout
+                            android:id="@+id/rl_answer4_wrapper"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_marginTop="@dimen/padding_medium"
+                            android:layout_marginEnd="@dimen/padding_medium"
+                            android:layout_marginRight="@dimen/padding_medium"
+                            android:background="@drawable/rounded_corner_item_bg_fill">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:orientation="vertical"
+                                android:padding="@dimen/padding_medium">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_above="@id/tv_answer1"
+                                    android:layout_gravity="center_horizontal"
+                                    app:srcCompat="@drawable/ic_plus_app_theme" />
+
+                                <TextView
+                                    android:id="@+id/tv_answer4"
+                                    style="@style/addQuizAnswerStyle"
+                                    android:text="@string/add_answer_optional" />
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
+
+
+                        <ImageView
+                            android:id="@+id/iv_ans4_correct"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/ic_tick_mark" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_added_questions_wrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_added_question_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/bt_add_more"
+                    />
+
+                <ImageButton
+                    android:id="@+id/bt_add_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="@dimen/padding_small"
+                    android:background="@drawable/rounded_corner_item_bg_fill"
+                    android:padding="@dimen/padding_medium"
+                    android:src="@drawable/ic_add_gray"
+                    />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
+

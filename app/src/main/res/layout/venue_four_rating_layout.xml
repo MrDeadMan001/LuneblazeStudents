@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="250dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/white_rounded_border_white_fill"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_xxl"
+        android:textColor="@color/dark_grey"
+        android:text="title"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_marginBottom="@dimen/padding_medium"
+        />
+
+    <RatingBar
+        android:id="@+id/rb_seating"
+        style="@style/CustomRatingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_horizontal"
+        android:numStars="5"
+        />
+
+    <TextView
+        android:id="@+id/tv_seating"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/seating_arrangement"
+        android:textColor="@color/med_grey"
+        android:textSize="@dimen/text_xl" />
+
+    <RatingBar
+        android:id="@+id/rb_accessibility"
+        style="@style/CustomRatingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="24dp"
+        android:numStars="5" />
+
+    <TextView
+        android:id="@+id/tv_accessibility"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/accessibility"
+        android:textColor="@color/med_grey"
+        android:textSize="@dimen/text_xl" />
+
+    <RatingBar
+        android:id="@+id/rb_staff"
+        style="@style/CustomRatingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="24dp"
+        android:numStars="5"
+
+        />
+
+    <TextView
+        android:id="@+id/tv_staff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/staff_behaviour"
+        android:textColor="@color/med_grey"
+        android:textSize="@dimen/text_xl" />
+
+    <RatingBar
+        android:id="@+id/rb_ambiance"
+        style="@style/CustomRatingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="24dp"
+        android:numStars="5" />
+
+    <TextView
+        android:id="@+id/tv_ambiance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/padding_large"
+        android:gravity="center"
+        android:text="@string/ambiance"
+        android:textColor="@color/med_grey"
+        android:textSize="@dimen/text_xl" />
+
+    <TextView
+        android:id="@+id/tv_submit"
+        style="@style/blue_button_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/submit"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+</LinearLayout>

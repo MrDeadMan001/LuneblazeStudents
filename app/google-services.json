@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "848145500965",
+    "firebase_url": "https://luneblazeofficial.firebaseio.com",
+    "project_id": "luneblazeofficial",
+    "storage_bucket": "luneblazeofficial.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:848145500965:android:78a24f80f98c6cef",
+        "android_client_info": {
+          "package_name": "com.avadna.luneblaze"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "848145500965-5bacfkhdh15gfi4dp7pmv6bvd8r0hl6e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.avadna.luneblaze",
+            "certificate_hash": "0bd7384f066726b3cd8d70985da437ca102d16c6"
+          }
+        },
+        {
+          "client_id": "848145500965-ivb86rkthjud7iekh58lacjso6okd18k.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.avadna.luneblaze",
+            "certificate_hash": "03345128e49bb4ba59450814870edcc6a5f90901"
+          }
+        },
+        {
+          "client_id": "848145500965-7smbgfclrhuthqlntj5q6ov079t35vsl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAAISY2BJIdMZHr9SJkRKpwUqwGjklAFqo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "848145500965-7smbgfclrhuthqlntj5q6ov079t35vsl.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "848145500965-f5nrqndd8kllatskfugg5bbf2q2kp8d6.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.avadna.luneblaze"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

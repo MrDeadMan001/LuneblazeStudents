@@ -1,0 +1,21 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ultra_light_grey"
+    android:padding="@dimen/padding_extra_small"
+    tools:activity="com.avadna.luneblaze.fragments.MyFriendsFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_my_friends_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/padding_extra_small" />
+
+    <ProgressBar
+        android:id="@+id/pb_loading_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+    <include layout="@layout/connection_error_sublayout"/>
+</FrameLayout>

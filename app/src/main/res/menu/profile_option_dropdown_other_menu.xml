@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/follow"
+        android:title="@string/follow"
+        app:showAsAction="never"
+        android:icon="@drawable/ic_follow_rss_filled"
+        />
+
+    <item
+        android:id="@+id/report"
+        android:title="@string/report"
+        app:showAsAction="never"
+        android:icon="@drawable/ic_report_gray"
+        />
+    <item
+        android:id="@+id/share"
+        android:title="@string/share"
+        app:showAsAction="never"
+        android:icon="@drawable/ic_share"
+        />
+    <item
+        android:id="@+id/block"
+        android:title="@string/block"
+        app:showAsAction="never"
+        android:icon="@drawable/ic_user_block_gray"
+        />
+
+    <item
+        android:id="@+id/session_block"
+        android:title="@string/session_block"
+        app:showAsAction="never"
+        android:icon="@drawable/ic_session_block"
+        />
+
+
+</menu>

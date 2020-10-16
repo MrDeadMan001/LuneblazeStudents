@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ultra_light_grey"
+    android:orientation="vertical"
+
+    tools:activity="com.avadna.luneblaze.activities.sessionCreation.SessionCreationFormActivity">
+
+    <TextView
+        android:id="@+id/tv_auto_gen_image"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/blackboard_with_chalk"
+        android:gravity="center_vertical"
+        android:maxLines="8"
+        android:padding="26dp"
+        android:text="@string/add_cover_photo"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        tools:fontFamily="casual" />
+
+    <ScrollView
+        android:id="@+id/sv_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/tv_next"
+        android:layout_centerInParent="true"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/padding_small"
+        android:paddingTop="24dp"
+        android:paddingRight="@dimen/padding_small">
+
+        <LinearLayout
+            android:id="@+id/ll_scroll_child"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/ultra_light_grey"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="@dimen/padding_small">
+
+                <ImageView
+                    android:id="@+id/iv_cover"
+                    android:layout_width="match_parent"
+                    android:layout_height="230dp"
+                    android:layout_marginBottom="@dimen/padding_medium"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/placeholder"
+
+                    />
+
+
+                <ImageButton
+                    android:id="@+id/ib_remove_photo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="@dimen/padding_medium"
+                    android:background="@drawable/white_rounded_border_white_fill"
+                    android:padding="@dimen/padding_small"
+                    android:src="@drawable/ic_cancel_gray" />
+
+                <TextView
+                    android:id="@+id/tv_add_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/iv_cover"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="@dimen/padding_small"
+                    android:background="@drawable/grey_border_white_fill"
+                    android:drawablePadding="@dimen/padding_small"
+                    android:gravity="center"
+                    android:padding="@dimen/padding_medium"
+                    android:text="@string/add_cover_photo"
+                    android:textColor="@color/med_grey"
+                    android:textSize="@dimen/text_xl"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_medium"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="@dimen/padding_small">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_tagged"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="@dimen/padding_medium"
+                        android:text="@string/tagged_interests"
+                        android:textColor="@color/med_grey"
+                        android:textSize="@dimen/text_xl"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_interests"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/padding_medium"
+                        android:layout_marginTop="@dimen/padding_medium"
+                        android:background="@drawable/grey_border_white_fill"
+                        android:drawableLeft="@drawable/ic_interest_follow_unfilled"
+                        android:drawablePadding="@dimen/padding_small"
+                        android:gravity="center"
+                        android:layout_alignParentRight="true"
+                        android:paddingLeft="@dimen/padding_medium"
+                        android:paddingRight="@dimen/padding_medium"
+                        android:paddingTop="@dimen/padding_small"
+                        android:paddingBottom="@dimen/padding_small"
+                        android:text="@string/add"
+                        android:textColor="@color/med_grey"
+                        android:textSize="@dimen/text_large"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_added_interests"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/padding_small"
+                    android:background="@color/white"
+                    android:overScrollMode="never"
+                    android:paddingTop="@dimen/padding_small" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/padding_large"
+                    android:padding="@dimen/padding_extra_small"
+                    android:text="Purpose of Session"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="@dimen/text_large"
+                    android:visibility="gone" />
+
+                <Spinner
+                    android:id="@+id/sp_purpose_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_length_getter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/padding_small"
+                    android:layout_marginRight="@dimen/padding_small"
+                    android:background="@drawable/tag_item_bg"
+                    android:paddingLeft="@dimen/padding_medium"
+                    android:paddingTop="@dimen/padding_small"
+                    android:paddingRight="@dimen/padding_medium"
+                    android:paddingBottom="@dimen/padding_small"
+                    android:text="Tag name"
+                    android:textColor="@color/app_theme_medium"
+                    android:textSize="@dimen/text_med"
+                    android:visibility="invisible" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/tv_next"
+        style="@style/blue_button_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="@string/next" />
+</RelativeLayout>

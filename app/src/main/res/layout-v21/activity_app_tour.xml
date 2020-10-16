@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:activity=".activities.registration.AppTourActivity">
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/vp_pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tl_pager_dots"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        app:tabBackground="@drawable/circle_tab_selector"
+        app:tabGravity="center"
+        app:tabIndicatorHeight="0dp"/>
+
+    <TextView
+        android:id="@+id/tv_login"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginBottom="48dp"
+        android:background="@drawable/white_rounded_border_white_fill"
+        android:gravity="center"
+        android:paddingLeft="@dimen/padding_large"
+        android:paddingTop="@dimen/padding_medium"
+        android:paddingRight="@dimen/padding_large"
+        android:paddingBottom="@dimen/padding_medium"
+        android:text="@string/login"
+        android:textColor="@color/app_theme_dark"
+        android:textSize="@dimen/text_xl" />
+
+    <TextView
+        android:id="@+id/tv_register"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="32dp"
+        android:layout_marginBottom="48dp"
+        android:gravity="center"
+        android:background="@drawable/white_rounded_border_white_fill"
+        android:paddingLeft="@dimen/padding_large"
+        android:paddingRight="@dimen/padding_large"
+        android:paddingTop="@dimen/padding_medium"
+        android:paddingBottom="@dimen/padding_medium"
+        android:text="@string/register"
+        android:textColor="@color/app_theme_dark"
+        android:textSize="@dimen/text_xl" />
+</RelativeLayout>

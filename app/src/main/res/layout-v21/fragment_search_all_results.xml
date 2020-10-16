@@ -1,0 +1,122 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/ultra_light_grey"
+    tools:activity="com.avadna.luneblaze.fragments.SearchAllResultsFragment"
+    >
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/ultra_light_grey"
+        android:layout_marginTop="@dimen/padding_small"
+
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/tableHeaderStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Posts"
+
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_post_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="2dp" />
+
+            <include layout="@layout/thick_divider" />
+
+            <TextView
+                style="@style/tableHeaderStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Users" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_user_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="2dp" />
+
+            <include layout="@layout/thick_divider" />
+
+            <TextView
+                style="@style/tableHeaderStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Articles" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_article_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="2dp" />
+
+            <include layout="@layout/thick_divider" />
+
+            <TextView
+                style="@style/tableHeaderStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sessions" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_session_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="2dp" />
+
+            <include layout="@layout/thick_divider" />
+
+            <TextView
+                style="@style/tableHeaderStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Interests" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_interest_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="2dp" />
+
+            <include layout="@layout/thick_divider" />
+
+            <TextView
+                style="@style/tableHeaderStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Questions and Answers" />
+            <TextView
+                android:id="@+id/tv_length_getter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding_small"
+                android:layout_marginRight="@dimen/padding_small"
+                android:background="@drawable/tag_item_bg"
+                android:paddingLeft="@dimen/padding_medium"
+                android:paddingRight="@dimen/padding_medium"
+                android:paddingTop="@dimen/padding_small"
+                android:paddingBottom="@dimen/padding_small"
+                android:text="Tag name"
+                android:textColor="@color/app_theme_medium"
+                android:textSize="@dimen/text_med"
+                android:visibility="invisible"
+                />
+
+
+            <include layout="@layout/thick_divider" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

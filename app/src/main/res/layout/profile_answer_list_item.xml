@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <LinearLayout
+        android:id="@+id/ll_data_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/white_rounded_border_white_fill"
+        android:paddingTop="@dimen/padding_medium"
+        android:paddingBottom="@dimen/padding_medium"
+        android:paddingLeft="@dimen/padding_large"
+        android:paddingRight="@dimen/padding_large"
+        android:layout_margin="@dimen/padding_extra_small"
+        android:elevation="2dp"
+        >
+        <TextView
+            android:id="@+id/tv_question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="This is a question. This is a question.This is a question.This is a question.This is a question.This is a question.This is a question.This is a question."
+            android:textColor="@color/dark_grey"
+            android:textSize="@dimen/text_large"
+            android:layout_marginLeft="@dimen/padding_small"
+            android:layout_marginRight="@dimen/padding_small"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_extra_small"
+            android:background="#00ffffff"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            >
+
+            <TextView
+                android:id="@+id/tv_ques_num_upvotes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding_medium"
+                android:gravity="center"
+                android:text="00 Upvotes"
+                android:textColor="@color/med_grey"
+                android:textSize="@dimen/text_med" />
+
+            <TextView
+                android:id="@+id/tv_num_answers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding_medium"
+                android:gravity="center"
+                android:text="00 answers"
+                android:textColor="@color/med_grey"
+                android:textSize="@dimen/text_med" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_answer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/padding_small"
+            android:paddingLeft="@dimen/padding_small"
+            android:paddingRight="@dimen/padding_small"
+            android:layout_marginLeft="@dimen/padding_small"
+            android:text="This is a question. This is a question.This is a question.This is a question.This is a question.This is a question.This is a question.This is a question."
+            android:textColor="@color/dark_grey"
+            android:textSize="@dimen/text_large" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/padding_extra_small"
+                android:background="#00ffffff"
+                android:orientation="horizontal"
+                android:layout_toLeftOf="@id/tv_time_stamp"
+                >
+
+                <TextView
+                    android:id="@+id/tv_num_upvotes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/padding_medium"
+                    android:gravity="center"
+                    android:text="00 Upvotes"
+                    android:textColor="@color/med_grey"
+                    android:textSize="@dimen/text_med" />
+
+                <TextView
+                    android:id="@+id/tv_num_replies"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/padding_medium"
+                    android:gravity="center"
+                    android:text="00 replies"
+                    android:textColor="@color/med_grey"
+                    android:textSize="@dimen/text_med"
+                    />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_time_stamp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding_medium"
+                android:gravity="center"
+                android:text="time"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/med_grey"
+                android:textSize="@dimen/text_med"
+                />
+        </RelativeLayout>
+
+    </LinearLayout>
+    <ProgressBar
+        android:id="@+id/pb_loading_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        />
+</RelativeLayout>

@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background"
+    tools:context=".update.activities.registration.RegistrationActivity1New">
+
+    <ScrollView
+        android:id="@+id/sv_content_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/all_activity_margin_small"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/form_padding"
+            android:paddingRight="@dimen/form_padding"
+            android:paddingBottom="24dp">
+
+            <TextView
+                android:id="@+id/tv_screen_header"
+                style="@style/screenHeader"
+                android:text="@string/create_an_account" />
+
+            <TextView
+                android:id="@+id/tv_screen_description"
+                style="@style/screenDescription"
+                android:text="@string/register_description"
+                android:layout_marginBottom="@dimen/padding_xxxl"
+                />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_first_name"
+                android:hint="@string/full_name"
+                style="@style/textInputLayoutStyle">
+
+                <EditText
+                    android:id="@+id/et_first_name"
+                    style="@style/formEditTextStyleInactive"
+                    android:inputType="textCapSentences"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--<com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_last_name"
+                android:hint="@string/last_name"
+                style="@style/textInputLayoutStyle">
+
+                <EditText
+                    android:id="@+id/et_last_name"
+                    style="@style/formEditTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapSentences|textMultiLine"
+
+                    />
+            </com.google.android.material.textfield.TextInputLayout>-->
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_email"
+                android:hint="@string/email_phone_number"
+                style="@style/textInputLayoutStyle">
+
+                <EditText
+                    android:id="@+id/et_email"
+                    style="@style/formEditTextStyleInactive"
+                    android:inputType="textEmailAddress" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_password"
+                app:errorEnabled="true"
+                android:hint="@string/password"
+                style="@style/textInputLayoutStyle"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/app_theme_medium">
+
+                <EditText
+                    android:id="@+id/et_password"
+                    style="@style/formEditTextStyleInactive"
+                    android:inputType="textPassword" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/bt_next"
+                style="@style/screenMainButton"
+                android:text="@string/register"
+                android:layout_marginTop="@dimen/padding_xxxxl"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/padding_xxxl"
+                android:layout_marginBottom="@dimen/padding_xxxl">
+
+                <TextView
+                    android:id="@+id/tv_or_reg_with"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="@dimen/padding_medium"
+                    android:layout_marginRight="@dimen/padding_medium"
+                    android:text="@string/or"
+                    android:textAllCaps="true"
+                    style="@style/AppTheme.text.catamaran.medDark"
+                    android:textSize="@dimen/text_large" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/tv_or_reg_with"
+                    android:background="@color/thin_divider_color">
+
+                </View>
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/tv_or_reg_with"
+                    android:background="@color/thin_divider_color">
+
+                </View>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_google_sign_up_wrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/light_grey_border_app_bg_fill"
+                android:padding="@dimen/padding_large">
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toStartOf="@id/tv_google_signup"
+                    android:layout_toLeftOf="@id/tv_google_signup"
+                    android:background="@color/transparent"
+                    android:paddingRight="@dimen/padding_medium"
+                    android:src="@drawable/ic_google_logo" />
+
+                <TextView
+                    android:id="@+id/tv_google_signup"
+                    style="@style/AppTheme.text.montserrat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/signup_with_google"
+                    android:textAllCaps="true"
+                    android:textColor="@color/med_dark_text" />
+            </RelativeLayout>
+
+
+            <!--<com.google.android.gms.common.SignInButton
+                android:id="@+id/sign_in_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                />-->
+
+            <TextView
+                android:id="@+id/tnc_agreement"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_xxl"
+                android:layout_marginBottom="@dimen/padding_medium"
+                android:gravity="center"
+                android:text="@string/tnc_agreement"
+                style="@style/AppTheme.text.catamaran.medDark" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/padding_xl"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:paddingLeft="@dimen/padding_medium"
+                    android:text="@string/already_registered"
+                    style="@style/AppTheme.text.catamaran.medDark"
+                    android:textSize="@dimen/text_large" />
+
+                <TextView
+                    android:id="@+id/tv_click_to_login"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/padding_medium"
+                    android:text="@string/sign_in"
+                    android:textColor="@color/icon_active"
+                    android:textSize="@dimen/text_large" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

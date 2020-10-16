@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="200dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="@dimen/padding_medium">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/padding_large"
+        android:layout_marginRight="@dimen/padding_large"
+       >
+
+        <LinearLayout
+            android:id="@+id/ll_post_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal"
+            android:padding="@dimen/padding_medium">
+
+            <TextView
+                android:id="@+id/tv_create_post"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:drawableLeft="@drawable/ic_create_post_gray"
+                android:drawablePadding="@dimen/padding_large"
+                android:paddingRight="@dimen/padding_large"
+                android:text="@string/insight"
+                android:textColor="@color/med_grey"
+                android:textSize="@dimen/text_xl"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/post_description"
+                android:textColor="@color/light_grey"
+                android:textSize="@dimen/text_large"
+
+                />
+        </LinearLayout>
+
+        <include layout="@layout/thinnest_light_grey_divider_with_margin" />
+
+        <LinearLayout
+            android:id="@+id/ll_session_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal"
+
+            android:padding="@dimen/padding_medium">
+
+            <TextView
+                android:id="@+id/tv_create_session"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:drawableLeft="@drawable/ic_session_unfilled"
+                android:drawablePadding="@dimen/padding_large"
+                android:paddingRight="@dimen/padding_large"
+                android:text="@string/session"
+                android:textColor="@color/med_grey"
+                android:textSize="@dimen/text_xl"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/session_description"
+                android:textColor="@color/light_grey"
+                android:textSize="@dimen/text_large"
+
+                />
+        </LinearLayout>
+
+        <include layout="@layout/thinnest_light_grey_divider_with_margin" />
+
+        <LinearLayout
+            android:id="@+id/ll_article_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal"
+
+            android:padding="@dimen/padding_medium">
+
+            <TextView
+                android:id="@+id/tv_create_article"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:drawableLeft="@drawable/ic_article_gray"
+                android:drawablePadding="@dimen/padding_large"
+                android:gravity="center_horizontal"
+                android:paddingRight="@dimen/padding_large"
+                android:text="@string/article"
+                android:textColor="@color/med_grey"
+                android:textSize="@dimen/text_xl"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/article_description"
+                android:textColor="@color/light_grey"
+                android:textSize="@dimen/text_large"
+
+                />
+        </LinearLayout>
+
+        <include layout="@layout/thinnest_light_grey_divider_with_margin" />
+
+        <LinearLayout
+            android:id="@+id/ll_poll_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal"
+            android:padding="@dimen/padding_medium">
+
+            <TextView
+                android:id="@+id/tv_create_poll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:drawableLeft="@drawable/ic_poll_gray"
+                android:drawablePadding="@dimen/padding_large"
+                android:gravity="center_horizontal"
+                android:paddingRight="@dimen/padding_large"
+                android:text="@string/poll"
+                android:textColor="@color/med_grey"
+                android:textSize="@dimen/text_xl"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/poll_description"
+                android:textColor="@color/light_grey"
+                android:textSize="@dimen/text_large" />
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sv_parent_wrapper"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:activity="com.avadna.luneblaze.activities.VenuePollActivity">
+
+
+        <LinearLayout
+            android:id="@+id/ll_venue_data_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:id="@+id/cb_select_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:buttonTint="@color/app_theme_dark"
+                android:drawableTint="@color/app_theme_dark"
+                android:textColor="@color/dark_grey"
+                android:text="@string/select_all"
+                android:padding="@dimen/padding_medium"
+                android:layout_marginLeft="@dimen/padding_medium"
+                />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_venue_poll_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="@dimen/padding_extra_small" />
+
+            <RelativeLayout
+                android:id="@+id/rl_venue_search_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_venue_search_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/padding_medium"
+                    android:background="@color/app_theme_medium"
+                    android:paddingBottom="@dimen/padding_small"
+                    android:paddingLeft="@dimen/padding_medium"
+                    android:paddingRight="@dimen/padding_medium"
+                    android:paddingTop="@dimen/padding_small"
+                    android:text="Search"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_large" />
+
+                <EditText
+                    android:id="@+id/et_venue_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_toLeftOf="@id/tv_venue_search_button"
+                    android:background="@drawable/grey_border_white_fill"
+                    android:gravity="center_vertical"
+                    android:hint="Enter venue name here"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:padding="@dimen/padding_medium"
+                    android:textColor="@color/dark_grey"
+                    android:textColorHint="@color/light_grey"
+                    android:textSize="@dimen/text_large" />
+
+
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_venue_search_result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/et_venue_name"
+                android:background="@color/ultra_light_grey" />
+            <Button
+                android:id="@+id/bt_done"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="done"
+                />
+
+        </LinearLayout>
+
+</ScrollView>

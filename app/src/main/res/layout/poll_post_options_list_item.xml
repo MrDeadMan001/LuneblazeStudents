@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_venue_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+
+        android:elevation="2dp">
+
+        <TextView
+            android:id="@+id/tv_black_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/light_grey_rounded_bg"
+            android:paddingTop="@dimen/padding_medium"
+            android:paddingBottom="@dimen/padding_medium"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_large"
+            android:layout_alignBottom="@id/tv_option_name"
+            android:layout_alignTop="@id/tv_option_name"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/graph_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/tv_option_name"
+            android:layout_alignBottom="@id/tv_option_name"
+            android:background="@drawable/dark_blue_rounded_bg"
+            android:visibility="visible" />
+
+
+        <TextView
+            android:id="@+id/tv_option_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#00ffffff"
+            android:paddingLeft="@dimen/padding_large"
+            android:paddingTop="@dimen/padding_medium"
+            android:paddingRight="@dimen/padding_large"
+            android:paddingBottom="@dimen/padding_medium"
+            android:text="Option (00 Votes)"
+            android:textColor="@color/med_grey"
+            android:textSize="@dimen/text_large"
+            android:maxLines="3"
+            android:ellipsize="end"
+            android:layout_toLeftOf="@id/tv_vote_percent"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_vote_percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="vote percent"
+            android:textColor="@color/med_grey"
+            android:textSize="@dimen/text_large"
+            android:layout_marginRight="@dimen/padding_medium"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:id="@+id/tv_checked_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/tv_option_name"
+            android:layout_alignTop="@id/tv_option_name"
+            android:background="@drawable/app_theme_rounded_border"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            />
+
+    </RelativeLayout>
+</LinearLayout>

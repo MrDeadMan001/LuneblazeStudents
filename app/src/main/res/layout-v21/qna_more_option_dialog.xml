@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@android:drawable/ic_menu_close_clear_cancel" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="More Options"
+            android:textColor="@color/app_theme_dark"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <include layout="@layout/thinnest_app_theme_color_divider" />
+
+    <TextView
+        android:id="@+id/tv_report"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/padding_medium"
+        android:text="Report Spam"
+        android:textColor="@color/med_grey"
+        android:textSize="@dimen/text_med" />
+
+    <include layout="@layout/thinnest_app_theme_color_divider" />
+
+    <TextView
+        android:id="@+id/tv_share"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/padding_medium"
+        android:text="Share"
+        android:textColor="@color/med_grey"
+        android:textSize="@dimen/text_med" />
+
+    <include layout="@layout/thinnest_app_theme_color_divider" />
+
+    <TextView
+        android:id="@+id/tv_request_answer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/padding_medium"
+        android:text="Request Answer"
+        android:textColor="@color/med_grey"
+        android:textSize="@dimen/text_med" />
+
+    <include layout="@layout/thinnest_app_theme_color_divider" />
+
+    <TextView
+        android:id="@+id/tv_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/padding_medium"
+        android:text="Edit"
+        android:textColor="@color/med_grey"
+        android:textSize="@dimen/text_med" />
+
+    <include layout="@layout/thinnest_app_theme_color_divider" />
+
+    <TextView
+        android:id="@+id/tv_unfollow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/padding_medium"
+        android:text="Unfollow"
+        android:textColor="@color/med_grey"
+        android:textSize="@dimen/text_med" />
+
+    <include layout="@layout/thinnest_app_theme_color_divider" />
+</LinearLayout>

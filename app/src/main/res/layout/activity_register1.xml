@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:id="@+id/sv_content_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            >
+
+            <TextView
+                android:id="@+id/tv_settings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:focusable="true"
+                android:gravity="center"
+                android:text="@string/register"
+                android:textColor="@color/app_theme_medium"
+                android:textSize="32sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_settings"
+                android:layout_centerInParent="true"
+                android:layout_margin="@dimen/padding_small"
+                android:background="@drawable/white_rounded_border_white_fill"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical"
+                android:paddingBottom="24dp"
+                android:paddingLeft="24dp"
+                android:paddingRight="24dp">
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_first_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/first_name"
+                    android:textColorHint="@color/light_grey"
+                    app:errorEnabled="true"
+                    app:errorTextAppearance="@style/error_appearance"
+                    app:hintTextAppearance="@style/hint_appearance">
+
+                    <EditText
+                        android:id="@+id/et_first_name"
+                        style="@style/signUpEditTextTheme"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textCapSentences|textMultiLine"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_last_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/last_name"
+                    android:textColorHint="@color/light_grey"
+                    app:errorEnabled="true"
+                    app:errorTextAppearance="@style/error_appearance"
+                    app:hintTextAppearance="@style/hint_appearance">
+
+                    <EditText
+                        android:id="@+id/et_last_name"
+                        style="@style/signUpEditTextTheme"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textCapSentences|textMultiLine"
+
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/email_phone_number"
+                    android:textColorHint="@color/light_grey"
+                    app:errorEnabled="true"
+                    app:errorTextAppearance="@style/error_appearance"
+                    app:hintTextAppearance="@style/hint_appearance">
+
+                    <EditText
+                        android:id="@+id/et_email"
+                        style="@style/signUpEditTextTheme"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textEmailAddress" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!--   <android.support.design.widget.TextInputLayout
+                       android:id="@+id/til_phone"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:hint="@string/phone"
+                       android:textColorHint="@color/light_grey"
+                       app:errorEnabled="true"
+                       app:errorTextAppearance="@style/error_appearance"
+                       app:hintTextAppearance="@style/hint_appearance">
+
+                       <EditText
+                           android:id="@+id/et_phone"
+                           style="@style/signUpEditTextTheme"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:inputType="textEmailAddress" />
+                   </android.support.design.widget.TextInputLayout>-->
+
+                <!--   <android.support.design.widget.TextInputLayout
+                       android:id="@+id/til_et_phone"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:hint="@string/phone"
+                       android:textColorHint="@color/light_grey"
+                       app:errorEnabled="true"
+                       app:errorTextAppearance="@style/error_appearance"
+                       app:hintTextAppearance="@style/hint_appearance">
+
+                       <EditText
+                           android:id="@+id/et_phone"
+                           style="@style/signUpEditTextTheme"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:inputType="phone" />
+                   </android.support.design.widget.TextInputLayout>-->
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/password"
+                    android:textColorHint="@color/light_grey"
+                    app:errorEnabled="true"
+                    app:errorTextAppearance="@style/error_appearance"
+                    app:hintTextAppearance="@style/hint_appearance"
+                    app:passwordToggleEnabled="true"
+                    app:passwordToggleTint="@color/app_theme_medium">
+
+                    <EditText
+                        android:id="@+id/et_password"
+                        style="@style/signUpEditTextTheme"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_date_of_birth"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/date_of_birth"
+                        android:textColorHint="@color/light_grey"
+                        app:errorEnabled="true"
+                        app:errorTextAppearance="@style/error_appearance"
+                        app:hintTextAppearance="@style/hint_appearance">
+
+                        <EditText
+                            android:id="@+id/et_date_of_birth"
+                            style="@style/signUpEditTextTheme"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableRight="@drawable/ic_calender"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:paddingRight="@dimen/padding_large"
+                            android:textColorHint="@color/transparent" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <!--     <ImageButton
+                             android:id="@+id/ib_calender"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_alignParentRight="true"
+                             android:layout_marginTop="@dimen/edit_text_padding_medium"
+                             android:layout_marginRight="@dimen/edit_text_padding_small"
+                             android:src="@drawable/ic_calender"
+                             android:padding="@dimen/edit_text_padding_medium"
+                             android:backgroundTint="@color/transparent"
+
+                             />-->
+                </RelativeLayout>
+
+
+                <!--   <EditText
+                       android:id="@+id/et_College"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       style="@style/signUpEditTextTheme"
+                       android:elevation="1dp"
+                       android:hint="College Name"
+                       />
+
+                   <TextView
+                       android:id="@+id/tv_date_of_birth"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       style="@style/signUpEditTextTheme"
+                       android:elevation="1dp"
+                       android:hint="Date of Birth"
+                        />-->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/padding_small"
+                    android:layout_marginRight="@dimen/padding_medium"
+                    android:elevation="1dp"
+                    android:paddingTop="@dimen/padding_medium"
+                    android:paddingRight="@dimen/padding_medium"
+                    android:text="@string/gender"
+                    android:textColor="@color/app_theme_dark"
+                    android:textSize="@dimen/text_large"
+
+                    />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/padding_medium"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb_male"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/padding_medium"
+                        android:buttonTint="@color/app_theme_medium"
+                        android:text="@string/male"
+                        android:textColor="@color/med_grey" />
+
+                    <RadioButton
+                        android:id="@+id/rb_female"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/padding_medium"
+                        android:buttonTint="@color/app_theme_medium"
+                        android:text="@string/female"
+                        android:textColor="@color/med_grey" />
+
+                    <RadioButton
+                        android:id="@+id/rb_other"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/padding_medium"
+                        android:buttonTint="@color/app_theme_medium"
+                        android:text="@string/other"
+                        android:textColor="@color/med_grey" />
+
+
+                </RadioGroup>
+                <TextView
+                    android:id="@+id/tnc_agreement"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tnc_agreement"
+                    android:textColor="@color/med_grey"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/padding_small"
+                    android:layout_marginBottom="@dimen/padding_medium"
+                    />
+                <TextView
+                    android:id="@+id/tv_next"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/padding_large"
+                    android:background="@drawable/light_blue_rounded_button"
+                    android:gravity="center"
+                    android:padding="@dimen/padding_large"
+                    android:text="@string/register"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_xxl"
+                    android:textStyle="bold" />
+
+
+
+
+                <!-- <RelativeLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_gravity="center_horizontal">
+
+                     <TextView
+                         android:id="@+id/tv_or_reg_with"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_centerInParent="true"
+                         android:background="#00ffffff"
+                         android:paddingLeft="@dimen/edit_text_padding_large"
+                         android:paddingRight="@dimen/edit_text_padding_large"
+                         android:text="Or Register with"
+                         android:textColor="@color/med_grey"
+                         android:textSize="@dimen/text_large"
+
+                         />
+                     <View
+                         android:layout_width="wrap_content"
+                         android:layout_height="1dp"
+                         android:layout_toLeftOf="@id/tv_or_reg_with"
+                         android:layout_centerVertical="true"
+                         android:layout_marginLeft="@dimen/edit_text_padding_medium"
+                         android:layout_marginRight="@dimen/edit_text_padding_medium"
+                         android:background="@color/app_theme_medium">
+
+                     </View>
+
+                     <View
+                         android:layout_width="wrap_content"
+                         android:layout_height="1dp"
+                         android:layout_toRightOf="@id/tv_or_reg_with"
+                         android:layout_centerVertical="true"
+                         android:layout_marginLeft="@dimen/edit_text_padding_medium"
+                         android:layout_marginRight="@dimen/edit_text_padding_medium"
+                         android:background="@color/app_theme_medium">
+
+                     </View>
+
+                 </RelativeLayout>
+
+                 <LinearLayout
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_gravity="center_horizontal"
+                     android:layout_margin="@dimen/edit_text_padding_small"
+                     android:orientation="horizontal">
+
+                     <TextView
+                         android:id="@+id/tv_fb_login"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:elevation="2dp"
+                         android:layout_margin="@dimen/edit_text_padding_extra_small"
+                         android:background="@color/facebook_button"
+                         android:paddingBottom="@dimen/edit_text_padding_small"
+                         android:paddingLeft="@dimen/edit_text_padding_large"
+                         android:paddingRight="@dimen/edit_text_padding_large"
+                         android:paddingTop="@dimen/edit_text_padding_small"
+                         android:text="f"
+                         android:textColor="#fff"
+                         android:textSize="@dimen/text_xxxl"
+                         android:textStyle="bold"
+
+                         />
+
+                     <TextView
+                         android:id="@+id/tv_twitter_login"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:elevation="2dp"
+                         android:layout_margin="@dimen/edit_text_padding_extra_small"
+                         android:background="@color/twitter_button"
+                         android:paddingBottom="@dimen/edit_text_padding_small"
+                         android:paddingLeft="@dimen/edit_text_padding_large"
+                         android:paddingRight="@dimen/edit_text_padding_large"
+                         android:paddingTop="@dimen/edit_text_padding_small"
+                         android:text="t"
+                         android:textColor="#fff"
+                         android:textSize="@dimen/text_xxxl"
+                         android:textStyle="bold" />
+
+                     <TextView
+                         android:id="@+id/tv_gmail_login"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:elevation="2dp"
+                         android:layout_margin="@dimen/edit_text_padding_extra_small"
+                         android:background="@color/gmail_button"
+                         android:paddingBottom="@dimen/edit_text_padding_small"
+                         android:paddingLeft="@dimen/edit_text_padding_medium"
+                         android:paddingRight="@dimen/edit_text_padding_medium"
+                         android:paddingTop="@dimen/edit_text_padding_small"
+                         android:text="G"
+                         android:textColor="#fff"
+                         android:textSize="@dimen/text_xxxl"
+                         android:textStyle="bold" />
+
+                 </LinearLayout>
+        -->
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:layout_marginTop="@dimen/padding_medium"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:paddingLeft="@dimen/padding_medium"
+                        android:text="@string/already_registered"
+                        android:textColor="@color/dark_grey"
+                        android:textSize="@dimen/text_large" />
+
+                    <TextView
+                        android:id="@+id/tv_click_to_login"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/padding_medium"
+                        android:text="@string/login_now"
+                        android:textColor="@color/app_theme_dark"
+
+                        android:textSize="@dimen/text_large" />
+                </LinearLayout>
+
+                <com.google.android.gms.common.SignInButton
+                    android:id="@+id/sign_in_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+
+                    />
+            </LinearLayout>
+        </RelativeLayout>
+
+    </ScrollView>
+</RelativeLayout>
+

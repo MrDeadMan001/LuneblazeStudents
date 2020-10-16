@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ultra_light_grey"
+    android:padding="@dimen/padding_small"
+    tools:activity=".activities.CreatePollActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/sv_content_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/tv_create"
+        android:layout_alignParentTop="true"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:id="@+id/ll_poll_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/padding_medium"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:padding="@dimen/padding_large">
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_poll_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_large"
+                android:hint="@string/poll_title"
+                android:textColorHint="@color/light_grey"
+                app:errorEnabled="true"
+                app:errorTextAppearance="@style/error_appearance"
+                app:hintTextAppearance="@style/hint_appearance">
+
+                <EditText
+                    android:id="@+id/et_poll_title"
+                    style="@style/signUpEditTextTheme"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapSentences|textMultiLine"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <TextView
+                android:id="@+id/tv_topics_to_discuss"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/padding_extra_small"
+                android:text="@string/poll_options"
+                android:textColor="@color/dark_grey"
+                android:textSize="@dimen/text_large" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_poll_options_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_topics_to_discuss"
+                android:background="@color/white" />
+
+            <RelativeLayout
+                android:id="@+id/rl_add_option_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <EditText
+                    android:id="@+id/et_poll_option"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:backgroundTint="@color/light_grey"
+                    android:hint="@string/enter_option_here"
+                    android:inputType="textCapSentences|textMultiLine"                    android:paddingRight="36dp"
+                    android:textColor="@color/dark_grey"
+                    android:textColorHint="@color/light_grey"
+                    android:textSize="@dimen/text_large" />
+
+                <TextView
+                    android:id="@+id/tv_add_more_options"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:drawableLeft="@drawable/ic_add_gray"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/padding_small"
+                    android:paddingRight="@dimen/padding_small"
+                    android:paddingBottom="@dimen/padding_medium"
+                    android:textColor="@color/med_grey"
+                    android:textSize="@dimen/text_large" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <TextView
+        android:id="@+id/tv_create"
+        style="@style/blue_button_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="@string/create_poll"
+        android:textSize="@dimen/text_xl"
+        android:textStyle="bold" />
+
+    <ProgressBar
+        android:id="@+id/pb_creating_poll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+</RelativeLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/rl_info_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/padding_large"
+        android:layout_marginTop="@dimen/padding_small"
+        android:layout_marginRight="@dimen/padding_large"
+        android:layout_marginBottom="@dimen/padding_small"
+        >
+
+        <ImageView
+            android:id="@+id/iv_user_dp"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/placeholder"
+            android:layout_marginLeft="@dimen/padding_large"
+            />
+
+        <TextView
+            android:id="@+id/tv_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/padding_large"
+            android:layout_toRightOf="@id/iv_user_dp"
+            android:text="@string/username"
+            android:textColor="@color/dark_grey"
+            android:textSize="@dimen/text_large"
+
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_designation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/padding_medium"
+            android:layout_toRightOf="@id/tv_user_name"
+            android:text="@string/designation"
+            android:textColor="@color/med_grey"
+            android:textSize="@dimen/text_large"
+            android:maxLines="1"
+            android:ellipsize="end"
+            />
+
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/tv_see_more_results"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textColor="@color/app_theme_dark"
+        android:text="@string/see_results_in_all_categories"
+        android:textSize="@dimen/text_large"
+        android:textStyle="bold"
+        android:visibility="gone"
+        android:padding="@dimen/padding_small"
+        />
+</RelativeLayout>

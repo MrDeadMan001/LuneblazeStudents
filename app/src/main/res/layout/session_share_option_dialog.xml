@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:paddingTop="@dimen/padding_medium"
+    android:paddingBottom="@dimen/padding_medium"
+
+    >
+
+    <LinearLayout
+        android:id="@+id/ll_timeline_wrapper"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_medium">
+
+        <TextView
+            android:id="@+id/tv_share_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:drawableLeft="@drawable/ic_reply_flipped"
+            android:drawablePadding="@dimen/padding_medium"
+            android:gravity="center_horizontal"
+            android:text="@string/share"
+            android:textColor="@color/med_grey"
+            android:textSize="@dimen/text_xl"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@string/share_with_fellows"
+            android:textColor="@color/light_grey"
+            android:textSize="@dimen/text_large" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_other_platform"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_medium">
+
+        <TextView
+            android:id="@+id/tv_conduct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:drawableLeft="@drawable/ic_share"
+            android:drawablePadding="@dimen/padding_medium"
+            android:paddingRight="@dimen/padding_large"
+            android:gravity="center_horizontal"
+            android:text="@string/share_to"
+            android:textColor="@color/med_grey"
+            android:textSize="@dimen/text_xl"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:text="@string/share_on_other_platforms"
+            android:textColor="@color/light_grey"
+            android:textSize="@dimen/text_large"
+
+            />
+    </LinearLayout>
+
+
+</LinearLayout>

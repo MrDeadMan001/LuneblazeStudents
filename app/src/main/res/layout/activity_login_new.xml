@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background"
+    tools:context=".update.activities.LoginActivityNew">
+
+    <ScrollView
+        android:id="@+id/sv_content_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/all_activity_margin_small">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/form_padding"
+            android:paddingRight="@dimen/form_padding"
+            android:paddingBottom="24dp">
+
+            <TextView
+                android:id="@+id/tv_screen_header"
+                style="@style/screenHeader"
+                android:text="@string/signin_to_luneblaze" />
+
+            <TextView
+                android:id="@+id/tv_screen_description"
+                style="@style/screenDescription"
+                android:layout_marginTop="@dimen/padding_xxl"
+                android:layout_marginBottom="@dimen/padding_xl"
+                android:text="@string/login_description" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_marginTop="@dimen/padding_large"
+                android:id="@+id/til_email"
+                style="@style/textInputLayoutStyle"
+                android:hint="@string/email_phone_number">
+
+                <EditText
+                    android:id="@+id/et_email"
+                    style="@style/formEditTextStyleInactive"
+                    android:inputType="textEmailAddress"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_password"
+                style="@style/textInputLayoutStyle"
+                android:hint="@string/password"
+                app:errorEnabled="true"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/app_theme_medium">
+
+                <EditText
+                    android:id="@+id/et_password"
+                    style="@style/formEditTextStyleInactive"
+                    android:inputType="textPassword"
+                     />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tv_forgot_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:padding="@dimen/padding_medium"
+                android:text="@string/forgot_password"
+                android:textColor="@color/icon_active"
+                android:textSize="@dimen/text_large" />
+
+            <Button
+                android:id="@+id/bt_login"
+                style="@style/screenMainButton"
+                android:text="@string/sign_in"
+                android:layout_marginTop="@dimen/padding_xxxl"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/padding_large"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/AppTheme.text.catamaran.medDark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:paddingLeft="@dimen/padding_medium"
+                    android:text="@string/dont_have_account"
+                    android:textSize="@dimen/text_large" />
+
+                <TextView
+                    android:id="@+id/tv_sign_up"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/padding_medium"
+                    android:text="@string/sign_up"
+                    android:textColor="@color/icon_active"
+                    android:textSize="@dimen/text_large" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/padding_xl"
+                android:layout_marginBottom="@dimen/padding_xxxl">
+
+                <TextView
+                    android:id="@+id/tv_or_reg_with"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="@dimen/padding_medium"
+                    android:layout_marginRight="@dimen/padding_medium"
+                    android:text="@string/or"
+                    android:textAllCaps="true"
+                    style="@style/AppTheme.text.catamaran.medDark"
+                    android:textSize="@dimen/text_large" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/tv_or_reg_with"
+                    android:background="@color/thin_divider_color">
+
+                </View>
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/tv_or_reg_with"
+                    android:background="@color/thin_divider_color">
+
+                </View>
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/bt_guest_login"
+                style="@style/screenMainWhiteButton"
+                android:text="@string/signin_as_guest"
+                />
+
+            <TextView
+                android:id="@+id/tv_tnc_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_xxl"
+                android:gravity="center"
+                android:text="@string/login_bottom_message"
+                style="@style/AppTheme.text.catamaran.medDark" />
+
+            <TextView
+                android:id="@+id/tv_tnc_message_link"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:paddingBottom="@dimen/padding_medium"
+                android:text="@string/terms_of_use"
+                android:textColor="@color/icon_active" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,122 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/ultra_light_grey"
+    android:orientation="vertical"
+    tools:activity="com.avadna.luneblaze.fragments.interest.InterestQuestionListFragment">
+
+    <LinearLayout
+        android:id="@+id/ll_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+       >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            >
+
+            <TextView
+                android:id="@+id/tv_filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:drawableLeft="@drawable/ic_filter_gray"
+                android:padding="@dimen/padding_small"
+                android:textSize="@dimen/text_xl"
+                android:layout_centerVertical="true"
+                android:textColor="@color/med_grey"
+                android:text="@string/filter"
+                android:layout_marginRight="@dimen/padding_medium"
+
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_item_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/ultra_light_grey" />
+<!--
+            <ProgressBar
+                android:id="@+id/pb_loading_more_questions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/rv_item_list"
+                android:layout_centerHorizontal="true" />
+                -->
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_no_questions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/dark_grey"
+        android:layout_marginTop="@dimen/padding_large"
+        android:text="@string/no_questions_to_show"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/padding_small"
+        />
+
+    <RelativeLayout
+        android:id="@+id/rl_comment_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/rounded_light_grey_border"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/bt_send"
+            style="@style/blue_button_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="Send" />
+        <!--
+                <ImageView
+                    android:id="@+id/iv_attach"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/edit_text_padding_medium"
+                    android:layout_marginRight="@dimen/edit_text_padding_small"
+                    android:src="@drawable/ic_question" />-->
+
+        <EditText
+            android:id="@+id/et_comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/padding_large"
+            android:layout_toLeftOf="@id/bt_send"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:hint="Add a comment"
+            android:textColor="@color/dark_grey"
+            android:textColorHint="@color/light_grey"
+            android:textSize="@dimen/text_large" />
+    </RelativeLayout>
+    <ProgressBar
+        android:id="@+id/pb_loading_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/padding_large"
+        />
+    <include layout="@layout/connection_error_sublayout"/>
+
+</RelativeLayout>

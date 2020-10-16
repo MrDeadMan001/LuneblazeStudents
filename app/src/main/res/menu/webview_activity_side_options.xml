@@ -1,0 +1,14 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/share_to"
+        android:title="@string/share_to"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/copy_url"
+        android:title="@string/copy_url"
+        app:showAsAction="never" />
+
+</menu>

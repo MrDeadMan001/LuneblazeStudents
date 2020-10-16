@@ -1,0 +1,111 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ultra_light_grey"
+    android:orientation="vertical"
+    tools:activity="com.avadna.luneblaze.fragments.home.FriendRequestsFragment">
+
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/srl_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.avadna.luneblaze.utils.ObservableScrollView
+            android:id="@+id/sv_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:id="@+id/ll_scroll_child"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/white_rounded_border_white_fill"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/padding_small"
+                    >
+
+                    <TextView
+                        android:id="@+id/tv_manage_requests"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:padding="@dimen/padding_large"
+                        android:text="@string/manage_requests"
+                        android:textColor="@color/app_theme_dark"
+                        android:textSize="@dimen/text_xl" />
+
+                    <TextView
+                        android:id="@+id/tv_no_requests"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/padding_large"
+                        android:text="no requests"
+                        android:textColor="@color/med_grey"
+                        android:textSize="@dimen/text_xl" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_request_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <ProgressBar
+                        android:id="@+id/pb_loading_friend_requests"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/padding_medium"
+                    android:background="@color/white"
+                    android:padding="@dimen/padding_medium"
+                    android:text="@string/suggested"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="@dimen/text_large"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_suggested_friends_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/ultra_light_grey"
+                        android:paddingLeft="@dimen/padding_extra_small"
+                        android:paddingTop="@dimen/padding_extra_small"
+                        android:paddingRight="@dimen/padding_extra_small"
+                        android:paddingBottom="64dp" />
+
+                    <ProgressBar
+                        android:id="@+id/pb_loading_suggested"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true" />
+                </RelativeLayout>
+
+            </LinearLayout>
+        </com.avadna.luneblaze.utils.ObservableScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</LinearLayout>

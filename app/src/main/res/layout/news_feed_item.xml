@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/ultra_light_grey"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:elevation="2dp"
+        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/padding_extra_small"
+        android:layout_marginRight="@dimen/padding_extra_small"
+        android:layout_marginTop="@dimen/padding_small"
+        android:layout_marginBottom="@dimen/padding_small"
+        >
+
+        <TextView
+            android:id="@+id/tv_activity_performer"
+            style="@style/tableHeaderStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="2dp"
+            android:text="Actvity performed by" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_post_image"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="@dimen/padding_medium"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="@dimen/padding_medium"
+                android:layout_marginTop="@dimen/padding_medium"
+                android:src="@drawable/placeholder" />
+
+            <TextView
+                android:id="@+id/tv_post_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_medium"
+                android:layout_toRightOf="@id/iv_post_image"
+                android:paddingRight="@dimen/padding_medium"
+                android:text="Post Title"
+                android:textColor="@color/app_theme_dark"
+                android:textSize="@dimen/text_large"
+                android:textStyle="bold"
+
+                />
+
+            <TextView
+                android:id="@+id/tv_post_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_post_title"
+                android:layout_toRightOf="@id/iv_post_image"
+                android:paddingRight="@dimen/padding_medium"
+                android:text="Post description"
+                android:textColor="@color/med_grey"
+                android:textSize="@dimen/text_med" />
+
+            <TextView
+                android:id="@+id/tv_timestamp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_post_description"
+                android:layout_toRightOf="@id/iv_post_image"
+                android:paddingRight="@dimen/padding_medium"
+                android:text="Time Stamp"
+                android:textColor="@color/med_grey"
+                android:textSize="@dimen/text_med" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_post_contents"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLength="300"
+            android:paddingBottom="@dimen/padding_small"
+            android:paddingLeft="@dimen/padding_medium"
+            android:paddingRight="@dimen/padding_medium"
+            android:text="This is some text. This is some text.This is some text.This is some text.This is some text.This is some text.This is some text.This is some text. "
+            android:textColor="@color/dark_grey"
+            android:textSize="@dimen/text_large" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#efefef"
+            android:src="@drawable/placeholder" />
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding_medium"
+            android:layout_marginRight="@dimen/padding_medium"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_dialog_like_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_small"
+                android:text="00 Likes"
+                android:textColor="@color/med_grey"
+                android:textSize="@dimen/text_med" />
+
+            <TextView
+                android:id="@+id/tv_dialog_comment_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_small"
+                android:text="00 Comments"
+                android:textColor="@color/med_grey"
+                android:textSize="@dimen/text_med" />
+
+            <TextView
+                android:id="@+id/tv_share_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_small"
+                android:text="00 Shares"
+                android:textColor="@color/med_grey"
+                android:textSize="@dimen/text_med" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:id="@+id/fl_like_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:drawableLeft="@android:drawable/ic_secure"
+                    android:drawablePadding="@dimen/padding_medium"
+                    android:paddingTop="@dimen/padding_small"
+                    android:paddingBottom="@dimen/padding_medium"
+                    android:text="Like"
+                    android:textColor="@color/med_grey"
+                    android:textSize="@dimen/text_large"
+                    android:textStyle="bold" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/fl_comment_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:drawableLeft="@android:drawable/ic_secure"
+                    android:drawablePadding="@dimen/padding_medium"
+                    android:paddingTop="@dimen/padding_small"
+                    android:paddingBottom="@dimen/padding_medium"
+                    android:text="Comment"
+                    android:textColor="@color/med_grey"
+                    android:textSize="@dimen/text_large"
+                    android:textStyle="bold" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/fl_Share_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:drawableLeft="@android:drawable/ic_secure"
+                    android:drawablePadding="@dimen/padding_medium"
+                    android:paddingTop="@dimen/padding_small"
+                    android:paddingBottom="@dimen/padding_medium"
+                    android:text="Share"
+                    android:textColor="@color/med_grey"
+                    android:textSize="@dimen/text_large"
+                    android:textStyle="bold" />
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_action_perf_desc_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/app_theme_border"
+            android:padding="@dimen/padding_small">
+
+            <ImageView
+                android:id="@+id/iv_user_dp"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="@dimen/padding_medium"
+                android:src="@drawable/placeholder" />
+
+            <TextView
+                android:id="@+id/tv_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/iv_user_dp"
+                android:paddingRight="@dimen/padding_medium"
+                android:text="User Name"
+                android:textColor="@color/dark_grey"
+                android:textSize="@dimen/text_med"
+
+                />
+
+            <TextView
+                android:id="@+id/tv_action_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_user_name"
+                android:layout_toRightOf="@id/iv_user_dp"
+                android:paddingRight="@dimen/padding_medium"
+                android:text="Comment"
+                android:textColor="@color/med_grey"
+                android:textSize="@dimen/text_med" />
+
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

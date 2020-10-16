@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/role_any"
+        android:title="@string/any"
+        app:showAsAction="never"
+        />
+    <item
+        android:id="@+id/role_initiator"
+        android:title="@string/initiator"
+        app:showAsAction="never"
+        />
+    <item
+        android:id="@+id/role_sharer"
+        android:title="@string/sharer"
+        app:showAsAction="never"
+        />
+    <item
+        android:id="@+id/role_attendee"
+        android:title="@string/attendee"
+        app:showAsAction="never"
+        />
+    <item
+        android:id="@+id/role_joined"
+        android:title="@string/joined"
+        app:showAsAction="never"
+        />
+</menu>

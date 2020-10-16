@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="@dimen/padding_large"
+        android:layout_marginRight="@dimen/padding_large"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_dialog_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:padding="@dimen/padding_large"
+            android:text="@string/edit"
+            android:textColor="@color/med_grey"
+            android:drawablePadding="@dimen/padding_medium"
+            android:textSize="@dimen/text_xxl"
+            android:textStyle="bold"
+          />
+
+        <EditText
+            android:id="@+id/et_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/grey_border_white_fill"
+            android:textColor="@color/med_grey"
+            android:layout_margin="@dimen/padding_medium"
+            android:gravity="top"
+            android:padding="@dimen/padding_medium"
+            android:textSize="@dimen/text_xl"
+            android:maxLines="10"
+            />
+
+        <include layout="@layout/thick_divider" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/padding_medium"
+            >
+
+            <TextView
+                android:id="@+id/tv_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/app_theme_dark"
+                android:padding="@dimen/padding_medium"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_xl"
+                android:text="@string/cancel" />
+
+            <TextView
+                android:id="@+id/tv_done"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/app_theme_dark"
+                android:padding="@dimen/padding_medium"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_xl"
+                android:text="@string/done" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

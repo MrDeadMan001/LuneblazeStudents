@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/role_any"
+        android:title="@string/any"
+        app:showAsAction="never"
+        />
+    <item
+        android:id="@+id/role_i_asked"
+        android:title="@string/i_have_asked"
+        app:showAsAction="never"
+        />
+    <item
+        android:id="@+id/role_i_answered"
+        android:title="@string/i_have_answered"
+        app:showAsAction="never"
+        />
+    <item
+        android:id="@+id/role_i_following"
+        android:title="@string/i_am_following"
+        app:showAsAction="never"
+        />
+</menu>

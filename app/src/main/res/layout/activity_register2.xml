@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:activity="com.avadna.luneblaze.activities.registration.RegisterActivity2">
+
+    <!--<ImageView
+        android:id="@+id/iv_login_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        android:maxHeight="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/login_bg" />-->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true">
+
+        <RelativeLayout
+            android:id="@+id/rl_scroll_child"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:id="@+id/tv_settings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Register"
+                android:textColor="@color/app_theme_medium"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_settings"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical"
+                android:layout_marginTop="48dp">
+
+                <!--  <EditText
+                      android:id="@+id/et_user_name"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      style="@style/editTextThemeAppThemeMed"
+                      android:elevation="1dp"
+                      android:hint="Username"
+                      />-->
+                <TextView
+                    android:id="@+id/tv_current_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/padding_medium"
+                    android:layout_marginRight="@dimen/padding_medium"
+                    android:elevation="1dp"
+                    android:paddingTop="@dimen/padding_medium"
+                    android:paddingRight="@dimen/padding_medium"
+                    android:text="Current Status"
+                    android:textColor="@color/app_theme_dark"
+                    android:textSize="@dimen/text_large"
+                    android:paddingLeft="26dp"
+                    />
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="@dimen/padding_medium"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb_working"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/padding_medium"
+                        app:buttonTint="@color/app_theme_medium"
+                        android:text="@string/working"
+                        android:textColor="@color/med_grey" />
+
+                    <RadioButton
+                        android:id="@+id/rb_studying"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/padding_medium"
+                        app:buttonTint="@color/app_theme_medium"
+                        android:text="@string/studying"
+                        android:textColor="@color/med_grey" />
+
+                    <RadioButton
+                        android:id="@+id/rb_other"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/padding_medium"
+                        app:buttonTint="@color/app_theme_medium"
+                        android:text="@string/other"
+                        android:textColor="@color/med_grey" />
+
+                </RadioGroup>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="28dp"
+                    android:paddingRight="28dp"
+                    android:paddingBottom="32dp"
+                    >
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_current_status"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/current_status"
+                        android:textColorHint="@color/light_grey"
+                        app:errorEnabled="true"
+                        app:errorTextAppearance="@style/error_appearance"
+                        app:hintTextAppearance="@style/hint_appearance">
+
+                        <EditText
+                            android:id="@+id/et_current_status"
+                            style="@style/signUpEditTextTheme"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textCapSentences|textMultiLine"
+                            />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_designation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/padding_large"
+                        android:hint="@string/designation"
+                        android:textColorHint="@color/light_grey"
+                        app:errorEnabled="true"
+                        app:errorTextAppearance="@style/error_appearance"
+                        app:hintTextAppearance="@style/hint_appearance">
+
+                        <EditText
+                            android:id="@+id/et_designation"
+                            style="@style/signUpEditTextTheme"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textCapSentences|textMultiLine"
+                            />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_institution"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/organisation_name"
+                        android:textColorHint="@color/light_grey"
+                        app:errorEnabled="true"
+                        app:errorTextAppearance="@style/error_appearance"
+                        app:hintTextAppearance="@style/hint_appearance">
+
+                        <EditText
+                            android:id="@+id/et_institution"
+                            style="@style/signUpEditTextTheme"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textCapSentences|textMultiLine"
+                            />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_start_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/start_date"
+                        android:textColorHint="@color/light_grey"
+                        app:errorEnabled="true"
+                        app:errorTextAppearance="@style/error_appearance"
+                        app:hintTextAppearance="@style/hint_appearance"
+                        android:visibility="gone"
+                        >
+
+                        <EditText
+                            android:id="@+id/et_start_date"
+                            style="@style/signUpEditTextTheme"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableRight="@drawable/ic_calender"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:paddingRight="@dimen/padding_large"
+                            android:textColorHint="@color/transparent" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+                    <!--   <EditText
+                           android:id="@+id/et_College"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           style="@style/editTextThemeAppThemeMed"
+                           android:elevation="1dp"
+                           android:hint="College Name"
+                           />
+
+                       <TextView
+                           android:id="@+id/tv_date_of_birth"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           style="@style/editTextThemeAppThemeMed"
+                           android:elevation="1dp"
+                           android:hint="Date of Birth"
+                            />-->
+
+                    <TextView
+                        android:id="@+id/tv_next"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:background="@drawable/light_blue_rounded_button"
+                        android:gravity="center"
+                        android:padding="@dimen/padding_large"
+                        android:text="@string/next"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_xxl"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_skip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="@dimen/padding_medium"
+                        android:padding="@dimen/padding_medium"
+                        android:text="@string/skip"
+                        android:textColor="@color/app_theme_dark" />
+                    <!-- <RelativeLayout
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_gravity="center_horizontal">
+
+                         <TextView
+                             android:id="@+id/tv_or_reg_with"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_centerInParent="true"
+                             android:background="#00ffffff"
+                             android:paddingLeft="@dimen/edit_text_padding_large"
+                             android:paddingRight="@dimen/edit_text_padding_large"
+                             android:text="Or Register with"
+                             android:textColor="@color/med_grey"
+                             android:textSize="@dimen/text_large"
+
+                             />
+                         <View
+                             android:layout_width="wrap_content"
+                             android:layout_height="1dp"
+                             android:layout_toLeftOf="@id/tv_or_reg_with"
+                             android:layout_centerVertical="true"
+                             android:layout_marginLeft="@dimen/edit_text_padding_medium"
+                             android:layout_marginRight="@dimen/edit_text_padding_medium"
+                             android:background="@color/app_theme_medium">
+
+                         </View>
+
+                         <View
+                             android:layout_width="wrap_content"
+                             android:layout_height="1dp"
+                             android:layout_toRightOf="@id/tv_or_reg_with"
+                             android:layout_centerVertical="true"
+                             android:layout_marginLeft="@dimen/edit_text_padding_medium"
+                             android:layout_marginRight="@dimen/edit_text_padding_medium"
+                             android:background="@color/app_theme_medium">
+
+                         </View>
+
+                     </RelativeLayout>
+
+                     <LinearLayout
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_gravity="center_horizontal"
+                         android:layout_margin="@dimen/edit_text_padding_small"
+                         android:orientation="horizontal">
+
+                         <TextView
+                             android:id="@+id/tv_fb_login"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:elevation="2dp"
+                             android:layout_margin="@dimen/edit_text_padding_extra_small"
+                             android:background="@color/facebook_button"
+                             android:paddingBottom="@dimen/edit_text_padding_small"
+                             android:paddingLeft="@dimen/edit_text_padding_large"
+                             android:paddingRight="@dimen/edit_text_padding_large"
+                             android:paddingTop="@dimen/edit_text_padding_small"
+                             android:text="f"
+                             android:textColor="#fff"
+                             android:textSize="@dimen/text_xxxl"
+                             android:textStyle="bold"
+
+                             />
+
+                         <TextView
+                             android:id="@+id/tv_twitter_login"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:elevation="2dp"
+                             android:layout_margin="@dimen/edit_text_padding_extra_small"
+                             android:background="@color/twitter_button"
+                             android:paddingBottom="@dimen/edit_text_padding_small"
+                             android:paddingLeft="@dimen/edit_text_padding_large"
+                             android:paddingRight="@dimen/edit_text_padding_large"
+                             android:paddingTop="@dimen/edit_text_padding_small"
+                             android:text="t"
+                             android:textColor="#fff"
+                             android:textSize="@dimen/text_xxxl"
+                             android:textStyle="bold" />
+
+                         <TextView
+                             android:id="@+id/tv_gmail_login"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:elevation="2dp"
+                             android:layout_margin="@dimen/edit_text_padding_extra_small"
+                             android:background="@color/gmail_button"
+                             android:paddingBottom="@dimen/edit_text_padding_small"
+                             android:paddingLeft="@dimen/edit_text_padding_medium"
+                             android:paddingRight="@dimen/edit_text_padding_medium"
+                             android:paddingTop="@dimen/edit_text_padding_small"
+                             android:text="G"
+                             android:textColor="#fff"
+                             android:textSize="@dimen/text_xxxl"
+                             android:textStyle="bold" />
+
+                     </LinearLayout>
+     -->
+
+                    <!--   <LinearLayout
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_gravity="center"
+                           android:orientation="horizontal">
+
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:padding="@dimen/edit_text_padding_medium"
+                               android:text="Already registered?"
+                               android:textColor="@color/dark_grey"
+                               android:textSize="@dimen/text_large"
+
+                               />
+
+                           <TextView
+                               android:id="@+id/tv_click_to_login"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:padding="@dimen/edit_text_padding_medium"
+                               android:text="Click here to login"
+                               android:textColor="@color/app_theme_dark"
+                               android:textSize="@dimen/text_large" />
+                       </LinearLayout>-->
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

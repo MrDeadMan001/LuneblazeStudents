@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:activity="com.avadna.luneblaze.activities.settingActivities.SettingsActivity"
+    android:padding="@dimen/padding_large"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/text_large"
+
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/tv_dialog_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:gravity="center"
+            android:paddingBottom="@dimen/padding_large"
+            android:paddingLeft="@dimen/padding_medium"
+
+            android:paddingRight="@dimen/padding_medium"
+            android:text="Setting name"
+            android:textColor="@color/dark_grey"
+            android:textSize="@dimen/text_xl" />
+
+        <include layout="@layout/thinnest_light_grey_divider_with_margin" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/padding_large"
+            android:paddingRight="@dimen/padding_large">
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/sw_switch1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/padding_medium"
+                android:padding="@dimen/padding_small"
+                app:track="@drawable/switch_track_custom"
+
+                />
+
+            <TextView
+                android:id="@+id/tv_switch1_description"
+                style="@style/settingsItemStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@id/sw_switch1"
+                android:text="Sounds" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/padding_large"
+            android:paddingRight="@dimen/padding_large">
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/sw_switch2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/padding_medium"
+                android:padding="@dimen/padding_small"
+                app:track="@drawable/switch_track_custom"
+
+                />
+
+            <TextView
+                android:id="@+id/tv_switch2_description"
+                style="@style/settingsItemStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@id/sw_switch2"
+                android:text="Vibration" />
+
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/tv_done"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:padding="@dimen/padding_medium"
+            android:text="@string/done"
+            android:textColor="@color/app_theme_dark"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_large"
+            />
+    </LinearLayout>
+
+
+</RelativeLayout>

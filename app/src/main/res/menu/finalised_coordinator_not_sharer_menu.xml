@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/assign_room"
+        android:title="@string/assign_room"
+        app:showAsAction="never"
+        android:icon="@drawable/ic_assign_room"
+        />
+    <item
+        android:id="@+id/invite"
+        android:title="@string/invite_fellows"
+        app:showAsAction="never"
+        android:icon="@drawable/ic_invite_unfilled"
+        />
+    <item
+        android:id="@+id/follow_sharer"
+        android:title="@string/follow_sharer"
+        app:showAsAction="never"
+        android:icon="@drawable/ic_follow_unfilled"
+        />
+
+    <item
+        android:id="@+id/share_to"
+        android:title="@string/share_to"
+        app:showAsAction="never"
+        android:icon="@drawable/ic_reply_flipped"
+        />
+
+    <item
+        android:id="@+id/attendance"
+        android:title="@string/mark_attendance"
+        app:showAsAction="never"
+        android:icon="@drawable/ic_mark_attendance"
+        />
+    <item
+        android:id="@+id/add_photos"
+        android:title="@string/add_photos"
+        app:showAsAction="never"
+        android:icon="@drawable/ic_add_image_gray"
+        />
+    <item
+        android:id="@+id/add_files"
+        android:title="@string/add_file"
+        app:showAsAction="never"
+        android:icon="@drawable/ic_upload_file"
+        />
+    <item
+        android:id="@+id/add_video"
+        android:title="@string/add_video"
+        app:showAsAction="never"
+        android:icon="@drawable/ic_upload_video"
+        />
+    <item
+        android:id="@+id/start_session"
+        android:title="@string/start_session"
+        app:showAsAction="never"
+        android:icon="@android:drawable/ic_media_play"
+        />
+    <item
+        android:id="@+id/end_session"
+        android:title="@string/stop_session"
+        app:showAsAction="never"
+        android:icon="@android:drawable/ic_media_pause"
+        />
+
+    <!-- <item
+         android:id="@+id/follow_venue"
+         android:title="@string/follow_venue"
+         app:showAsAction="never"
+         android:icon="@drawable/ic_venue_unfollowed"
+         />-->
+</menu>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ultra_light_grey"
+    android:orientation="vertical"
+    tools:activity="com.avadna.luneblaze.activities.settingActivities.FollowingListActivity">
+
+    <LinearLayout
+        android:id="@+id/ll_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/padding_small"
+        android:layout_marginLeft="@dimen/padding_small"
+        android:layout_marginRight="@dimen/padding_small"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <!--  <RelativeLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              >
+
+              <LinearLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_centerInParent="true"
+                  android:orientation="vertical"
+                  android:paddingBottom="@dimen/edit_text_padding_large"
+                  android:paddingLeft="@dimen/edit_text_padding_medium"
+                  android:paddingRight="20dp"
+                  android:paddingTop="@dimen/edit_text_padding_large">
+
+                  <TextView
+                      android:id="@+id/tv_num_following"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:gravity="center"
+                      android:text="00"
+                      android:textColor="@color/dark_grey"
+                      android:textSize="28sp" />
+
+                  <TextView
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:gravity="center"
+                      android:text="Following"
+                      android:textColor="@color/med_grey"
+                      android:textSize="@dimen/text_xl" />
+              </LinearLayout>
+          </RelativeLayout>-->
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_large"
+            android:text="Choose what you want to UnFollow"
+            android:textColor="@color/med_grey"
+            android:visibility="gone"
+            android:textSize="@dimen/text_xl" />
+
+        <!-- <android.support.v7.widget.RecyclerView
+             android:id="@+id/rv_following_list"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:background="@color/ultra_light_grey"
+             android:paddingTop="@dimen/edit_text_padding_extra_small"
+             android:paddingBottom="@dimen/edit_text_padding_extra_small"
+             />-->
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tl_tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:tabMode="fixed"
+            app:tabSelectedTextColor="@color/app_theme_dark"
+            app:tabTextColor="@color/med_grey" />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/vp_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/ultra_light_grey" />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/pb_loading_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+</RelativeLayout>

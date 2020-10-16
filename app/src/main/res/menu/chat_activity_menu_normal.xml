@@ -1,0 +1,27 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/search"
+        android:title="@string/search"
+        app:showAsAction="never"
+        android:icon="@drawable/ic_search_gray"
+        />
+    <item
+        android:id="@+id/delete"
+        android:title="@string/delete_conversation"
+        android:icon="@drawable/ic_gray_delete"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/group_info"
+        android:title="@string/group_info"
+        app:showAsAction="never"
+        android:icon="@drawable/ic_info_gray"
+        />
+    <item
+        android:id="@+id/block"
+        android:title="@string/block"
+        app:showAsAction="never"
+        android:icon="@drawable/ic_unfollow_feed_poster"
+        />
+
+</menu>

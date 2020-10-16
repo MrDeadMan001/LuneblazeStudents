@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background"
+    tools:context=".update.activities.registration.RegistrationActivity2New">
+
+    <ScrollView
+        android:id="@+id/sv_content_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/all_activity_margin_small">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/form_padding"
+            android:paddingRight="@dimen/form_padding">
+
+            <TextView
+                android:id="@+id/tv_screen_header"
+                style="@style/screenHeader"
+                android:text="@string/setup_your_profile" />
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="32dp">
+
+                <ImageView
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:src="@drawable/blank_profile_male" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_add_gray" />
+
+            </FrameLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_bio"
+                style="@style/textInputLayoutStyle"
+                android:hint="@string/bio">
+                <EditText
+                    android:id="@+id/et_bio"
+                    style="@style/formEditTextStyleInactive"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_date_of_birth"
+                    style="@style/textInputLayoutStyle"
+                    android:hint="@string/date_of_birth">
+
+                    <EditText
+                        android:id="@+id/et_date_of_birth"
+                        style="@style/formEditTextStyleInactive"
+                        android:drawableEnd="@drawable/ic_calender"
+                        android:drawableRight="@drawable/ic_calender"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:paddingEnd="@dimen/padding_large"
+                        android:paddingRight="@dimen/padding_large" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </RelativeLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_first_name"
+                style="@style/textInputLayoutStyle"
+                android:hint="@string/location">
+
+                <EditText
+                    android:id="@+id/et_first_name"
+                    style="@style/formEditTextStyleInactive"
+                    android:inputType="textCapSentences" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/ll_gender_wrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/light_grey_border_app_bg_fill"
+                android:orientation="vertical"
+                android:padding="@dimen/padding_xl">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/gender"
+                    android:textColor="@color/light_text"
+                    android:textSize="@dimen/text_xl" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+
+                    >
+
+                    <RadioButton
+                        android:id="@+id/rb_male"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:buttonTint="@color/app_theme_medium"
+                        android:text="@string/male"
+                        android:textColor="@color/light_text" />
+
+                    <RadioButton
+                        android:id="@+id/rb_female"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:buttonTint="@color/app_theme_medium"
+                        android:text="@string/female"
+                        android:textColor="@color/light_text" />
+
+                    <RadioButton
+                        android:id="@+id/rb_other"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:buttonTint="@color/app_theme_medium"
+                        android:text="@string/other"
+                        android:textColor="@color/light_text" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/bt_next"
+                style="@style/screenMainButton"
+                android:layout_marginTop="@dimen/padding_xxxxl"
+                android:layout_marginBottom="24dp"
+                android:text="@string/register" />
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

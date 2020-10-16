@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/white_rounded_border_white_fill"
+    android:padding="24dp"
+   >
+    <TextView
+        android:id="@+id/tv_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/med_grey"
+        android:textSize="@dimen/text_xl"
+        android:text="@string/pick_time"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_marginBottom="@dimen/padding_large"
+        />
+
+    <LinearLayout
+        android:id="@+id/ll_lists_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:orientation="horizontal"
+        android:layout_below="@id/tv_header"
+        >
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_hours"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text=":"
+            android:textStyle="bold"
+            android:textColor="@color/med_grey"
+            android:gravity="center"
+            android:textSize="@dimen/text_xxxl"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_minutes"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_text_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_lists_wrapper"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_hours"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:padding="@dimen/padding_medium"
+            android:text="@string/hours"
+            android:textColor="@color/med_grey"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:textColor="@color/med_grey"
+            android:gravity="center"
+            android:textSize="@dimen/text_xxxl"
+            />
+        <TextView
+            android:id="@+id/tv_minutes"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:padding="@dimen/padding_medium"
+            android:text="@string/minutes"
+            android:textColor="@color/med_grey"
+            android:textStyle="bold"
+            />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignTop="@id/ll_lists_wrapper"
+        android:background="@drawable/white_gradient_top_to_bottom" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignBottom="@id/ll_lists_wrapper"
+        android:background="@drawable/white_gradient_top_to_bottom"
+        android:rotation="180" />
+
+    <TextView
+        android:id="@+id/tv_done_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_text_wrapper"
+        android:layout_alignParentRight="true"
+        android:paddingTop="@dimen/padding_medium"
+        android:paddingRight="20dp"
+        android:text="@string/done_capital"
+        android:textColor="@color/app_theme_dark"
+        android:textSize="@dimen/text_xl"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>

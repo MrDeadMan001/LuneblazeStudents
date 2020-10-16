@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_content_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/padding_extra_small"
+        android:background="@drawable/white_rounded_border_white_fill"
+        android:elevation="2dp"
+        android:padding="@dimen/all_activity_margin_medium">
+
+        <RelativeLayout
+            android:id="@+id/rl_dp_wrapper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding_medium">
+
+            <ImageView
+                android:id="@+id/iv_user_dp"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:layout_centerInParent="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/placeholder" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_time_stamp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="@dimen/padding_large"
+            android:text="time stamp"
+            android:textColor="@color/med_grey"
+            android:textSize="@dimen/text_med" />
+
+        <TextView
+            android:id="@+id/tv_user_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_toEndOf="@id/rl_dp_wrapper"
+            android:layout_toRightOf="@id/rl_dp_wrapper"
+            android:layout_marginRight="60dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:paddingLeft="@dimen/padding_medium"
+            android:paddingRight="@dimen/padding_medium"
+            android:text="User name"
+            android:textColor="@color/dark_grey"
+            android:textSize="@dimen/text_xl" />
+
+        <TextView
+            android:id="@+id/tv_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_user_name"
+            android:layout_marginTop="-2dp"
+            android:layout_toLeftOf="@id/iv_selected"
+            android:layout_toRightOf="@id/rl_dp_wrapper"
+            android:drawablePadding="@dimen/padding_small"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:paddingLeft="@dimen/padding_large"
+            android:paddingRight="@dimen/padding_medium"
+            android:text="latest message in chat"
+            android:textColor="@color/med_grey"
+            android:textSize="@dimen/text_large" />
+
+        <ImageView
+            android:id="@+id/iv_selected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_item_selected"
+            android:checked="true" />
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/pb_loading_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:elevation="2dp" />
+
+    <TextView
+        android:id="@+id/tv_no_more_present"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="@dimen/padding_small"
+        android:elevation="2dp"
+        android:gravity="center"
+        android:padding="@dimen/padding_small"
+        android:text="@string/no_more_conversations"
+        android:textColor="@color/med_grey"
+        android:textSize="@dimen/text_large" />
+
+</RelativeLayout>
+
+

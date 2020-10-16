@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:activity=".fragments.SuggestedFollowInterestFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_suggest_follow_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/ultra_light_grey"
+        android:paddingBottom="@dimen/padding_extra_small"
+        android:paddingTop="@dimen/padding_extra_small" />
+
+    <ProgressBar
+        android:id="@+id/pb_loading_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/padding_large"
+        />
+    <include layout="@layout/connection_error_sublayout"/>
+</RelativeLayout>

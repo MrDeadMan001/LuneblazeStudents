@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    android:padding="@dimen/padding_medium"
+    >
+
+    <CheckBox
+        android:id="@+id/cb_select_all"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:buttonTint="@color/app_theme_medium"
+        android:layout_marginTop="2dp"
+        />
+    <RelativeLayout
+        android:id="@+id/rl_venue_wrapper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_toLeftOf="@id/cb_select_all"
+        android:elevation="2dp">
+
+        <ImageView
+            android:id="@+id/iv_is_final"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_item_selected"
+            android:layout_marginRight="@dimen/padding_small"
+            />
+        <TextView
+            android:id="@+id/tv_black_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/tv_venue"
+            android:layout_alignTop="@id/tv_venue"
+            android:background="@drawable/light_grey_rounded_bg"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_large"
+            android:textStyle="bold"
+            android:layout_toRightOf="@id/iv_is_final"
+            />
+
+
+        <TextView
+            android:id="@+id/tv_venue_bar"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/tv_venue"
+            android:layout_alignTop="@id/tv_venue"
+            android:background="@drawable/dark_blue_rounded_bg"
+            android:visibility="visible"
+            android:layout_toRightOf="@id/iv_is_final"
+
+            />
+
+        <TextView
+            android:id="@+id/tv_venue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#00ffffff"
+            android:paddingBottom="@dimen/padding_medium"
+            android:paddingLeft="@dimen/padding_large"
+            android:paddingRight="@dimen/padding_large"
+            android:paddingTop="@dimen/padding_medium"
+            android:text="Venue name"
+            android:layout_toLeftOf="@id/tv_votes"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_xl"
+            android:textStyle="bold"
+            android:layout_toRightOf="@id/iv_is_final"
+
+            />
+
+        <TextView
+            android:id="@+id/tv_votes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="#00ffffff"
+            android:layout_centerVertical="true"
+            android:paddingRight="@dimen/padding_medium"
+            android:paddingLeft="@dimen/padding_medium"
+            android:text="(Votes)"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_large"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_list"
+        android:layout_below="@id/rl_venue_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       />
+
+
+</RelativeLayout>

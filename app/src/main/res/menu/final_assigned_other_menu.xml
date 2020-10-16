@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/assign_room"
+        android:title="@string/assign_room"
+        app:showAsAction="never"
+        android:icon="@drawable/ic_assign_room"
+        />
+    <item
+        android:id="@+id/invite"
+        android:title="@string/invite_fellows"
+        app:showAsAction="never"
+        android:icon="@drawable/ic_invite_unfilled"
+        />
+    <item
+        android:id="@+id/follow_sharer"
+        android:title="@string/follow_sharer"
+        app:showAsAction="never"
+        android:icon="@drawable/ic_follow_unfilled"
+        />
+
+    <item
+        android:id="@+id/share_to"
+        android:title="@string/share_to"
+        app:showAsAction="never"
+        android:icon="@drawable/ic_reply_flipped"
+        />
+    <item
+        android:id="@+id/create_session"
+        android:title="@string/create_session"
+        app:showAsAction="never"
+        android:icon="@drawable/ic_session_unfilled"
+        />
+   <!-- <item
+        android:id="@+id/follow_venue"
+        android:title="@string/follow_venue"
+        app:showAsAction="never"
+        android:icon="@drawable/ic_venue_unfollowed"
+        />-->
+</menu>

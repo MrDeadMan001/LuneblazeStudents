@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/date"
+        android:title="@string/date"
+        app:showAsAction="never"
+
+        />
+    <item
+        android:id="@+id/upvotes"
+        android:title="@string/upvotes"
+        app:showAsAction="never" />
+
+</menu>

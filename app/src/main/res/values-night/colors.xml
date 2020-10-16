@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="app_icon_color">#38a7b2</color>
+    <color name="colorPrimary">#18aeb9</color>
+    <color name="colorPrimaryDark">#0b6c73</color>
+    <color name="colorAccent">#18aeb9</color>
+    <color name="app_theme_chat_box">#c1f4f7</color>
+    <color name="app_theme_extra_light">#abe2ec</color>
+    <color name="app_theme_light">#28d3df</color>
+    <color name="app_theme_medium">#18aeb9</color>
+    <color name="app_theme_dark">#0b6c73</color>
+    <color name="app_theme_extra_dark">#034a50</color>
+    <color name="action_bar_color">#0b6c73</color>
+    <color name="status_bar_color">#034a50</color>
+    <color name="black_translucent_40">#5e030303</color>
+    <color name="black_translucent_20">#2e030303</color>
+    <color name="transparent">#00030303</color>
+
+
+    <color name="dark_text">#fff</color>
+    <color name="med_dark_text">#f9f9f9</color>
+    <color name="light_text">#d1d1d1</color>
+    <color name="very_light_text">#9B9B9B</color>
+    <color name="ultra_light_text">#AFAFAF</color>
+    <color name="item_background_color">#202020</color>
+    <color name="app_background">#171717</color>
+    <color name="icon_active">#18aeb9</color>
+    <color name="icon_inactive">#9B9B9B</color>
+    <color name="thin_divider_color">#329B9B9B</color>
+    <color name="form_inactive_edittext_item_bg">#202020</color>
+    <color name="form_active_edittext_item_bg">#171717</color>
+
+
+
+    <color name="unseen_notification">#d7f7fa</color>
+    <color name="white">#fff</color>
+    <color name="light_white">#f9f9f9</color>
+    <color name="ultra_light_grey">#e7e7e7</color>
+    <color name="mild_light_grey">#d1d1d1</color>
+    <color name="light_grey">#9B9B9B</color>
+    <color name="light_med_grey">#737373</color>
+    <color name="med_grey">#414141</color>
+    <color name="dark_grey">#202020</color>
+    <color name="black">#020202</color>
+    <color name="facebook_button">#3b5997</color>
+    <color name="twitter_button">#55abed</color>
+    <color name="gmail_button">#dc4b39</color>
+    <color name="error_red">#f70505</color>
+    <color name="online_green">#3dbe3b</color>
+
+    <color name="chat_pink">#D81B60</color>
+    <color name="chat_violet">#5E35B1</color>
+    <color name="chat_purple">#8E24AA</color>
+    <color name="chat_brown">#86201E</color>
+    <color name="chat_orange">#F4511E</color>
+</resources>

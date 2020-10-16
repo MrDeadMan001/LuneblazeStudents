@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".update.fragments.quiz.QuizQuestionFragment"
+    android:background="@color/app_background"
+    android:paddingLeft="@dimen/padding_xxl"
+    android:paddingTop="@dimen/padding_xxl"
+    android:paddingRight="@dimen/padding_xxl"
+    android:paddingBottom="@dimen/padding_medium">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/rl_progress"
+            android:layout_alignParentTop="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    style="@style/lightItemRoundedCorner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_question_text"
+                        style="@style/AppTheme.text.catamaran.medDark"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:lineSpacingMultiplier="0.8"
+                        android:paddingLeft="@dimen/padding_medium"
+                        android:paddingRight="@dimen/padding_medium"
+                        android:paddingBottom="@dimen/padding_medium"
+                        android:text="question Textquestion Textquestion Textquestion Textquestion Textquestion Textquestion Textquestion Textquestion Textquestion Textquestion Textquestion Text"
+                        android:textSize="@dimen/text_xl"
+                        android:letterSpacing="0.02"
+                        android:textStyle="bold" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_question_text"
+                        app:cardCornerRadius="@dimen/button_corner_radius">
+
+                        <ImageView
+                            android:id="@+id/iv_question_image"
+                            android:layout_width="match_parent"
+                            android:layout_height="160dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/placeholder" />
+                    </androidx.cardview.widget.CardView>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/padding_xl"
+                    >
+
+                    <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:id="@+id/tv_answer1"
+                        style="@style/AppTheme.text.catamaran.dark"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/rounded_corner_item_bg_fill"
+                        android:lineSpacingMultiplier="0.7"
+                        android:maxHeight="120dp"
+                        android:padding="@dimen/padding_large"
+                        android:text="dsads djsadsadsasah sajdjsa"
+                        android:textSize="@dimen/text_large"
+                        android:layout_marginRight="@dimen/padding_medium_small"
+                        />
+
+                    <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:id="@+id/tv_answer2"
+                        style="@style/AppTheme.text.catamaran.dark"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/rounded_corner_item_bg_fill"
+                        android:lineSpacingMultiplier="0.7"
+                        android:maxHeight="120dp"
+                        android:padding="@dimen/padding_large"
+                        android:text="dsads djsadsadsasah sajdjsa"
+                        android:layout_marginLeft="@dimen/padding_small"
+                        android:textSize="@dimen/text_large" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/padding_large"
+                    >
+
+                    <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:id="@+id/tv_answer3"
+                        style="@style/AppTheme.text.catamaran.dark"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/rounded_corner_item_bg_fill"
+                        android:lineSpacingMultiplier="0.7"
+                        android:maxHeight="120dp"
+                        android:padding="@dimen/padding_large"
+                        android:text="dsads djsadsadsasah sajdjsa"
+                        android:textSize="@dimen/text_large"
+                        android:layout_marginRight="@dimen/padding_medium_small"
+                        />
+
+                    <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:id="@+id/tv_answer4"
+                        style="@style/AppTheme.text.catamaran.dark"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/rounded_corner_item_bg_fill"
+                        android:lineSpacingMultiplier="0.7"
+                        android:maxHeight="120dp"
+                        android:padding="@dimen/padding_large"
+                        android:text="dsads djsadsadsasah sajdjsa"
+                        android:layout_marginLeft="@dimen/padding_small"
+                        android:textSize="@dimen/text_large" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_progress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="@dimen/padding_xxxl">
+
+            <com.google.android.material.progressindicator.ProgressIndicator
+                android:id="@+id/pb_time_left"
+                style="@style/Widget.MaterialComponents.ProgressIndicator.Circular.Determinate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:progress="30"
+                app:circularRadius="24dp"
+                app:indicatorColor="@color/icon_active"
+                app:trackColor="@color/very_light_text" />
+
+            <TextView
+                android:id="@+id/tv_time_left"
+                style="@style/AppTheme.text.catamaran.medDark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:paddingBottom="@dimen/padding_medium"
+                android:text="26"
+                android:textSize="@dimen/text_xxxxl"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+

@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:activity=".activities.organisation.OrganisationProfileInfoActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_large"
+        android:paddingLeft="@dimen/padding_large"
+        android:paddingTop="@dimen/padding_medium"
+        android:paddingRight="@dimen/padding_large"
+        android:paddingBottom="@dimen/padding_small">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_dp_wrapper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_small"
+            app:cardCornerRadius="@dimen/padding_medium"
+            app:cardElevation="0dp">
+
+            <ImageView
+                android:id="@+id/iv_user_dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:background="@color/white"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_company_placeholder" />
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+
+            android:id="@+id/ll_basic_info_wrapper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding_large"
+            android:layout_marginRight="@dimen/padding_medium"
+            android:layout_toRightOf="@id/cv_dp_wrapper"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_organisation_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/iv_edit"
+                    android:fontFamily="@font/allerta"
+                    android:gravity="left"
+                    android:text="@string/company_name"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="@dimen/text_xxl"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/iv_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/ic_edit_grey" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_toLeftOf="@id/rl_analytics_wrapper"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_company_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="Company type"
+                        android:textColor="@color/med_grey"
+                        android:textSize="@dimen/text_large" />
+
+                    <TextView
+                        android:id="@+id/tv_city"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="City"
+                        android:textColor="@color/med_grey"
+                        android:textSize="@dimen/text_large" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_analytics_wrapper"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:padding="@dimen/padding_medium"
+                    >
+                    <TextView
+                        android:id="@+id/tv_follow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/app_theme_dark_border"
+                        android:drawablePadding="@dimen/padding_medium"
+                        android:gravity="center"
+                        android:paddingRight="@dimen/padding_medium"
+                        android:paddingLeft="@dimen/padding_medium"
+                        android:paddingTop="@dimen/padding_small"
+                        android:paddingBottom="@dimen/padding_small"
+                        android:text="@string/follow"
+                        android:textColor="@color/app_theme_dark"
+                        android:textSize="@dimen/text_large"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_analytics"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/app_theme_dark_border"
+                        android:drawablePadding="@dimen/padding_medium"
+                        android:gravity="center"
+                        android:paddingRight="@dimen/padding_medium"
+                        android:paddingLeft="@dimen/padding_medium"
+                        android:paddingTop="@dimen/padding_small"
+                        android:paddingBottom="@dimen/padding_small"
+                        android:text="@string/analytics"
+                        android:textColor="@color/app_theme_dark"
+                        android:textSize="@dimen/text_large"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/tv_followers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="Followers"
+                android:textColor="@color/app_theme_dark"
+
+                android:textSize="@dimen/text_large" />
+
+            <TextView
+                android:id="@+id/tv_website"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text=""
+                android:textColor="@color/app_theme_dark"
+                android:textSize="@dimen/text_large" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_about_company"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="5"
+        android:paddingLeft="@dimen/padding_large"
+        android:paddingRight="@dimen/padding_large"
+        android:paddingBottom="@dimen/padding_medium"
+        android:text="Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text "
+        android:textColor="@color/med_grey" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="@dimen/padding_large"
+        android:layout_marginTop="@dimen/padding_medium"
+        android:layout_marginRight="@dimen/padding_large"
+        android:layout_marginBottom="16dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:id="@+id/tv_campus_drive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding_large"
+            android:layout_marginRight="@dimen/padding_large"
+            android:background="@drawable/app_theme_dark_border"
+
+            android:drawablePadding="@dimen/padding_small"
+            android:gravity="center"
+            android:minWidth="150dp"
+            android:padding="@dimen/padding_medium"
+            android:text="@string/hire"
+            android:textColor="@color/app_theme_dark"
+            android:textSize="@dimen/text_xl"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+
+        <TextView
+            android:id="@+id/tv_sponsor_session"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/app_theme_dark_border"
+            android:drawablePadding="@dimen/padding_medium"
+            android:gravity="center"
+            android:minWidth="150dp"
+            android:padding="@dimen/padding_medium"
+            android:text="@string/sponsor_session"
+            android:textColor="@color/app_theme_dark"
+            android:textSize="@dimen/text_xl"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

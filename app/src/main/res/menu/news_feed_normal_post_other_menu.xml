@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/share_to"
+        android:title="@string/share_to"
+        app:showAsAction="never"
+        android:icon="@drawable/ic_reply_flipped"
+        />
+
+    <item
+        android:id="@+id/unfollow"
+        android:title="@string/unFollow"
+        app:showAsAction="never"
+        android:icon="@drawable/ic_unfollow_feed_poster"
+        />
+
+    <item
+        android:id="@+id/hide_post"
+        android:title="@string/hide"
+        app:showAsAction="never"
+        android:icon="@drawable/ic_hide_post"
+        />
+
+    <item
+        android:id="@+id/report"
+        android:title="@string/report"
+        app:showAsAction="never"
+        android:icon="@drawable/ic_report_gray"
+        />
+
+</menu>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ultra_light_grey"
+    android:padding="@dimen/padding_small"
+    tools:context=".activities.sessions.UploadSessionVideosActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_content_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_session_photos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/rl_bottom_bar"
+            android:layout_alignParentTop="true" />
+
+        <RelativeLayout
+            android:id="@+id/rl_bottom_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fb_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginRight="@dimen/padding_medium"
+                android:layout_marginBottom="@dimen/padding_medium"
+                app:backgroundTint="@color/app_theme_dark"
+                app:srcCompat="@drawable/ic_plus_white" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fb_done"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/padding_medium"
+                android:layout_marginBottom="@dimen/padding_medium"
+                app:backgroundTint="@color/app_theme_dark"
+                app:srcCompat="@drawable/ic_done_white" />
+
+
+            <TextView
+                android:id="@+id/tv_add_more"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/padding_extra_small"
+                android:layout_weight="1"
+                android:background="@drawable/light_blue_rounded_button"
+                android:gravity="center"
+                android:padding="@dimen/padding_medium"
+                android:text="@string/add"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_xl"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_done"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/padding_extra_small"
+                android:layout_weight="1"
+                android:background="@drawable/light_blue_rounded_button"
+                android:gravity="center"
+                android:padding="@dimen/padding_medium"
+                android:text="@string/done"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_xl"
+                android:textStyle="bold"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/pb_loading_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/padding_large" />
+
+</RelativeLayout>

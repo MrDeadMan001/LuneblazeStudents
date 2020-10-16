@@ -1,0 +1,41 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--  <item
+          android:id="@+id/save"
+          android:title="@string/save"
+          app:showAsAction="never"
+          />-->
+    <item
+        android:id="@+id/share_to"
+        android:icon="@drawable/ic_reply_flipped"
+        android:title="@string/share_to"
+        app:showAsAction="never" />
+    <!--    <item
+            android:id="@+id/boost"
+            android:title="@string/boost"
+            app:showAsAction="never"
+            />
+        <item
+            android:id="@+id/unboost"
+            android:title="@string/unboost"
+            app:showAsAction="never"
+            />-->
+    <!--   <item
+           android:id="@+id/pin"
+           android:title="@string/pin"
+           app:showAsAction="never"
+           />-->
+
+    <!-- <item
+         android:id="@+id/hide"
+         android:title="@string/hide"
+         app:showAsAction="never"
+         />-->
+
+    <item
+        android:id="@+id/report"
+        android:icon="@drawable/ic_report_gray"
+        android:title="@string/report"
+        app:showAsAction="never" />
+</menu>

@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:activity=".activities.assessment.AssessmentCategoriesActivity">
+    <TextView
+        android:id="@+id/tv_length_getter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/padding_small"
+        android:layout_marginRight="@dimen/padding_small"
+        android:background="@drawable/tag_item_bg"
+        android:paddingLeft="@dimen/padding_medium"
+        android:paddingTop="@dimen/padding_small"
+        android:paddingRight="@dimen/padding_medium"
+        android:paddingBottom="@dimen/padding_small"
+        android:text="Tag name"
+        android:textColor="@color/app_theme_medium"
+        android:textSize="@dimen/text_med"
+        android:visibility="invisible" />
+
+    <RelativeLayout
+        android:id="@+id/rl_content_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/ll_bottom_buttons_wrapper"
+            android:layout_alignParentTop="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/ultra_light_grey"
+                android:orientation="vertical">
+
+                <com.google.android.material.appbar.AppBarLayout
+                    android:id="@+id/app_bar_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.Toolbar
+                        android:id="@+id/tl_top_bar"
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize"
+                        android:background="@color/white"
+                        android:contentInsetStart="0dp"
+                        android:contentInsetLeft="0dp"
+                        app:contentInsetLeft="0dp"
+                        app:contentInsetStart="0dp">
+
+                        <RelativeLayout
+                            android:id="@+id/rl_search_wrapper"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <EditText
+                                android:id="@+id/et_search_bar"
+                                android:layout_width="match_parent"
+                                android:layout_height="?attr/actionBarSize"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@id/ib_back"
+                                android:background="@color/white"
+                                android:focusable="true"
+                                android:focusableInTouchMode="true"
+                                android:gravity="left|center_vertical"
+                                android:hint="@string/search"
+                                android:maxLines="1"
+                                android:paddingLeft="@dimen/padding_large"
+                                android:singleLine="true"
+                                android:textColor="@color/med_grey"
+                                android:textColorHint="@color/light_grey"
+                                android:textSize="@dimen/text_xl" />
+
+                            <ImageButton
+                                android:id="@+id/ib_back"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/padding_large"
+                                android:background="#00ffffff"
+                                android:padding="@dimen/padding_medium"
+                                android:src="@drawable/ic_back_gray" />
+
+                            <ImageButton
+                                android:id="@+id/ib_search"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="@dimen/padding_large"
+                                android:background="#00ffffff"
+                                android:padding="@dimen/padding_medium"
+                                android:src="@drawable/ic_search_gray" />
+
+                        </RelativeLayout>
+                    </androidx.appcompat.widget.Toolbar>
+                </com.google.android.material.appbar.AppBarLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_assessment_category_search_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:paddingLeft="32dp" />
+
+                <TextView
+                    android:id="@+id/tv_added_categories_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/app_theme_medium"
+                    android:drawableRight="@drawable/ic_collapse"
+                    android:padding="@dimen/padding_medium"
+                    android:text="@string/selected_categories"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_xl"
+                    android:textStyle="bold" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_categories_to_be_sent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/padding_small"
+                    android:background="@color/white"
+                    android:overScrollMode="never"
+                    android:paddingTop="@dimen/padding_small" />
+
+                <TextView
+                    android:id="@+id/tv_select_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/app_theme_medium"
+                    android:padding="@dimen/padding_medium"
+                    android:text="@string/select_categories_from_below"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_xl"
+                    android:textStyle="bold" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_hierarchy_indicator"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white" />
+
+                <include layout="@layout/thinnest_app_theme_color_divider" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_list1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@color/app_theme_light"
+                    android:dividerHeight="1px"
+                    android:visibility="visible" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <LinearLayout
+            android:id="@+id/ll_bottom_buttons_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_done_button"
+                style="@style/blue_button_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/done" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/pb_loading_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/ll_loading_wrapper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:orientation="vertical"
+        >
+
+        <RelativeLayout
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center_horizontal">
+
+            <ImageView
+                android:id="@+id/iv_outer_ring"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/outer_ring" />
+
+            <ImageView
+                android:id="@+id/iv_inner_ring"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/padding_small"
+                android:src="@drawable/inner_ring" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_small"
+            android:text="@string/loading_categories"
+            android:textColor="@color/med_grey"
+            android:textSize="@dimen/text_xl"
+            android:textStyle="bold" />
+    </LinearLayout>
+</RelativeLayout>
+

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/padding_extra_small"
+    android:background="@color/ultra_light_grey"
+    tools:activity=".activities.chat.GroupInfoActivity">
+
+    <LinearLayout
+        android:id="@+id/ll_content_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding_extra_small"
+            android:layout_marginTop="@dimen/padding_extra_small"
+            android:layout_marginRight="@dimen/padding_extra_small"
+            android:layout_marginBottom="@dimen/padding_large"
+            android:background="@drawable/grey_border_white_fill"
+            android:elevation="2dp"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/iv_group_photo"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:layout_marginLeft="@dimen/padding_medium"
+                android:scaleType="centerCrop"
+                android:src="@drawable/placeholder" />
+
+            <ImageView
+                android:id="@+id/iv_edit_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/et_group_name"
+                android:layout_alignParentRight="true"
+                android:padding="@dimen/padding_small"
+                android:src="@drawable/ic_edit_grey" />
+
+            <ImageView
+                android:id="@+id/iv_done_editing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/et_group_name"
+                android:layout_alignParentRight="true"
+                android:padding="@dimen/padding_small"
+                android:src="@drawable/ic_thanks_unfilled" />
+
+
+            <EditText
+                android:id="@+id/et_group_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/iv_group_photo"
+                android:background="@color/transparent"
+                android:enabled="false"
+                android:padding="@dimen/padding_medium"
+                android:text="group name"
+                android:layout_marginLeft="@dimen/padding_medium"
+                android:textColor="@color/dark_grey"
+                android:textColorHint="@color/light_grey"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_xl" />
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_member_count"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/app_theme_medium"
+            android:padding="@dimen/padding_medium"
+            android:text="@string/participants"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_xl"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_member_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/ultra_light_grey" />
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/pb_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+
+</RelativeLayout>

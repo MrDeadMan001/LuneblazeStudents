@@ -1,0 +1,25 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:activity="com.avadna.luneblaze.fragments.SuggestFriendsFragment"
+    android:orientation="vertical"
+    android:background="@color/ultra_light_grey"
+
+    >
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_suggested_friends_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/tv_next"
+        android:layout_alignParentTop="true"
+        android:background="@color/ultra_light_grey"
+        android:padding="@dimen/padding_extra_small"
+        android:layout_margin="@dimen/padding_extra_small"
+        />
+    <include layout="@layout/connection_error_sublayout"/>
+
+
+</RelativeLayout>

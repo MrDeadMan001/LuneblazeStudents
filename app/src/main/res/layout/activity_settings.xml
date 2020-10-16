@@ -1,0 +1,721 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ultra_light_grey"
+    tools:activity="com.avadna.luneblaze.activities.settingActivities.SettingsActivity">
+
+    <LinearLayout
+        android:id="@+id/ll_content_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/ultra_light_grey"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/padding_small"
+            android:layout_marginRight="@dimen/padding_small"
+            android:layout_marginBottom="@dimen/padding_small">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/ll_account_settings_wrapper"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/padding_medium"
+                    android:layout_marginBottom="@dimen/padding_medium"
+                    android:background="@drawable/grey_border_white_fill"
+                    android:elevation="2dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/tableHeaderStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/account"
+                        android:textSize="@dimen/text_xl" />
+
+                    <TextView
+                        android:id="@+id/tv_add_mail"
+                        style="@style/settingsItemStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/add_email" />
+
+                    <include layout="@layout/thinnest_light_grey_divider_with_margin" />
+
+                    <TextView
+                        android:id="@+id/tv_add_phone"
+                        style="@style/settingsItemStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/add_phone_number" />
+
+                    <include layout="@layout/thinnest_light_grey_divider_with_margin" />
+
+                    <TextView
+                        android:id="@+id/tv_change_password"
+                        style="@style/settingsItemStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/change_password" />
+
+                    <include layout="@layout/thinnest_light_grey_divider_with_margin" />
+
+                    <TextView
+                        android:id="@+id/tv_manage_feed"
+                        style="@style/settingsItemStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/manage_your_feed" />
+
+                    <include layout="@layout/thinnest_light_grey_divider_with_margin" />
+
+                    <TextView
+                        android:id="@+id/tv_organisation"
+                        style="@style/settingsItemStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/create_organisation_page" />
+
+                    <include layout="@layout/thinnest_light_grey_divider_with_margin" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_my_organisation_wrapper"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:id="@+id/rl_my_organisation_wrapper"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_my_organisations"
+                                style="@style/settingsItemStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/my_organisations" />
+
+                            <TextView
+                                android:id="@+id/tv_organisation_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="@dimen/padding_large"
+                                android:layout_toRightOf="@id/tv_my_organisations"
+                                android:gravity="right"
+                                android:padding="@dimen/padding_medium"
+                                android:maxLines="1"
+                                android:ellipsize="end"
+                                android:text="Organisation"
+                                android:textColor="@color/app_theme_dark"
+                                android:textSize="@dimen/text_xl"
+                               />
+
+                        </RelativeLayout>
+
+                        <include layout="@layout/thinnest_light_grey_divider_with_margin" />
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/tv_verification_request"
+                        style="@style/settingsItemStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/verification_request"
+                        android:visibility="gone" />
+
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/tv_close_account"
+                            style="@style/settingsItemStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/close_delete_account" />
+
+                        <TextView
+                            android:id="@+id/tv_withdraw_delete"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/padding_large"
+                            android:background="@drawable/app_theme_border"
+                            android:paddingLeft="@dimen/padding_medium"
+                            android:paddingTop="@dimen/padding_small"
+                            android:paddingRight="@dimen/padding_medium"
+                            android:paddingBottom="@dimen/padding_small"
+                            android:text="@string/withdraw"
+                            android:textColor="@color/app_theme_medium" />
+
+                        <ProgressBar
+                            android:id="@+id/pb_delete_withdraw_status"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="32dp" />
+                    </RelativeLayout>
+                    <include layout="@layout/thinnest_light_grey_divider_with_margin" />
+
+                    <TextView
+                        android:id="@+id/tv_assessment_report"
+                        style="@style/settingsItemStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/assessment_report" />
+
+                    <include layout="@layout/thinnest_light_grey_divider_with_margin" />
+
+                    <TextView
+                        android:id="@+id/tv_signout"
+                        style="@style/settingsItemStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sign_out" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/ll_privacy_settings_wrapper"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/padding_medium"
+                    android:background="@drawable/grey_border_white_fill"
+                    android:elevation="2dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/tableHeaderStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/privacy"
+                        android:textSize="@dimen/text_xl" />
+
+                    <TextView
+                        android:id="@+id/tv_who_can_send_req"
+                        style="@style/settingsItemStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/who_can_send_you_connection_request" />
+
+                    <include layout="@layout/thinnest_light_grey_divider_with_margin" />
+
+                    <TextView
+                        android:id="@+id/tv_who_can_see_connections"
+                        style="@style/settingsItemStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/who_can_see_your_connections" />
+
+                    <include layout="@layout/thinnest_light_grey_divider_with_margin" />
+
+                    <TextView
+                        android:id="@+id/tv_who_can_see_sessions"
+                        style="@style/settingsItemStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/who_can_see_your_sessions" />
+
+                    <include layout="@layout/thinnest_light_grey_divider_with_margin" />
+
+                    <TextView
+                        android:id="@+id/tv_who_can_message"
+                        style="@style/settingsItemStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/who_can_message_you" />
+
+                    <include layout="@layout/thinnest_light_grey_divider_with_margin" />
+
+                    <TextView
+                        android:id="@+id/tv_who_can_see_choices"
+                        style="@style/settingsItemStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/who_can_see_your_choices" />
+
+
+                    <include layout="@layout/thinnest_light_grey_divider_with_margin" />
+
+                    <TextView
+                        android:id="@+id/tv_who_can_see_profile_info"
+                        style="@style/settingsItemStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/who_can_see_your_profile_info" />
+
+                    <include layout="@layout/thinnest_light_grey_divider_with_margin" />
+
+                    <TextView
+                        android:id="@+id/tv_who_can_see_content"
+                        style="@style/settingsItemStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/who_can_see_your_content" />
+
+                    <include layout="@layout/thinnest_light_grey_divider_with_margin" />
+
+                    <TextView
+                        android:id="@+id/tv_tagging"
+                        style="@style/settingsItemStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/who_can_tag_you" />
+
+                    <include layout="@layout/thinnest_light_grey_divider_with_margin" />
+
+                    <TextView
+                        android:id="@+id/tv_blocking"
+                        style="@style/settingsItemStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/blocking" />
+
+                    <include layout="@layout/thinnest_light_grey_divider_with_margin" />
+
+                    <TextView
+                        android:id="@+id/tv_session_blocking"
+                        style="@style/settingsItemStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/session_blocking" />
+
+                    <include layout="@layout/thinnest_light_grey_divider_with_margin" />
+
+                    <TextView
+                        android:id="@+id/tv_session_invite"
+                        style="@style/settingsItemStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/who_can_invite_you_in_sessions" />
+
+                    <include layout="@layout/thinnest_light_grey_divider_with_margin" />
+
+                    <TextView
+                        android:id="@+id/tv_session_conduct_invite"
+                        style="@style/settingsItemStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/who_can_invite_you_to_conduct_sessions" />
+
+                    <include layout="@layout/thinnest_light_grey_divider_with_margin" />
+
+                    <TextView
+                        android:id="@+id/tv_answer_invite"
+                        style="@style/settingsItemStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/who_can_ask_you_to_answer_a_question" />
+
+                    <include layout="@layout/thinnest_light_grey_divider_with_margin" />
+
+                    <TextView
+                        android:id="@+id/tv_interest_invite"
+                        style="@style/settingsItemStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/who_can_invite_you_to_interests" />
+
+                    <include layout="@layout/thinnest_light_grey_divider_with_margin" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/sw_two_step_verification"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/padding_medium"
+                            android:padding="@dimen/padding_small" />
+
+                        <TextView
+                            android:id="@+id/tv_two_step"
+                            style="@style/settingsItemStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_toLeftOf="@id/sw_two_step_verification"
+                            android:text="@string/two_step_verification" />
+
+                    </RelativeLayout>
+
+                    <include layout="@layout/thinnest_light_grey_divider_with_margin" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_app_settings_wrapper"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/padding_medium"
+                    android:background="@drawable/grey_border_white_fill"
+                    android:elevation="2dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/tableHeaderStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/app_settings"
+                        android:textSize="@dimen/text_xl" />
+
+                    <TextView
+                        android:id="@+id/tv_notifications"
+                        style="@style/settingsItemStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/notifications" />
+
+                    <com.google.android.material.tabs.TabLayout
+                        android:id="@+id/tl_notification_tabs"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/padding_medium"
+                        android:layout_marginRight="@dimen/padding_medium"
+                        android:background="@color/white"
+                        app:tabMode="fixed"
+                        app:tabSelectedTextColor="@color/app_theme_dark"
+                        app:tabTextColor="@color/med_grey">
+
+                    </com.google.android.material.tabs.TabLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/padding_medium"
+                        android:layout_marginRight="@dimen/padding_medium"
+                        android:layout_marginBottom="@dimen/padding_medium"
+                        android:background="@drawable/grey_border_white_fill"
+                        android:orientation="vertical"
+                        android:padding="@dimen/padding_extra_small">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <androidx.appcompat.widget.SwitchCompat
+                                android:id="@+id/sw_invite_switch"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="@dimen/padding_medium"
+                                android:padding="@dimen/padding_small" />
+
+                            <TextView
+                                android:id="@+id/tv_invites_and_messages"
+                                style="@style/settingsItemStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_toLeftOf="@id/sw_invite_switch"
+                                android:text="@string/invites_and_messages" />
+
+
+                        </RelativeLayout>
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <androidx.appcompat.widget.SwitchCompat
+                                android:id="@+id/sw_session_related_switch"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="@dimen/padding_medium"
+                                android:padding="@dimen/padding_small" />
+
+                            <TextView
+                                android:id="@+id/tv_session_related"
+                                style="@style/settingsItemStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_toLeftOf="@id/sw_session_related_switch"
+                                android:text="@string/session_related" />
+
+
+                        </RelativeLayout>
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <androidx.appcompat.widget.SwitchCompat
+                                android:id="@+id/sw_qna_related_switch"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="@dimen/padding_medium"
+                                android:padding="@dimen/padding_small" />
+
+                            <TextView
+                                android:id="@+id/tv_question_and_answer"
+                                style="@style/settingsItemStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_toLeftOf="@id/sw_qna_related_switch"
+                                android:text="@string/question_and_answer_related" />
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <androidx.appcompat.widget.SwitchCompat
+                                android:id="@+id/sw_articles_related"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="@dimen/padding_medium"
+                                android:padding="@dimen/padding_small" />
+
+                            <TextView
+                                android:id="@+id/tv_article_related"
+                                style="@style/settingsItemStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_toLeftOf="@id/sw_articles_related"
+                                android:text="@string/articles_related" />
+
+
+                        </RelativeLayout>
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <androidx.appcompat.widget.SwitchCompat
+                                android:id="@+id/sw_updates_on_activities"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="@dimen/padding_medium"
+                                android:padding="@dimen/padding_small" />
+
+                            <TextView
+                                android:id="@+id/tv_update_on_activity"
+                                style="@style/settingsItemStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_toLeftOf="@id/sw_updates_on_activities"
+                                android:text="@string/updates_on_your_activities" />
+
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/tv_message_read"
+                        style="@style/settingsItemStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/message_read_typing_info"
+                        android:visibility="gone" />
+                    <!--
+                                    <include layout="@layout/thinnest_light_grey_divider_with_margin" />
+
+                                    &lt;!&ndash; <TextView
+                                         android:id="@+id/tv_language"
+                                         style="@style/settingsItemStyle"
+                                         android:layout_width="match_parent"
+                                         android:layout_height="wrap_content"
+                                         android:text="Language" />&ndash;&gt;
+
+                                    <include layout="@layout/thinnest_light_grey_divider_with_margin" />-->
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone">
+
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/sw_auto_play_videos"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/padding_medium"
+                            android:padding="@dimen/padding_small" />
+
+                        <TextView
+                            android:id="@+id/tv_auto_play"
+                            style="@style/settingsItemStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_toLeftOf="@id/sw_auto_play_videos"
+                            android:text="@string/auto_play_videos" />
+
+                    </RelativeLayout>
+
+
+                    <include layout="@layout/thinnest_light_grey_divider_with_margin" />
+
+                    <TextView
+                        android:id="@+id/tv_sound_and_vibration"
+                        style="@style/settingsItemStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sounds_and_vibrations" />
+
+                    <TextView
+                        android:id="@+id/tv_language"
+                        style="@style/settingsItemStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/language"
+                        android:visibility="invisible" />
+
+
+                    <include layout="@layout/thinnest_light_grey_divider_with_margin" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_help_support_settings_wrapper"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/padding_medium"
+                    android:background="@drawable/grey_border_white_fill"
+                    android:elevation="2dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/tableHeaderStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/help_and_support"
+                        android:textSize="@dimen/text_xl" />
+
+                    <include layout="@layout/thinnest_light_grey_divider_with_margin" />
+
+                    <TextView
+                        android:id="@+id/tv_active_sessions"
+                        style="@style/settingsItemStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/active_sessions" />
+
+                    <include layout="@layout/thinnest_light_grey_divider_with_margin" />
+
+                    <TextView
+                        android:id="@+id/tv_feedback"
+                        style="@style/settingsItemStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/feedback_and_suggestions" />
+
+                    <include layout="@layout/thinnest_light_grey_divider_with_margin" />
+
+                    <TextView
+                        android:id="@+id/tv_report_bug"
+                        style="@style/settingsItemStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/report_a_bug" />
+
+                    <include layout="@layout/thinnest_light_grey_divider_with_margin" />
+
+                    <TextView
+                        android:id="@+id/tv_help_center"
+                        style="@style/settingsItemStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/help_center"
+                        android:visibility="gone" />
+
+                    <include layout="@layout/thinnest_light_grey_divider_with_margin" />
+
+                    <TextView
+                        android:id="@+id/tv_privacy_policy"
+                        style="@style/settingsItemStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/privacy_policy" />
+
+                    <include layout="@layout/thinnest_light_grey_divider_with_margin" />
+
+                    <TextView
+                        android:id="@+id/tv_session_policy"
+                        style="@style/settingsItemStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/session_policy" />
+
+                    <include layout="@layout/thinnest_light_grey_divider_with_margin" />
+
+                    <TextView
+                        android:id="@+id/tv_terms_of_use"
+                        style="@style/settingsItemStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/terms_of_use_settings" />
+
+                    <include layout="@layout/thinnest_light_grey_divider_with_margin" />
+
+                    <TextView
+                        android:id="@+id/tv_user_agreement"
+                        style="@style/settingsItemStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/user_agreement"
+                        android:visibility="gone" />
+
+                    <include layout="@layout/thinnest_light_grey_divider_with_margin" />
+
+                    <TextView
+                        android:id="@+id/tv_end_user_agreement"
+                        style="@style/settingsItemStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/end_user_license_agreement"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/pb_loading_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/padding_large" />
+</RelativeLayout>

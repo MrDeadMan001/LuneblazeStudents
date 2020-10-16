@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="@dimen/padding_large">
+
+    <LinearLayout
+        android:id="@+id/ll_dialog_content_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical"
+        android:layout_marginBottom="@dimen/padding_large"
+        >
+        <TextView
+            android:id="@+id/tv_dialog_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/padding_large"
+            android:text="Enter the email address below. We will send a confirmation code to the entered email address"
+            android:textColor="@color/dark_grey"
+            android:textSize="@dimen/text_xl" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding_small"
+            android:layout_marginRight="@dimen/padding_small"
+            android:hint="@string/email"
+            app:errorEnabled="true"
+            android:textColorHint="@color/light_grey"
+            app:errorTextAppearance="@style/error_appearance"
+            app:hintTextAppearance="@style/hint_appearance">
+            <EditText
+                android:id="@+id/et_email"
+                style="@style/signUpEditTextTheme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <EditText
+            android:id="@+id/et_password"
+            style="@style/editTextThemeAppThemeMed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:visibility="gone"
+            android:hint="Luneblaze Password"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_confirmation_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding_small"
+            android:layout_marginRight="@dimen/padding_small"
+            android:hint="@string/confirmation_code"
+            app:errorEnabled="true"
+            android:textColorHint="@color/light_grey"
+            app:errorTextAppearance="@style/error_appearance"
+            app:hintTextAppearance="@style/hint_appearance">
+            <EditText
+                android:id="@+id/et_confirmation_code"
+                style="@style/signUpEditTextTheme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <include layout="@layout/thick_divider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_cancel"
+                style="@style/blue_button_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/cancel" />
+            <TextView
+                android:id="@+id/tv_done"
+                style="@style/blue_button_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/done" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

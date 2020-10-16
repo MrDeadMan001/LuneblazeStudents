@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background"
+    tools:context=".update.activities.quiz.CreateQuizActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            style="@style/formSectionStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/form_section_gap">
+
+            <TextView
+                android:id="@+id/tv_title"
+                style="@style/formFieldHeaderStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:text="@string/quiz_title" />
+
+            <TextView
+                android:id="@+id/tv_title_char_count"
+                style="@style/formFieldCharCounterStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/et_title"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:text="0/20" />
+
+            <EditText
+                android:id="@+id/et_title"
+                style="@style/formEditTextStyleInactive"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_title"
+                android:hint="@string/quiz_title_hint" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            style="@style/formSectionStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/form_section_gap">
+
+            <TextView
+                android:id="@+id/tv_description"
+                style="@style/formFieldHeaderStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:text="@string/quiz_description" />
+
+            <TextView
+                android:id="@+id/tv_description_char_count"
+                style="@style/formFieldCharCounterStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/et_description"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:text="0/200" />
+
+            <EditText
+                android:id="@+id/et_description"
+                style="@style/formEditTextStyleInactive"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_description"
+                android:gravity="top"
+                android:minHeight="150dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            style="@style/formSectionStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/form_section_gap">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="@dimen/button_corner_radius">
+
+                <Button
+                    android:id="@+id/bt_add_image"
+                    style="@style/transparentBGButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/tap_to_add_image"
+                    android:textSize="@dimen/text_xxl"
+                    app:drawableTopCompat="@drawable/ic_add_image_gray" />
+
+                <ImageView
+                    android:id="@+id/iv_quiz_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/dotted_grey_border_grey_fill"
+                    android:scaleType="centerCrop"
+                    android:minHeight="180dp" />
+
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/lv_questions_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+        <RelativeLayout
+            android:id="@+id/rl_add_question_wrapper"
+            style="@style/formSectionStyle"
+            android:padding="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/form_section_gap">
+
+            <Button
+                android:id="@+id/bt_add_question"
+                style="@style/transparentBGButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:drawablePadding="@dimen/padding_small"
+                android:gravity="center"
+                android:text="@string/add_more_question"
+                android:textSize="@dimen/text_xl"
+                app:drawableLeftCompat="@drawable/ic_plus_app_theme" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            style="@style/formSectionStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/form_section_gap">
+
+            <TextView
+                android:id="@+id/tv_duration"
+                style="@style/formFieldHeaderStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:paddingBottom="0dp"
+                android:text="@string/quiz_duration" />
+
+            <Button
+                android:id="@+id/bt_select_duration"
+                style="@style/transparentBGButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_duration"
+                android:gravity="center_vertical"
+                android:text="@string/select_duration"
+                android:layout_marginBottom="-10dp"
+
+                android:textSize="@dimen/text_xxl"
+                app:drawableRightCompat="@drawable/ic_dropdown_gray" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            style="@style/formSectionStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/form_section_gap">
+
+            <TextView
+                android:id="@+id/tv_tags"
+                style="@style/formFieldHeaderStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:paddingBottom="@dimen/padding_small"
+                android:text="@string/add_tags" />
+
+            <TextView
+                android:id="@+id/tag_name"
+                style="@style/AppTheme.text.catamaran.light"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_tags"
+                android:gravity="center_vertical"
+                android:text="@string/type_tags_name"
+                android:textSize="@dimen/text_xl" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

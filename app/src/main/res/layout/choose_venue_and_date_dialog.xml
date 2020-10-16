@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    >
+
+    <LinearLayout
+        android:id="@+id/ll_venue_data_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/white_rounded_border_white_fill"
+        android:orientation="vertical"
+        android:paddingLeft="32dp"
+        android:paddingRight="32dp"
+        android:paddingTop="32dp"
+        android:paddingBottom="16dp">
+
+        <TextView
+            android:id="@+id/tv_chosen_venue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/padding_large"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:hint="Choose Venue 1"
+            android:padding="@dimen/padding_medium"
+            android:textColor="@color/dark_grey"
+            android:textColorHint="@color/med_grey"
+            android:textSize="@dimen/text_xl"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/padding_medium"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_date1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/padding_medium"
+                android:layout_weight="3"
+                android:background="@drawable/grey_border_white_fill"
+                android:gravity="center"
+                android:hint="Pick date 1"
+                android:padding="@dimen/padding_medium"
+                android:textColor="@color/dark_grey"
+                android:textColorHint="@color/light_grey" />
+
+
+            <TextView
+                android:id="@+id/tv_date2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/padding_medium"
+                android:layout_weight="3"
+                android:background="@drawable/grey_border_white_fill"
+                android:gravity="center"
+                android:hint="Pick date 2"
+                android:padding="@dimen/padding_medium"
+                android:textColor="@color/dark_grey"
+
+                android:textColorHint="@color/light_grey" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_done"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/done_capital"
+            android:textColor="@color/app_theme_dark"
+            android:textSize="@dimen/text_xl"
+            android:textStyle="bold"
+            android:layout_gravity="end"
+            android:padding="@dimen/padding_medium"
+
+            />
+    </LinearLayout>
+</RelativeLayout>

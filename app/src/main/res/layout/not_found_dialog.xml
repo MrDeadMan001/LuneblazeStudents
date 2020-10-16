@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_not_found"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/ic_not_found" />
+
+        <TextView
+            android:id="@+id/tv_not_found"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_not_found"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="@dimen/padding_large"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="32dp"
+            android:layout_marginRight="@dimen/padding_large"
+            android:padding="@dimen/padding_large"
+            android:text="@string/not_found"
+            android:textColor="@color/dark_grey"
+            android:textSize="@dimen/text_xxl" />
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/bt_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginRight="@dimen/padding_large"
+        android:layout_marginBottom="@dimen/padding_large"
+        android:background="@color/transparent"
+        android:gravity="center"
+        android:text="@string/dismiss"
+        android:textColor="@color/app_theme_dark"
+        android:textSize="@dimen/text_xl"
+
+        />
+
+
+</RelativeLayout>

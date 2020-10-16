@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#0fff">
+
+    <RelativeLayout
+        android:id="@+id/tl_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/action_bar_color">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/padding_medium"
+            android:src="@drawable/ic_back_white" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="left"
+            android:layout_marginLeft="@dimen/padding_large"
+            android:layout_toRightOf="@id/iv_back"
+            android:layout_toLeftOf="@id/iv_close"
+            android:text="Title"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_xxl"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/padding_medium"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_no_cross"
+            android:visibility="invisible"
+            />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_total_count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_xxl"
+        android:textColor="@color/med_grey"
+        android:padding="@dimen/padding_large"
+        android:layout_below="@id/tl_top_bar"
+        android:visibility="gone"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_total_count"
+        android:background="#0fff" />
+
+    <ProgressBar
+        android:id="@+id/pb_loading_users"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/padding_medium" />
+    <TextView
+        android:id="@+id/tv_no_students"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="32dp"
+        android:paddingBottom="32dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:background="@color/white"
+        android:textColor="@color/med_grey"
+        android:textSize="@dimen/text_xl"
+        android:textStyle="bold"
+        android:text="@string/no_students_per_filter"
+        android:gravity="center"
+        android:visibility="gone"
+        />
+
+</LinearLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_notification"
+        android:title="@string/notifications"
+        android:icon="@drawable/nav_notification_selector"
+        />
+    <item
+        android:id="@+id/nav_message"
+        android:title="@string/messages"
+        android:icon="@drawable/nav_message_selector"
+        />
+    <item
+        android:id="@+id/nav_home"
+        android:title="@string/feeds"
+        android:icon="@drawable/nav_feed_selector"
+        />
+    <item
+        android:id="@+id/nav_session"
+        android:title="@string/sessions"
+        android:icon="@drawable/nav_session_selector"
+        />
+    <item
+        android:id="@+id/nav_friends"
+        android:title="@string/fellows"
+        android:icon="@drawable/nav_friend_selector"
+        />
+</menu>

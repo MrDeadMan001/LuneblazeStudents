@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/relevance_any"
+        android:title="@string/any"
+        app:showAsAction="never"
+        />
+    <item
+        android:id="@+id/relevance_most_upvoted"
+        android:title="@string/most_upvoted"
+        app:showAsAction="never"
+        />
+</menu>

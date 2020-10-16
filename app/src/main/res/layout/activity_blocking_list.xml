@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ultra_light_grey"
+    android:orientation="vertical"
+    tools:activity="com.avadna.luneblaze.activities.settingActivities.BlockingListActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <!--  <RelativeLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              >
+
+              <LinearLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_centerInParent="true"
+                  android:orientation="vertical"
+                  android:paddingBottom="@dimen/edit_text_padding_large"
+                  android:paddingLeft="@dimen/edit_text_padding_medium"
+                  android:paddingRight="20dp"
+                  android:paddingTop="@dimen/edit_text_padding_large">
+
+                  <TextView
+                      android:id="@+id/tv_num_following"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:gravity="center"
+                      android:text="00"
+                      android:textColor="@color/dark_grey"
+                      android:textSize="28sp" />
+
+                  <TextView
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:gravity="center"
+                      android:text="Following"
+                      android:textColor="@color/med_grey"
+                      android:textSize="@dimen/text_xl" />
+              </LinearLayout>
+          </RelativeLayout>-->
+
+
+        <TextView
+            android:id="@+id/tv_top_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_large"
+            android:text="Following users have been blocked by you"
+            android:textColor="@color/med_grey"
+            android:textSize="@dimen/text_xl" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_blocked_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_top_bar"
+            android:background="@color/ultra_light_grey"
+            android:paddingTop="@dimen/padding_extra_small"
+            android:paddingBottom="@dimen/padding_extra_small" />
+
+        <ProgressBar
+            android:id="@+id/pb_loading_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_top_bar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/padding_large" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

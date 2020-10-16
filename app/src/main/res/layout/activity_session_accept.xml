@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ultra_light_grey"
+    android:orientation="vertical"
+    tools:activity="com.avadna.luneblaze.activities.SessionAcceptFormActivity">
+
+    <ScrollView
+        android:id="@+id/sv_parent_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/padding_small"
+        android:layout_marginLeft="@dimen/padding_medium"
+        android:layout_marginRight="@dimen/padding_medium"
+        android:background="@color/ultra_light_grey">
+
+        <LinearLayout
+            android:id="@+id/ll_scroll_child"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="@dimen/padding_large"
+                android:layout_marginBottom="@dimen/padding_medium"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/padding_extra_small"
+                    android:text="Please briefly explain why you think, you can share the listed topics and help the attendees."
+                    android:textColor="@color/dark_grey"
+                    android:textSize="@dimen/text_large" />
+
+                <EditText
+                    android:id="@+id/et_accepting_reason"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/padding_large"
+                    android:background="@drawable/grey_border_white_fill"
+                    android:padding="@dimen/padding_medium"
+                    android:inputType="textCapSentences|textMultiLine"
+                    android:textColorHint="@color/light_grey"
+                    android:textSize="@dimen/text_large"
+                    android:textColor="@color/dark_grey"
+                    android:maxLines="6"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="@dimen/padding_large"
+                android:layout_marginBottom="@dimen/padding_medium"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/padding_extra_small"
+                    android:text="Please briefly explain what the highlights would be for your session."
+                    android:textColor="@color/dark_grey"
+                    android:textSize="@dimen/text_large" />
+
+                <EditText
+                    android:id="@+id/et_session_highlights"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/padding_large"
+                    android:background="@drawable/grey_border_white_fill"
+                    android:hint="Enter highlights here"
+                    android:padding="@dimen/padding_medium"
+                    android:inputType="textCapSentences|textMultiLine"
+                    android:textColorHint="@color/light_grey"
+                    android:textSize="@dimen/text_large"
+                    android:textColor="@color/dark_grey"
+                    android:maxLines="6"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="@dimen/padding_large"
+                android:layout_marginBottom="@dimen/padding_medium"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/padding_extra_small"
+                    android:text="Number of attendees allowed (minimum 20)"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="@dimen/text_large" />
+
+                <EditText
+                    android:id="@+id/et_num_attendees"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/padding_large"
+                    android:background="@drawable/grey_border_white_fill"
+                    android:hint="Enter total number of attendees allowed here"
+                    android:padding="@dimen/padding_medium"
+                    android:textColorHint="@color/light_grey"
+                    android:textSize="@dimen/text_large"
+                    android:textColor="@color/dark_grey"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="@dimen/padding_large"
+                android:layout_marginBottom="@dimen/padding_medium"
+                >
+                <TextView
+                    android:id="@+id/tv_done_button"
+                    style="@style/blue_button_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Done" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <ProgressBar
+        android:id="@+id/pb_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        />
+</RelativeLayout>

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background"
+    tools:context=".update.activities.quiz.AddQuestionActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/item_background_color"
+            >
+            <TextView
+                android:id="@+id/tv_done"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                style="@style/transparentBGButton"
+                android:textColor="@color/icon_active"
+                android:text="@string/done"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/padding_small"
+                android:layout_marginRight="@dimen/padding_large"
+                android:textSize="@dimen/text_large"
+                android:textStyle="bold"
+                />
+
+        </RelativeLayout>
+        <RelativeLayout
+            style="@style/formSectionStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/form_section_gap"
+            >
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="@dimen/button_corner_radius"
+                >
+                <Button
+                    android:id="@+id/bt_add_question_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    style="@style/transparentBGButton"
+                    android:text="@string/tap_to_add_image"
+                    android:textSize="@dimen/text_xxl"
+                    app:drawableTopCompat="@drawable/ic_add_image_gray" />
+                <ImageView
+                    android:id="@+id/iv_question_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="180dp"
+                    android:background="@drawable/dotted_grey_border_grey_fill"
+                    />
+
+
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            style="@style/formSectionStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/form_section_gap">
+
+            <TextView
+                android:id="@+id/tv_question"
+                style="@style/formFieldHeaderStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:text="@string/question" />
+
+            <TextView
+                android:id="@+id/tv_title_char_count"
+                style="@style/formFieldCharCounterStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/et_question"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:text="0/40" />
+
+            <EditText
+                android:id="@+id/et_question"
+                style="@style/formEditTextStyleInactive"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_question"
+                android:hint="@string/quiz_title_hint" />
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_answer_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/form_section_gap"
+            />
+
+        <RelativeLayout
+            style="@style/formSectionStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/form_section_gap"
+            >
+
+            <ImageButton
+                android:id="@+id/ib_add_question"
+                style="@style/imageButtonStyle"
+                android:src="@drawable/ic_plus_white"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/padding_extra_small"
+                android:layout_toLeftOf="@id/bt_add_answer"
+                android:layout_toStartOf="@id/bt_add_answer" />
+
+            <Button
+                android:id="@+id/bt_add_answer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/add_ans_choice"
+                android:textSize="@dimen/text_xl"
+                style="@style/transparentBGButton"
+                android:layout_centerInParent="true"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            style="@style/formSectionStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/form_section_gap">
+
+            <TextView
+                android:id="@+id/tv_duration"
+                style="@style/formFieldHeaderStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:paddingBottom="@dimen/padding_small"
+                android:text="@string/answer_duration" />
+            <Button
+                android:id="@+id/bt_select_question_duration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/select_duration"
+                android:textSize="@dimen/text_xxl"
+                android:gravity="center_vertical"
+                style="@style/transparentBGButton"
+                android:layout_below="@id/tv_duration"
+                app:drawableRightCompat="@drawable/ic_dropdown_gray" />
+        </RelativeLayout>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

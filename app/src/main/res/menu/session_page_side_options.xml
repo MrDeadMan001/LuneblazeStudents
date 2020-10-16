@@ -1,0 +1,39 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/join"
+        android:title="@string/join"
+        app:showAsAction="never"
+        />
+    <item
+        android:id="@+id/follow_interest"
+        android:title="@string/follow_tagged_interests"
+        app:showAsAction="never"
+        />
+    <item
+        android:id="@+id/notify_question"
+        android:title="@string/question_notify"
+        app:showAsAction="never"
+        />
+   <!-- <item
+        android:id="@+id/boost"
+        android:title="@string/boost"
+        app:showAsAction="never"
+        />
+    <item
+        android:id="@+id/unboost"
+        android:title="@string/unboost"
+        app:showAsAction="never"
+        />-->
+    <item
+        android:id="@+id/leave"
+        android:title="@string/leave"
+        app:showAsAction="never"
+        />
+    <item
+        android:id="@+id/report"
+        android:title="@string/report"
+        app:showAsAction="never"
+        />
+</menu>

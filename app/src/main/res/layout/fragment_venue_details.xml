@@ -1,0 +1,220 @@
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:activity="com.avadna.luneblaze.fragments.venue.VenueDetailsFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding_medium"
+                android:layout_marginTop="@dimen/text_large">
+
+                <TextView
+                    android:id="@+id/about"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/about"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="@dimen/text_xl"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:id="@+id/ib_edit_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/padding_medium"
+                    android:background="@color/transparent"
+                    android:paddingBottom="@dimen/padding_small"
+                    android:src="@drawable/ic_edit_grey" />
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_venue_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding_small"
+                android:layout_marginRight="@dimen/padding_small"
+                android:layout_marginBottom="@dimen/padding_small"
+                android:background="@color/transparent"
+                android:ellipsize="end"
+                android:maxLines="10"
+                android:padding="@dimen/padding_small"
+                android:text="This is some text. This is some text. This is some text. This is some text. This is some text. vThis is some text. This is some text."
+                android:textColor="@color/dark_grey"
+                android:textSize="@dimen/text_large" />
+
+            <RelativeLayout
+                android:id="@+id/rl_edit_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/et_venue_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/padding_small"
+                    android:layout_marginRight="@dimen/padding_small"
+                    android:layout_marginBottom="@dimen/padding_small"
+                    android:background="@drawable/grey_border_white_fill"
+                    android:paddingLeft="@dimen/padding_small"
+                    android:paddingTop="@dimen/padding_small"
+                    android:paddingRight="@dimen/padding_small"
+                    android:paddingBottom="32dp"
+                    android:maxLines="10"
+                    android:text="This is some text. This is some text. This is some text. This is some text. This is some text. vThis is some text. This is some text."
+                    android:textColor="@color/dark_grey"
+                    android:textSize="@dimen/text_large" />
+
+                <ImageButton
+                    android:id="@+id/ib_done_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/et_venue_description"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/padding_medium"
+                    android:background="@color/transparent"
+                    android:padding="@dimen/padding_small"
+                    android:src="@drawable/ic_thanks_unfilled" />
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/tv_show_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/padding_medium"
+                android:paddingRight="@dimen/padding_medium"
+                android:paddingBottom="@dimen/padding_small"
+                android:text="@string/more"
+                android:textColor="@color/app_theme_dark"
+                android:textSize="@dimen/text_large" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/padding_medium"
+                    android:paddingTop="@dimen/padding_small"
+                    android:paddingRight="@dimen/padding_medium"
+                    android:text="@string/website"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="@dimen/text_xl"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:id="@+id/ib_edit_website"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/padding_medium"
+                    android:background="@color/transparent"
+                    android:paddingBottom="@dimen/padding_small"
+                    android:src="@drawable/ic_edit_grey" />
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/tv_web_link"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding_small"
+                android:layout_marginRight="@dimen/padding_small"
+                android:layout_marginBottom="@dimen/padding_small"
+                android:background="@color/transparent"
+                android:padding="@dimen/padding_small"
+                android:text="http://www.google.com"
+                android:textColor="@color/app_theme_dark"
+                android:textSize="@dimen/text_large" />
+
+            <RelativeLayout
+                android:id="@+id/rl_edit_website"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <EditText
+                    android:id="@+id/et_web_link"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/padding_small"
+                    android:layout_marginRight="@dimen/padding_small"
+                    android:layout_marginBottom="@dimen/padding_small"
+                    android:background="@drawable/grey_border_white_fill"
+                    android:paddingLeft="@dimen/padding_small"
+                    android:paddingTop="@dimen/padding_small"
+                    android:paddingRight="@dimen/padding_small"
+                    android:paddingBottom="32dp"
+                    android:text="http://www.google.com"
+                    android:textColor="@color/app_theme_dark"
+                    android:textSize="@dimen/text_large" />
+
+                <ImageButton
+                    android:id="@+id/ib_done_website"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/et_web_link"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/padding_medium"
+                    android:background="@color/transparent"
+                    android:padding="@dimen/padding_small"
+                    android:src="@drawable/ic_thanks_unfilled" />
+            </RelativeLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding_medium"
+                android:layout_marginTop="@dimen/text_large"
+                android:text="@string/address"
+                android:textColor="@color/dark_grey"
+                android:textSize="@dimen/text_xl"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_venue_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/padding_medium"
+                android:paddingRight="@dimen/padding_medium"
+                android:paddingBottom="@dimen/padding_small"
+                android:text="Address goes here"
+                android:textColor="@color/med_grey"
+                android:textSize="@dimen/text_large" />
+
+            <com.google.android.gms.maps.MapView
+                android:id="@+id/mv_venue_location"
+                android:layout_width="match_parent"
+                android:layout_height="160dp" />
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</androidx.core.widget.NestedScrollView>

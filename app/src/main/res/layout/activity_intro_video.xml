@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".activities.IntroVideoActivity">
+
+    <com.google.android.exoplayer2.ui.PlayerView
+        android:id="@+id/playerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:layout_centerInParent="true"
+        />
+
+    <TextView
+        android:id="@+id/tv_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/padding_small"
+        android:background="@drawable/light_grey_rounded_bg"
+        android:paddingLeft="@dimen/padding_medium"
+        android:paddingTop="@dimen/padding_small"
+        android:paddingRight="@dimen/padding_medium"
+        android:paddingBottom="@dimen/padding_small"
+        android:text="@string/intro_desc"
+        android:textColor="@color/med_grey"
+        app:elevation="5dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_skip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/padding_small"
+        android:background="@drawable/light_grey_rounded_bg"
+        android:paddingLeft="@dimen/padding_medium"
+        android:paddingTop="@dimen/padding_small"
+        android:paddingRight="@dimen/padding_medium"
+        android:paddingBottom="@dimen/padding_small"
+        android:text="@string/skip"
+        android:textColor="@color/med_grey"
+        app:elevation="5dp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

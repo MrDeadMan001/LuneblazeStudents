@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/formSectionStyle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/form_section_gap">
+
+
+    <EditText
+        android:id="@+id/et_ans"
+        style="@style/formEditTextStyleInactive"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_ans"
+        android:hint="@string/quiz_title_hint"
+        android:inputType="text" />
+
+    <TextView
+        android:id="@+id/tv_ans"
+        style="@style/formFieldHeaderStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:text="@string/answer_choice" />
+
+    <TextView
+        android:id="@+id/tv_ans_char_acount"
+        style="@style/formFieldCharCounterStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@id/ib_more"
+        android:text="0/10"
+        android:layout_toStartOf="@id/ib_more" />
+
+    <ImageButton
+        android:id="@+id/ib_more"
+        style="@style/imageButtonStyle"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="-16dp"
+        android:layout_marginTop="-6dp"
+        android:src="@drawable/ic_vertical_dots"
+        android:layout_marginEnd="-16dp" />
+</RelativeLayout>

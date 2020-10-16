@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_session_videos_wrapper"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/ultra_light_grey"
+    android:elevation="2dp"
+    android:orientation="vertical"
+
+    >
+
+    <TextView
+        style="@style/tableHeaderStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Session Videos" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_session_videos"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+         />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_videos_num_likes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding_medium"
+            android:gravity="center"
+            android:padding="@dimen/padding_small"
+            android:text="00 Likes"
+            android:textColor="@color/med_grey"
+            android:textSize="@dimen/text_med" />
+
+        <TextView
+            android:id="@+id/tv_videos_num_comments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding_medium"
+            android:gravity="center"
+            android:padding="@dimen/padding_small"
+            android:text="00 Comments"
+            android:textColor="@color/med_grey"
+            android:textSize="@dimen/text_med" />
+
+        <TextView
+            android:id="@+id/tv_videos_num_shares"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding_medium"
+            android:gravity="center"
+            android:padding="@dimen/padding_small"
+            android:text="00 Shares"
+            android:textColor="@color/med_grey"
+            android:textSize="@dimen/text_med" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <FrameLayout
+            android:id="@+id/fl_videos_like_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingTop="@dimen/padding_small"
+            android:paddingBottom="@dimen/padding_small">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:drawableLeft="@android:drawable/ic_secure"
+                android:drawablePadding="@dimen/padding_medium"
+                android:padding="@dimen/padding_small"
+                android:text="Like"
+                android:textColor="@color/med_grey"
+                android:textSize="@dimen/text_large"
+                android:textStyle="bold" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/fl_videos_comment_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingTop="@dimen/padding_small"
+            android:paddingBottom="@dimen/padding_small">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:drawableLeft="@android:drawable/ic_secure"
+                android:drawablePadding="@dimen/padding_medium"
+                android:padding="@dimen/padding_small"
+                android:text="Comment"
+                android:textColor="@color/med_grey"
+                android:textSize="@dimen/text_large"
+                android:textStyle="bold" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/fl_videos_share_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingTop="@dimen/padding_small"
+            android:paddingBottom="@dimen/padding_small">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:drawableLeft="@android:drawable/ic_secure"
+                android:drawablePadding="@dimen/padding_medium"
+                android:padding="@dimen/padding_small"
+                android:text="Share"
+                android:textColor="@color/med_grey"
+                android:textSize="@dimen/text_large"
+                android:textStyle="bold" />
+        </FrameLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

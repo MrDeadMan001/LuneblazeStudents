@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_parent"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/padding_extra_small"
+        android:background="@drawable/white_rounded_border_white_fill"
+        android:elevation="2dp"
+        android:padding="@dimen/all_activity_margin_medium"
+        >
+
+        <ImageView
+            android:id="@+id/iv_user_dp"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:src="@drawable/placeholder"
+            android:layout_marginLeft="@dimen/padding_small"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            />
+        <TextView
+            android:id="@+id/tv_add_friend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:paddingBottom="@dimen/padding_small"
+            android:paddingLeft="@dimen/padding_medium"
+            android:paddingRight="@dimen/padding_medium"
+            android:paddingTop="@dimen/padding_small"
+            android:drawablePadding="@dimen/padding_small"
+            android:drawableLeft="@drawable/ic_add_fellow"
+            android:background="@drawable/app_theme_border"
+            android:text="@string/add_fellow"
+            android:textSize="@dimen/text_large"
+            android:textColor="@color/med_grey"
+            android:visibility="visible"
+            />
+
+        <LinearLayout
+            android:layout_toRightOf="@id/iv_user_dp"
+            android:layout_toLeftOf="@id/tv_add_friend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/all_activity_margin_medium"
+            android:layout_marginRight="@dimen/all_activity_margin_medium"
+            >
+            <TextView
+                android:id="@+id/tv_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="User Name"
+                android:textSize="@dimen/text_large"
+                android:textColor="@color/dark_grey"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:id="@+id/tv_place_and_designation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Place and Designation"
+                android:textSize="@dimen/text_med"
+                android:textColor="@color/light_grey"
+                />
+            <TextView
+                android:id="@+id/tv_num_followers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0 Mutual Friends"
+                android:textSize="@dimen/text_med"
+                android:textColor="@color/med_grey"
+                />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

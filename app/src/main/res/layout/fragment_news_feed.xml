@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_venue_wrapper"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:activity=".fragments.NewsFeedFragment">
+
+    <TextView
+        android:id="@+id/tv_filter_placeholder"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_alignParentRight="true" />
+
+    <RelativeLayout
+        android:id="@+id/ll_mid_section_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/bot_nav_bar"
+        android:layout_below="@id/tv_filter"
+        android:background="@color/ultra_light_grey"
+        android:orientation="vertical"
+        android:layout_marginTop="-2dp"
+        android:paddingLeft="@dimen/padding_small"
+        android:paddingRight="@dimen/padding_small">
+
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/srl_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_news_feed_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/ultra_light_grey" />
+
+                <include layout="@layout/connection_error_sublayout" />
+
+            </RelativeLayout>
+
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <TextView
+            android:id="@+id/tv_new_posts_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/padding_large"
+            android:background="@drawable/dark_blue_rounded_bg"
+            android:drawableLeft="@drawable/ic_arrow_up_white"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/padding_large"
+            android:paddingTop="@dimen/padding_small"
+            android:paddingRight="@dimen/padding_large"
+            android:paddingBottom="@dimen/padding_small"
+            android:text="@string/new_posts"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_large"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <!-- <android.support.design.widget.FloatingActionButton
+         android:id="@+id/fb_create"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentBottom="true"
+         android:layout_alignParentRight="true"
+         android:layout_marginBottom="72dp"
+         android:layout_marginRight="16dp"
+         android:src="@drawable/ic_vertical_dots" />-->
+
+
+</RelativeLayout>

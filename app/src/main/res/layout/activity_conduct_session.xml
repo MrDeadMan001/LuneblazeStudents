@@ -1,0 +1,553 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ultra_light_grey"
+    android:orientation="vertical"
+    tools:activity="com.avadna.luneblaze.activities.sessionCreation.SessionCreationFormActivity">
+
+    <ScrollView
+        android:id="@+id/sv_parent_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/padding_small"
+        android:layout_marginLeft="@dimen/padding_medium"
+        android:layout_marginRight="@dimen/padding_medium"
+        android:background="@color/ultra_light_grey">
+
+        <LinearLayout
+            android:id="@+id/ll_scroll_child"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/padding_medium"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="@dimen/padding_large">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/padding_extra_small"
+                    android:text="Session name"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="@dimen/text_large" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/padding_large"
+                    android:background="@drawable/grey_border_white_fill"
+                    android:hint="Enter a name for the session"
+                    android:inputType="text"
+                    android:padding="@dimen/padding_medium"
+                    android:singleLine="true"
+                    android:textColor="@color/dark_grey"
+                    android:textColorHint="@color/light_grey"
+                    android:textSize="@dimen/text_large" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/padding_medium"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="@dimen/padding_large">
+
+
+                <TextView
+                    android:id="@+id/tv_topics_to_discuss"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/padding_extra_small"
+                    android:text="Topics to be discussed"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="@dimen/text_large" />
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_discussion_topics_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_topics_to_discuss"
+                    android:background="@color/ultra_light_grey"
+
+                    />
+
+                <RelativeLayout
+                    android:id="@+id/rl_add_discussion_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_add_more_discuss"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/padding_medium"
+                        android:background="@color/app_theme_medium"
+
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/padding_small"
+                        android:paddingLeft="@dimen/padding_medium"
+                        android:paddingRight="@dimen/padding_medium"
+                        android:paddingTop="@dimen/padding_small"
+                        android:text="+ Topic"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_large"
+
+                        />
+
+                    <EditText
+                        android:id="@+id/et_discussion_topic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_alignParentLeft="true"
+
+                        android:layout_toLeftOf="@id/tv_add_more_discuss"
+                        android:background="@drawable/grey_border_white_fill"
+                        android:gravity="center_vertical"
+                        android:hint="Enter topic here"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:padding="@dimen/padding_medium"
+
+                        android:textColor="@color/dark_grey"
+                        android:textColorHint="@color/light_grey"
+                        android:textSize="@dimen/text_large" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/padding_medium"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="@dimen/padding_large">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/padding_extra_small"
+                    android:text="Pre-requisite knowledge"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="@dimen/text_large" />
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_prerequisites_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/ultra_light_grey" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_add_requisite_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_add_more_requisite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/padding_medium"
+                        android:background="@color/app_theme_medium"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/padding_small"
+                        android:paddingLeft="@dimen/padding_medium"
+                        android:paddingRight="@dimen/padding_medium"
+                        android:paddingTop="@dimen/padding_small"
+                        android:text="+ Topic"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_large"
+
+                        />
+
+                    <EditText
+                        android:id="@+id/et_requisite_topic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_toLeftOf="@id/tv_add_more_requisite"
+                        android:background="@drawable/grey_border_white_fill"
+                        android:gravity="center_vertical"
+                        android:hint="Enter topic here"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:padding="@dimen/padding_medium"
+                        android:textColor="@color/dark_grey"
+                        android:textColorHint="@color/light_grey"
+                        android:textSize="@dimen/text_large" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_interest_search_wrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/padding_medium"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="@dimen/padding_large">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/padding_extra_small"
+                    android:text="Interests"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="@dimen/text_large" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_added_interests"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/padding_small"
+                    android:background="@color/white"
+                    android:overScrollMode="never"
+                    android:paddingTop="@dimen/padding_small" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_interest_search_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_length_getter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/padding_small"
+                        android:layout_marginRight="@dimen/padding_small"
+                        android:background="@drawable/tag_item_bg"
+                        android:paddingBottom="@dimen/padding_small"
+                        android:paddingLeft="@dimen/padding_medium"
+                        android:paddingRight="@dimen/padding_medium"
+                        android:paddingTop="@dimen/padding_small"
+                        android:text="Tag name"
+                        android:textColor="@color/app_theme_medium"
+                        android:textSize="@dimen/text_med" />
+
+                    <TextView
+                        android:id="@+id/tv_interest_search_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/padding_medium"
+                        android:background="@color/app_theme_medium"
+                        android:paddingBottom="@dimen/padding_small"
+                        android:paddingLeft="@dimen/padding_medium"
+                        android:paddingRight="@dimen/padding_medium"
+                        android:paddingTop="@dimen/padding_small"
+                        android:text="Search"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_large" />
+
+                    <EditText
+                        android:id="@+id/et_interest_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_alignParentLeft="true"
+
+                        android:layout_toLeftOf="@id/tv_interest_search_button"
+                        android:background="@drawable/grey_border_white_fill"
+                        android:gravity="center_vertical"
+                        android:hint="Enter interest name here"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:padding="@dimen/padding_medium"
+                        android:textColor="@color/dark_grey"
+                        android:textColorHint="@color/light_grey"
+                        android:textSize="@dimen/text_large" />
+
+
+                </RelativeLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_interest_search_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/ultra_light_grey" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_venue_search_wrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/padding_medium"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="@dimen/padding_large">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/padding_extra_small"
+                    android:text="Venue"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="@dimen/text_large" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_venue_wrapper"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:padding="@dimen/padding_medium"
+                    android:text="Search Result"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="@dimen/text_large"
+                    android:visibility="gone"
+                    >
+
+                    <ImageView
+                        android:id="@+id/iv_remove"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/padding_medium"
+                        android:src="@android:drawable/ic_menu_close_clear_cancel" />
+
+                    <TextView
+                        android:id="@+id/tv_venue_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:background="@color/white"
+                        android:text="Search Result"
+                        android:textColor="@color/dark_grey"
+                        android:textSize="@dimen/text_large"
+
+                        />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_venue_search_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_venue_search_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/padding_medium"
+                        android:background="@color/app_theme_medium"
+                        android:paddingBottom="@dimen/padding_small"
+                        android:paddingLeft="@dimen/padding_medium"
+                        android:paddingRight="@dimen/padding_medium"
+                        android:paddingTop="@dimen/padding_small"
+                        android:text="Search"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_large" />
+
+                    <EditText
+                        android:id="@+id/et_venue_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_toLeftOf="@id/tv_venue_search_button"
+                        android:background="@drawable/grey_border_white_fill"
+                        android:gravity="center_vertical"
+                        android:hint="Enter venue name here"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:padding="@dimen/padding_medium"
+                        android:textColor="@color/dark_grey"
+                        android:textColorHint="@color/light_grey"
+                        android:textSize="@dimen/text_large" />
+
+
+                </RelativeLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_venue_search_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/et_venue_name"
+                    android:background="@color/ultra_light_grey" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/padding_medium"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="@dimen/padding_large">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/padding_extra_small"
+                    android:text="Choose dates for session"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="@dimen/text_large" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_date1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:background="@drawable/grey_border_white_fill"
+                        android:gravity="center"
+                        android:hint="Choose date preference 1"
+                        android:padding="@dimen/padding_medium"
+                        android:textColor="@color/dark_grey"
+                        android:textColorHint="@color/light_grey" />
+
+
+                    <TextView
+                        android:id="@+id/tv_date2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:background="@drawable/grey_border_white_fill"
+                        android:gravity="center"
+                        android:hint="Choose date preference 2"
+                        android:padding="@dimen/padding_medium"
+                        android:textColor="@color/dark_grey"
+                        android:textColorHint="@color/light_grey" />
+
+                    <TextView
+                        android:id="@+id/tv_date3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:background="@drawable/grey_border_white_fill"
+                        android:gravity="center"
+                        android:hint="Choose date preference 3"
+                        android:padding="@dimen/padding_medium"
+                        android:textColor="@color/dark_grey"
+                        android:textColorHint="@color/light_grey" />
+
+                    <TextView
+                        android:id="@+id/tv_date4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:background="@drawable/grey_border_white_fill"
+                        android:gravity="center"
+                        android:hint="Choose date preference 4"
+                        android:padding="@dimen/padding_medium"
+                        android:textColor="@color/dark_grey"
+                        android:textColorHint="@color/light_grey" />
+
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="@dimen/padding_large"
+                android:layout_marginBottom="@dimen/padding_medium"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/padding_extra_small"
+                    android:text="Please briefly explain why you think, you can share the listed topics and help the attendees."
+                    android:textColor="@color/dark_grey"
+                    android:textSize="@dimen/text_large" />
+
+                <EditText
+                    android:id="@+id/et_accepting_reason"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/padding_large"
+                    android:background="@drawable/grey_border_white_fill"
+                    android:padding="@dimen/padding_medium"
+                    android:textColorHint="@color/light_grey"
+                    android:textSize="@dimen/text_large"
+                    android:textColor="@color/dark_grey"
+                    android:maxLines="6"
+                    />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="@dimen/padding_large"
+                android:layout_marginBottom="@dimen/padding_medium"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/padding_extra_small"
+                    android:text="Number of attendees allowed (minimum 50)"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="@dimen/text_large" />
+
+                <EditText
+                    android:id="@+id/et_num_attendees"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/padding_large"
+                    android:background="@drawable/grey_border_white_fill"
+                    android:hint="Enter total number of attendees allowed here"
+                    android:padding="@dimen/padding_medium"
+                    android:textColorHint="@color/light_grey"
+                    android:textSize="@dimen/text_large"
+                    android:textColor="@color/dark_grey"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/padding_medium"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="@dimen/padding_large">
+                <TextView
+                    android:id="@+id/tv_done_button"
+                    style="@style/blue_button_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Verify with OTP" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</LinearLayout>

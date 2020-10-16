@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_post_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/padding_extra_small"
+        android:layout_marginTop="@dimen/padding_small"
+        android:layout_marginRight="@dimen/padding_extra_small"
+        android:layout_marginBottom="@dimen/padding_small"
+        android:background="@color/white"
+        app:cardCornerRadius="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            >
+
+            <RelativeLayout
+                android:id="@+id/rl_top_bar_wrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_activity_performed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/spinner_dot_space"
+                    android:paddingLeft="@dimen/padding_medium"
+                    android:paddingTop="@dimen/padding_medium_small"
+                    android:paddingRight="@dimen/padding_medium"
+                    android:paddingBottom="@dimen/padding_medium_small"
+                    android:text="User performed this Activity"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="@dimen/text_large"
+                   />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_alignBottom="@id/tv_activity_performed"
+                    android:background="@color/light_grey" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding_large"
+                android:layout_marginTop="@dimen/padding_small"
+                android:layout_marginRight="@dimen/spinner_dot_space"
+                android:layout_marginBottom="@dimen/padding_extra_small"
+                android:background="@color/white">
+
+                <ImageView
+                    android:id="@+id/iv_post_sharer_user_dp"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/placeholder" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/tv_follow_button"
+                    android:layout_toRightOf="@id/iv_post_sharer_user_dp"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/padding_medium"
+                    android:paddingRight="@dimen/padding_medium">
+
+                    <TextView
+                        android:id="@+id/tv_post_sharer_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Poster Name"
+                        android:textColor="@color/dark_grey"
+                        android:textSize="@dimen/text_large"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_post_sharer_designation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-2dp"
+                        android:layout_marginBottom="-2dp"
+                        android:text="designation"
+                        android:textColor="@color/med_grey"
+                        android:textSize="@dimen/text_med" />
+
+                    <TextView
+                        android:id="@+id/tv_post_sharer_stamp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="timestamp"
+                        android:textColor="@color/light_grey"
+                        android:textSize="@dimen/text_med" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_share_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding_medium"
+                android:layout_marginRight="@dimen/padding_medium"
+                android:padding="@dimen/padding_small"
+                android:text="This is some text. This is some text. This is some text. This is some text. This is some text. "
+                android:textColor="@color/dark_grey"
+                android:textSize="@dimen/text_xl" />
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_origin_wrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding_large"
+                android:layout_marginTop="@dimen/padding_small"
+                android:layout_marginRight="@dimen/padding_large"
+                android:layout_marginBottom="@dimen/padding_small"
+                app:cardCornerRadius="4dp"
+
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:paddingTop="@dimen/padding_small"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/padding_large"
+                        android:layout_marginTop="@dimen/padding_small"
+                        android:layout_marginRight="@dimen/spinner_dot_space"
+                        android:layout_marginBottom="@dimen/padding_extra_small"
+                        android:background="@color/white">
+
+                        <ImageView
+                            android:id="@+id/iv_user_dp"
+                            android:layout_width="42dp"
+                            android:layout_height="42dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/placeholder" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toLeftOf="@id/tv_follow_button"
+                            android:layout_toRightOf="@id/iv_user_dp"
+                            android:orientation="vertical"
+                            android:paddingLeft="@dimen/padding_medium"
+                            android:paddingRight="@dimen/padding_medium">
+
+                            <TextView
+                                android:id="@+id/tv_poster_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Poster Name"
+                                android:textColor="@color/dark_grey"
+                                android:textSize="@dimen/text_large"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tv_poster_designation"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="-2dp"
+                                android:layout_marginBottom="-2dp"
+                                android:text="designation"
+                                android:textColor="@color/med_grey"
+                                android:textSize="@dimen/text_med" />
+
+                            <TextView
+                                android:id="@+id/tv_time_stamp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="timestamp"
+                                android:textColor="@color/light_grey"
+                                android:textSize="@dimen/text_med" />
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_content_wrapper"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/padding_small"
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_post_content"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/padding_medium"
+                            android:layout_marginRight="@dimen/padding_medium"
+                            android:padding="@dimen/padding_small"
+                            android:text="This is some text. This is some text. This is some text. This is some text. This is some text. "
+                            android:textColor="@color/dark_grey"
+                            android:textSize="@dimen/text_xl" />
+                        <TextView
+                            android:id="@+id/tv_view_more"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/read_more"
+                            android:textColor="@color/app_theme_medium"
+                            android:textSize="@dimen/text_xl"
+                            android:layout_marginLeft="@dimen/padding_large"
+                            android:layout_marginTop="-2dp"
+                            android:visibility="gone"
+                            />
+
+                        <include layout="@layout/web_preview_layout"/>
+
+                        <ImageView
+                            android:id="@+id/iv_cover_photo1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:background="@color/dark_grey"
+                            android:maxHeight="450dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/placeholder"
+                            android:visibility="gone" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_two_images"
+                            android:layout_width="match_parent"
+                            android:layout_height="130dp"
+                            android:layout_marginTop="1dp"
+                            android:orientation="horizontal">
+
+                            <com.avadna.luneblaze.utils.ProportionalImageView
+                                android:id="@+id/iv_cover_photo2"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:scaleType="fitXY"
+                                android:layout_marginRight="1dp"
+
+                                android:src="@drawable/placeholder" />
+
+                            <com.avadna.luneblaze.utils.ProportionalImageView
+                                android:id="@+id/iv_cover_photo3"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:scaleType="fitXY"
+
+                                android:src="@drawable/placeholder" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_three_images"
+                            android:layout_width="match_parent"
+                            android:layout_height="110dp"
+                            android:orientation="horizontal">
+
+                            <com.avadna.luneblaze.utils.ProportionalImageView
+                                android:id="@+id/iv_cover_photo4"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:layout_marginRight="1dp"
+                                android:scaleType="fitXY"
+
+                                android:src="@drawable/placeholder" />
+
+                            <com.avadna.luneblaze.utils.ProportionalImageView
+                                android:id="@+id/iv_cover_photo5"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:scaleType="fitXY"
+
+                                android:src="@drawable/placeholder" />
+
+                            <FrameLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1">
+
+                                <com.avadna.luneblaze.utils.ProportionalImageView
+                                    android:id="@+id/iv_cover_photo6"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="fitXY"
+
+                                    android:src="@drawable/placeholder" />
+
+                                <TextView
+                                    android:id="@+id/tv_more_images"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_centerInParent="true"
+                                    android:gravity="center"
+                                    android:text="+ more"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/text_xxl"
+                                    android:visibility="gone" />
+                            </FrameLayout>
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding_medium"
+                android:layout_marginRight="@dimen/padding_medium"
+                android:layout_marginBottom="-4dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_like_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/padding_small"
+                    android:text="00 Likes"
+                    android:textColor="@color/med_grey"
+                    android:textSize="@dimen/text_med" />
+
+                <TextView
+                    android:id="@+id/tv_comment_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/padding_small"
+                    android:text="00 Comments"
+                    android:textColor="@color/med_grey"
+                    android:textSize="@dimen/text_med" />
+
+                <TextView
+                    android:id="@+id/tv_share_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/padding_small"
+                    android:text="00 Shares"
+                    android:textColor="@color/med_grey"
+                    android:textSize="@dimen/text_med"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_post_action_button_wrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:id="@+id/fl_like_button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/tv_like_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:drawableLeft="@drawable/ic_like_unfilled"
+                        android:drawablePadding="@dimen/padding_small"
+                        android:gravity="center_vertical"
+                        android:padding="@dimen/padding_small"
+                        android:text="@string/like"
+                        android:textColor="@color/med_grey"
+                        android:textSize="@dimen/text_large"
+                        android:textStyle="bold" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/fl_comment_button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/tv_comment_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:drawableLeft="@drawable/ic_comment"
+                        android:drawablePadding="@dimen/padding_small"
+                        android:gravity="center_vertical"
+                        android:padding="@dimen/padding_small"
+
+                        android:text="@string/comment"
+                        android:textColor="@color/med_grey"
+                        android:textSize="@dimen/text_large"
+                        android:textStyle="bold" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/fl_Share_button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/tv_share_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:drawableLeft="@drawable/ic_share"
+                        android:drawablePadding="@dimen/padding_small"
+                        android:gravity="center_vertical"
+                        android:padding="@dimen/padding_small"
+                        android:text="@string/share"
+                        android:textColor="@color/med_grey"
+                        android:textSize="@dimen/text_large"
+                        android:textStyle="bold" />
+                </FrameLayout>
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rl_user_comment_wrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/padding_medium"
+                android:paddingRight="@dimen/padding_medium"
+                android:paddingBottom="@dimen/padding_medium">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_alignParentTop="true"
+                    android:background="@color/light_grey" />
+
+                <ImageView
+                    android:id="@+id/iv_comment_dp"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginRight="@dimen/padding_medium"
+                    android:paddingTop="@dimen/padding_medium"
+                    android:src="@drawable/placeholder" />
+
+                <TextView
+                    android:id="@+id/tv_comment_user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="-2dp"
+                    android:layout_toRightOf="@id/iv_comment_dp"
+                    android:paddingTop="@dimen/padding_medium"
+                    android:paddingRight="@dimen/padding_medium"
+                    android:text="User Name"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="@dimen/text_large"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_user_comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_comment_user_name"
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    android:layout_toRightOf="@id/iv_comment_dp"
+                    android:paddingRight="@dimen/padding_medium"
+                    android:text="Comment"
+                    android:textColor="@color/med_grey"
+                    android:textSize="@dimen/text_large" />
+
+
+            </RelativeLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/padding_small"
+        android:elevation="3dp">
+
+
+        <ImageView
+            android:id="@+id/iv_more_options"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_vertical_dots" />
+    </FrameLayout>
+</RelativeLayout>

@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_post_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/padding_extra_small"
+        android:layout_marginTop="@dimen/padding_small"
+        android:layout_marginRight="@dimen/padding_extra_small"
+        android:layout_marginBottom="@dimen/padding_small"
+        app:cardCornerRadius="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rl_top_bar_wrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_activity_performed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/spinner_dot_space"
+                    android:paddingLeft="@dimen/padding_medium"
+                    android:paddingTop="@dimen/padding_medium_small"
+                    android:paddingRight="@dimen/padding_medium"
+                    android:paddingBottom="@dimen/padding_medium_small"
+                    android:text="User performed this Activity"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="@dimen/text_large"
+                  />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_share_data_wrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/padding_large"
+                    android:layout_marginRight="@dimen/spinner_dot_space"
+                    android:layout_marginBottom="@dimen/padding_extra_small"
+                    android:background="@color/white">
+
+                    <ImageView
+                        android:id="@+id/iv_post_sharer_user_dp"
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/placeholder" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@id/tv_follow_button"
+                        android:layout_toRightOf="@id/iv_post_sharer_user_dp"
+                        android:orientation="vertical"
+                        android:paddingLeft="@dimen/padding_medium"
+                        android:paddingRight="@dimen/padding_medium">
+
+                        <TextView
+                            android:id="@+id/tv_post_sharer_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Poster Name"
+                            android:textColor="@color/dark_grey"
+                            android:textSize="@dimen/text_large"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_post_sharer_designation"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="-2dp"
+                            android:layout_marginBottom="-2dp"
+                            android:text="designation"
+                            android:textColor="@color/med_grey"
+                            android:textSize="@dimen/text_med" />
+
+                        <TextView
+                            android:id="@+id/tv_post_sharer_stamp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="timestamp"
+                            android:textColor="@color/light_grey"
+                            android:textSize="@dimen/text_med" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+            <TextView
+                android:id="@+id/tv_share_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding_medium"
+                android:layout_marginRight="@dimen/padding_medium"
+                android:text="This is some text. This is some text. This is some text. This is some text. This is some text. "
+                android:textColor="@color/dark_grey"
+                android:textSize="@dimen/text_xl" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding_small"
+                android:layout_marginRight="@dimen/padding_small"
+                android:layout_marginBottom="@dimen/padding_small"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/ll_target_click_wrapper"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rounded_light_grey_border"
+                        android:orientation="vertical"
+                        android:layout_marginTop="@dimen/padding_small"
+                        >
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="1px"
+                            app:cardCornerRadius="4dp">
+
+                            <ImageView
+                                android:id="@+id/iv_session_photo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:scaleType="centerCrop"
+                                android:adjustViewBounds="true"
+
+                                android:src="@drawable/placeholder" />
+                        </androidx.cardview.widget.CardView>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/padding_small">
+
+                            <TextView
+                                android:id="@+id/tv_sharer_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:paddingLeft="@dimen/padding_medium"
+                                android:paddingTop="@dimen/padding_extra_small"
+                                android:paddingRight="@dimen/padding_medium"
+                                android:paddingBottom="@dimen/padding_small"
+                                android:text="Shared by : User name"
+                                android:textColor="@color/dark_grey"
+                                android:textSize="@dimen/text_med"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:id="@+id/tv_session_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_marginLeft="@dimen/padding_medium"
+                                android:layout_marginRight="@dimen/padding_medium"
+                                android:layout_toLeftOf="@id/tv_accept_button"
+                                android:text="Session name"
+                                android:textColor="@color/dark_grey"
+                                android:textSize="@dimen/text_large"
+                                android:textStyle="bold"
+
+                                />
+
+                            <TextView
+                                android:id="@+id/tv_session_time_stamp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/tv_session_name"
+                                android:layout_alignParentLeft="true"
+                                android:layout_marginLeft="@dimen/padding_medium"
+                                android:layout_marginTop="-2dp"
+                                android:layout_marginRight="@dimen/padding_medium"
+                                android:layout_toLeftOf="@id/tv_accept_button"
+                                android:text="Session time stamp"
+                                android:textColor="@color/med_grey"
+                                android:textSize="@dimen/text_med" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/tv_session_description"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/padding_medium"
+                            android:paddingTop="@dimen/padding_small"
+                            android:paddingRight="@dimen/padding_medium"
+                            android:paddingBottom="@dimen/padding_small"
+                            android:text="This is some text. This is some text. This is some text. This is some text.This is some text.This is some text.This is some text.This is some text.This is some text.This is some text.This is some text."
+                            android:textColor="@color/med_grey"
+                            android:textSize="@dimen/text_large"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_post_action_button_wrapper"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/padding_medium"
+                        android:layout_marginRight="@dimen/padding_medium"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_thank_number"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/padding_small"
+                            android:text="00 Thanks"
+
+                            android:textColor="@color/med_grey"
+                            android:textSize="@dimen/text_med" />
+
+                        <TextView
+                            android:id="@+id/tv_question_number"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/padding_small"
+                            android:text="00 Questions"
+                            android:textColor="@color/med_grey"
+                            android:textSize="@dimen/text_med" />
+
+                        <TextView
+                            android:id="@+id/tv_comment_number"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/padding_small"
+                            android:text="00 Comments"
+                            android:textColor="@color/med_grey"
+                            android:textSize="@dimen/text_med"
+                            android:visibility="gone" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:id="@+id/fl_thank_button"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/tv_thank_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:drawableLeft="@drawable/ic_thanks_unfilled"
+                            android:drawablePadding="@dimen/padding_small"
+                            android:gravity="center_vertical"
+                            android:padding="@dimen/padding_small"
+                            android:text="@string/thanks"
+                            android:textColor="@color/med_grey"
+                            android:textSize="@dimen/text_large"
+                            android:textStyle="bold" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/fl_comment_button"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/tv_comment_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:drawableLeft="@android:drawable/ic_secure"
+                            android:drawablePadding="@dimen/padding_medium"
+                            android:paddingTop="@dimen/padding_small"
+                            android:paddingBottom="@dimen/padding_small"
+                            android:text="Comment"
+                            android:textColor="@color/med_grey"
+                            android:textSize="@dimen/text_large"
+                            android:textStyle="bold" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/fl_question_button"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/tv_question_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:drawableLeft="@drawable/ic_question_unfilled"
+                            android:drawablePadding="@dimen/padding_small"
+                            android:gravity="center_vertical"
+                            android:padding="@dimen/padding_small"
+                            android:text="@string/question"
+                            android:textColor="@color/med_grey"
+                            android:textSize="@dimen/text_large"
+                            android:textStyle="bold" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/fl_Share_button"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/tv_share_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:drawableLeft="@drawable/ic_share"
+                            android:drawablePadding="@dimen/padding_small"
+                            android:gravity="center_vertical"
+                            android:padding="@dimen/padding_small"
+                            android:text="@string/share"
+                            android:textColor="@color/med_grey"
+                            android:textSize="@dimen/text_large"
+                            android:textStyle="bold" />
+                    </FrameLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_user_comment_wrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/padding_medium"
+                android:paddingRight="@dimen/padding_medium"
+                android:paddingBottom="@dimen/padding_medium">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_alignParentTop="true"
+                    android:background="@color/light_grey" />
+
+                <ImageView
+                    android:id="@+id/iv_comment_dp"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginRight="@dimen/padding_medium"
+                    android:paddingTop="@dimen/padding_medium"
+                    android:src="@drawable/placeholder" />
+
+                <TextView
+                    android:id="@+id/tv_comment_user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="-2dp"
+                    android:layout_toRightOf="@id/iv_comment_dp"
+                    android:paddingTop="@dimen/padding_medium"
+                    android:paddingRight="@dimen/padding_medium"
+                    android:text="User Name"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="@dimen/text_large"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_user_comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_comment_user_name"
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    android:layout_toRightOf="@id/iv_comment_dp"
+                    android:paddingRight="@dimen/padding_medium"
+                    android:text="Comment"
+                    android:textColor="@color/med_grey"
+                    android:textSize="@dimen/text_large" />
+
+
+            </RelativeLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <FrameLayout
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/padding_small"
+        android:elevation="3dp">
+
+        <ImageView
+            android:id="@+id/iv_more_options"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_vertical_dots" />
+    </FrameLayout>
+</RelativeLayout>

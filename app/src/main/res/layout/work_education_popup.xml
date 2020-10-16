@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/white_rounded_border_white_fill"
+    android:orientation="vertical"
+    android:padding="@dimen/padding_small">
+
+    <TextView
+        android:id="@+id/tv_work"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:padding="@dimen/padding_medium"
+        android:text="@string/work"
+        android:textColor="@color/med_grey"
+        android:textSize="@dimen/text_xl"
+       />
+
+    <TextView
+        android:id="@+id/tv_education"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:padding="@dimen/padding_medium"
+        android:text="@string/education"
+        android:textColor="@color/med_grey"
+        android:textSize="@dimen/text_xl"
+         />
+
+</LinearLayout>

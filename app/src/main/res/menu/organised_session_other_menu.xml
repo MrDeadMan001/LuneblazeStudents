@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/share_to"
+        android:icon="@drawable/ic_reply_flipped"
+        android:title="@string/share_to"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/join"
+        android:icon="@drawable/ic_add_fellow"
+        android:title="@string/join_discussion"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/follow_sharer"
+        android:icon="@drawable/ic_follow_unfilled"
+        android:title="@string/follow_sharer"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/report"
+        android:icon="@drawable/ic_report_gray"
+        android:title="@string/report"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/upload_video"
+        android:icon="@drawable/ic_upload_video"
+        android:title="@string/upload_video"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/upload_file"
+        android:icon="@drawable/ic_upload_file"
+        android:title="@string/upload_study_material"
+        app:showAsAction="never" />
+</menu>

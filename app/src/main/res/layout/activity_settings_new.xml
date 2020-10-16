@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/item_background_color"
+    tools:context=".update.activities.settings.SettingsActivityNew">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/all_activity_margin_small"
+        android:paddingBottom="@dimen/padding_medium"
+        >
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/sw_theme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/item_background_color"
+            android:padding="@dimen/padding_large"
+            app:thumbTint="@color/app_theme_medium"
+            app:trackTint="@color/very_light_text" />
+
+        <TextView
+            style="@style/settingsGroupHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/account" />
+
+        <LinearLayout
+            style="@style/settingsItemStyleNew"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_add_mail"
+                style="@style/settingsItemNameStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/add_email"
+                app:drawableLeftCompat="@drawable/ic_message_unfilled"
+                app:drawableRightCompat="@drawable/ic_next"
+                app:drawableTint="@color/icon_active" />
+
+            <TextView
+                style="@style/settingsItemDescriptionStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:text="Add or modify your account information" />
+        </LinearLayout>
+
+        <include layout="@layout/thinnest_light_grey_divider_with_margin" />
+
+        <LinearLayout
+            style="@style/settingsItemStyleNew"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_notifications"
+                style="@style/settingsItemNameStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/notifications"
+                app:drawableLeftCompat="@drawable/ic_message_unfilled"
+                app:drawableRightCompat="@drawable/ic_next"
+                app:drawableTint="@color/icon_active" />
+
+            <TextView
+                style="@style/settingsItemDescriptionStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Turn notifications on/off" />
+        </LinearLayout>
+
+        <include layout="@layout/thinnest_light_grey_divider_with_margin" />
+
+        <LinearLayout
+            style="@style/settingsItemStyleNew"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_manage_feed"
+                style="@style/settingsItemNameStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/manage_your_feed"
+                app:drawableLeftCompat="@drawable/ic_message_unfilled"
+                app:drawableRightCompat="@drawable/ic_next"
+                app:drawableTint="@color/icon_active" />
+
+            <TextView
+                style="@style/settingsItemDescriptionStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add or modify your feed" />
+        </LinearLayout>
+
+        <include layout="@layout/thinnest_light_grey_divider_with_margin" />
+
+        <LinearLayout
+            style="@style/settingsItemStyleNew"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_organisation"
+                style="@style/settingsItemNameStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/organisations"
+                app:drawableLeftCompat="@drawable/ic_message_unfilled"
+                app:drawableRightCompat="@drawable/ic_next"
+                app:drawableTint="@color/icon_active" />
+
+            <TextView
+                style="@style/settingsItemDescriptionStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Create or modify your organization page" />
+        </LinearLayout>
+
+        <include layout="@layout/thinnest_light_grey_divider_with_margin" />
+
+        <LinearLayout
+            style="@style/settingsItemStyleNew"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_assessment_report"
+                style="@style/settingsItemNameStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/assessment_report"
+                app:drawableLeftCompat="@drawable/ic_message_unfilled"
+                app:drawableRightCompat="@drawable/ic_next"
+                app:drawableTint="@color/icon_active" />
+
+            <TextView
+                style="@style/settingsItemDescriptionStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="View reports or apply for new assessment" />
+        </LinearLayout>
+
+
+        <TextView
+            style="@style/settingsGroupHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/about" />
+
+        <LinearLayout
+            style="@style/settingsItemStyleNew"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/about"
+                style="@style/settingsItemNameStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/about"
+                app:drawableLeftCompat="@drawable/ic_message_unfilled"
+                app:drawableRightCompat="@drawable/ic_next"
+                app:drawableTint="@color/icon_active" />
+
+            <TextView
+                style="@style/settingsItemDescriptionStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Learn more about Luneblaze" />
+        </LinearLayout>
+
+        <include layout="@layout/thinnest_light_grey_divider_with_margin" />
+
+        <LinearLayout
+            style="@style/settingsItemStyleNew"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_privacy"
+                style="@style/settingsItemNameStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/privacy"
+                app:drawableLeftCompat="@drawable/ic_message_unfilled"
+                app:drawableRightCompat="@drawable/ic_next"
+                app:drawableTint="@color/icon_active" />
+
+            <TextView
+                style="@style/settingsItemDescriptionStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Set your privacy preferences and blocking list" />
+        </LinearLayout>
+
+        <include layout="@layout/thinnest_light_grey_divider_with_margin" />
+
+        <LinearLayout
+            style="@style/settingsItemStyleNew"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_session_policy"
+                style="@style/settingsItemNameStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/session_policy"
+                app:drawableLeftCompat="@drawable/ic_message_unfilled"
+                app:drawableRightCompat="@drawable/ic_next"
+                app:drawableTint="@color/icon_active" />
+
+            <TextView
+                style="@style/settingsItemDescriptionStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add or modify your account information" />
+        </LinearLayout>
+
+        <include layout="@layout/thinnest_light_grey_divider_with_margin" />
+
+        <LinearLayout
+            style="@style/settingsItemStyleNew"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_terms_of_use"
+                style="@style/settingsItemNameStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/terms_of_use"
+                app:drawableLeftCompat="@drawable/ic_message_unfilled"
+                app:drawableRightCompat="@drawable/ic_next"
+                app:drawableTint="@color/icon_active" />
+
+            <TextView
+                style="@style/settingsItemDescriptionStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="View terms and conditions for usage" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/settingsGroupHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/about" />
+
+        <LinearLayout
+            style="@style/settingsItemStyleNew"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/report"
+                style="@style/settingsItemNameStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/report_problem"
+                app:drawableLeftCompat="@drawable/ic_message_unfilled"
+                app:drawableRightCompat="@drawable/ic_next"
+                app:drawableTint="@color/icon_active" />
+
+            <TextView
+                style="@style/settingsItemDescriptionStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Having a problem? Report to us here." />
+        </LinearLayout>
+
+        <include layout="@layout/thinnest_light_grey_divider_with_margin" />
+
+        <LinearLayout
+            style="@style/settingsItemStyleNew"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_contact_us"
+                style="@style/settingsItemNameStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/contact_us"
+                app:drawableLeftCompat="@drawable/ic_message_unfilled"
+                app:drawableRightCompat="@drawable/ic_next"
+                app:drawableTint="@color/icon_active" />
+
+            <TextView
+                style="@style/settingsItemDescriptionStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Need help? Contact us here." />
+        </LinearLayout>
+
+        <include layout="@layout/thinnest_light_grey_divider_with_margin" />
+
+        <LinearLayout
+            style="@style/settingsItemStyleNew"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_logout"
+                style="@style/settingsItemNameStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/logout"
+                app:drawableLeftCompat="@drawable/ic_message_unfilled"
+                app:drawableRightCompat="@drawable/ic_next"
+                app:drawableTint="@color/icon_active" />
+
+            <TextView
+                style="@style/settingsItemDescriptionStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Logout from Luneblaze" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

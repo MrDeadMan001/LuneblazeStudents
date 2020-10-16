@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/padding_extra_small"
+        android:background="@drawable/white_rounded_border_white_fill"
+        android:elevation="2dp"
+        android:padding="@dimen/padding_small"
+        >
+
+        <ImageView
+            android:id="@+id/iv_user_dp"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/placeholder"
+            android:layout_marginLeft="@dimen/padding_large"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            />
+        <FrameLayout
+            android:id="@+id/fl_action_wrapper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            >
+            <ProgressBar
+                android:id="@+id/pb_action_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                />
+
+            <LinearLayout
+                android:id="@+id/ll_button_wrapper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="@dimen/padding_medium"
+                >
+                <TextView
+                    android:id="@+id/tv_accept"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:elevation="1dp"
+                    style="@style/blue_border_button_style"
+                    android:text="@string/accept"
+                    android:visibility="visible"
+                    android:textSize="@dimen/text_large"
+                    />
+                <TextView
+                    android:id="@+id/tv_reject"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:elevation="1dp"
+                    android:layout_marginLeft="@dimen/padding_small"
+                    android:text="@string/reject"
+                    style="@style/grey_border_button_style"
+                    android:visibility="visible"
+                    android:textSize="@dimen/text_large"
+
+                    />
+            </LinearLayout>
+        </FrameLayout>
+
+
+        <!-- <Button
+             android:id="@+id/bt_add_friend"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_centerVertical="true"
+             android:layout_alignParentRight="true"
+             android:text="Add friend"
+             />-->
+        <TextView
+            android:id="@+id/tv_request_sent"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:elevation="1dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/app_theme_border"
+            android:layout_marginRight="@dimen/padding_large"
+            android:layout_marginLeft="@dimen/padding_medium"
+            android:gravity="center"
+            android:paddingTop="@dimen/padding_small"
+            android:paddingBottom="@dimen/padding_small"
+            android:paddingLeft="@dimen/padding_medium"
+            android:paddingRight="@dimen/padding_medium"
+            android:text="Request sent"
+            android:textColor="@color/app_theme_dark"
+            android:textSize="@dimen/text_large"
+            android:visibility="gone"
+            />
+        <LinearLayout
+            android:layout_toRightOf="@id/iv_user_dp"
+            android:layout_toLeftOf="@id/fl_action_wrapper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/padding_small"
+            android:paddingBottom="@dimen/padding_small"
+            android:paddingLeft="@dimen/padding_medium"
+            android:paddingRight="@dimen/padding_medium"
+            >
+            <TextView
+                android:id="@+id/tv_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="User Name"
+                android:textSize="@dimen/text_large"
+                android:textColor="@color/dark_grey"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:id="@+id/tv_place_and_designation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Place and Designation"
+                android:textSize="@dimen/text_med"
+                android:textColor="@color/light_grey"
+                />
+            <TextView
+                android:id="@+id/tv_num_followers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0 Mutual Friends"
+                android:textSize="@dimen/text_med"
+                android:textColor="@color/med_grey"
+                />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,21 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/message"
+        android:title="@string/message"
+        app:showAsAction="never"
+        />
+
+    <item
+        android:id="@+id/block"
+        android:title="@string/block"
+        app:showAsAction="never"
+        />
+    <item
+        android:id="@+id/remove"
+        android:title="@string/remove"
+        app:showAsAction="never"
+        />
+
+</menu>

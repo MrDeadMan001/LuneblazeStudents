@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/time_any"
+        android:title="@string/any"
+        app:showAsAction="never"
+        />
+    <item
+        android:id="@+id/time_10_days"
+        android:title="@string/within_ten_days"
+        app:showAsAction="never"
+        />
+    <item
+        android:id="@+id/date_range"
+        android:title="@string/pick_date_range"
+        app:showAsAction="never"
+        />
+</menu>

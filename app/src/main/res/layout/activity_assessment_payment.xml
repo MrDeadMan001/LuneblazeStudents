@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ultra_light_grey"
+    tools:context=".activities.assessment.AssessmentStatusActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/tv_make_payment"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/white_rounded_border_white_fill">
+
+        <RelativeLayout
+            android:id="@+id/rl_content_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/padding_small">
+
+            <LinearLayout
+                android:id="@+id/ll_payment_pending"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/padding_medium"
+                android:paddingTop="@dimen/padding_large"
+                android:paddingRight="@dimen/padding_medium"
+                android:paddingBottom="@dimen/padding_large">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/assessment_category"
+                    android:textColor="@color/med_grey"
+                    android:textSize="@dimen/text_large"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et_category"
+                    style="@style/signUpEditTextTheme"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:hint="@string/choose_assessment_category"
+                    android:paddingRight="32dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/amount"
+                    android:layout_marginTop="@dimen/padding_large"
+                    android:textColor="@color/med_grey"
+                    android:textSize="@dimen/text_large"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/padding_large"
+                    android:padding="@dimen/padding_small"
+                    android:text="@string/amount"
+                    android:textColor="@color/med_grey"
+                    android:textSize="@dimen/text_xxxl"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_disclaimer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/padding_medium"
+                    android:padding="@dimen/padding_small"
+                    android:text="@string/assement_disclaimer"
+                    android:textColor="@color/med_grey"
+                    android:textSize="@dimen/text_xl" />
+
+                <CheckBox
+                    android:id="@+id/cb_i_agree"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:padding="@dimen/padding_large"
+                    android:textColor="@color/med_grey"
+                    app:buttonTint="@color/app_theme_medium"
+                    android:text="@string/i_agree" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_payment_done_wrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_large"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/padding_medium"
+                android:paddingTop="@dimen/padding_large"
+                android:paddingRight="@dimen/padding_medium"
+                android:paddingBottom="@dimen/padding_large"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_payment_status_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/payment_status"
+                    android:textColor="@color/med_grey"
+                    android:textSize="@dimen/text_large"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_payment_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/padding_large"
+                    android:padding="@dimen/padding_small"
+                    android:text="@string/paid"
+                    android:textColor="@color/online_green"
+                    android:textSize="@dimen/text_xxxl"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:id="@+id/tv_transaction_id_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/transaction_id"
+                    android:textColor="@color/med_grey"
+                    android:textSize="@dimen/text_large"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_transaction_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/padding_large"
+                    android:padding="@dimen/padding_small"
+                    android:text="@string/unpaid"
+                    android:textColor="@color/med_grey"
+                    android:textSize="@dimen/text_xxl"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_report_status_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/assessment_report_status"
+                    android:textColor="@color/med_grey"
+                    android:textSize="@dimen/text_large"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_report_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/padding_large"
+                    android:padding="@dimen/padding_small"
+                    android:text="@string/pending"
+                    android:textColor="@color/med_grey"
+                    android:textSize="@dimen/text_xxl"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/tv_make_payment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/padding_small"
+        android:background="@drawable/light_blue_rounded_button"
+        android:gravity="center"
+        android:padding="@dimen/padding_large"
+        android:text="@string/proceed_to_payment"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_xl"
+        android:textStyle="bold" />
+
+    <ProgressBar
+        android:id="@+id/pb_loading_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/padding_large" />
+</RelativeLayout>

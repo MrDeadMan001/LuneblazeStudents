@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="2dp"
+    android:layout_marginTop="2dp"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/padding_medium"
+        android:layout_marginRight="@dimen/padding_medium"
+        >
+
+
+
+       <!-- <Spinner
+            android:id="@+id/sp_time_options"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/ll_checkbox_wrapper"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/ll_checkbox_wrapper"
+            android:layout_marginBottom="1dp"
+            android:layout_marginRight="@dimen/edit_text_padding_medium"
+            android:layout_marginTop="1dp"
+            android:background="@color/med_grey"
+            android:visibility="gone" />
+-->
+        <LinearLayout
+            android:id="@+id/ll_checkbox_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <CheckBox
+                android:id="@+id/cb_selected"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+
+                android:buttonTint="@color/app_theme_dark"
+                android:drawableTint="@color/app_theme_dark"
+
+                />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="01-01-2018 (34000 Votes)"
+                    android:background="@drawable/grey_border_white_fill"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="@dimen/text_large"
+                    android:paddingLeft="@dimen/padding_medium"
+                    android:paddingRight="@dimen/padding_medium"
+                    android:paddingTop="@dimen/padding_medium"
+                    android:paddingBottom="@dimen/padding_medium"
+                    android:textStyle="bold"
+                    />
+                <TextView
+                    android:id="@+id/graph_bar"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/tv_date"
+                    android:layout_alignTop="@id/tv_date"
+                    android:background="#7090dcda"
+                    />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <RadioGroup
+            android:id="@+id/rg_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_checkbox_wrapper"
+            android:layout_marginLeft="32dp"
+            android:orientation="horizontal"
+            android:background="@drawable/grey_border_white_fill"
+            android:paddingBottom="@dimen/padding_medium"
+            >
+
+            <RadioButton
+                android:id="@+id/rb_morning"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/app_theme_medium"
+                android:drawableTint="@color/app_theme_medium"
+                android:text="Morning"
+                android:textColor="@color/med_grey"
+                />
+
+            <RadioButton
+                android:id="@+id/rb_evening"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/app_theme_medium"
+                android:drawableTint="@color/app_theme_medium"
+                android:text="Evening"
+                android:textColor="@color/med_grey" />
+
+            <RadioButton
+                android:id="@+id/rb_any"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/app_theme_medium"
+                android:drawableTint="@color/app_theme_medium"
+                android:text="Any"
+                android:textColor="@color/med_grey" />
+
+        </RadioGroup>
+        <LinearLayout
+            android:id="@+id/ll_time_votes_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="32dp"
+            android:layout_alignBottom="@id/rg_time"
+            android:paddingBottom="@dimen/padding_small"
+            >
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="00 votes"
+                android:textSize="@dimen/text_med"
+                android:textColor="@color/med_grey"
+                android:layout_marginLeft="32dp"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="00 votes"
+                android:textSize="@dimen/text_med"
+                android:textColor="@color/med_grey"
+                android:layout_marginLeft="32dp"
+
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="00 votes"
+                android:textSize="@dimen/text_med"
+                android:textColor="@color/med_grey"
+                android:layout_marginLeft="32dp"
+
+                />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <!-- <RelativeLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_marginLeft="@dimen/edit_text_padding_medium"
+         android:layout_marginRight="@dimen/edit_text_padding_medium"
+         android:layout_marginTop="2dp"
+
+         >
+         <View
+             android:id="@+id/morning_time_graph_bar"
+             android:layout_width="300dp"
+             android:layout_height="32dp"
+             android:background="#79a7ded9"
+             android:layout_centerVertical="true"
+             />
+         <CheckBox
+             android:id="@+id/cb_morning"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:drawableTint="@color/app_theme_dark"
+             android:buttonTint="@color/app_theme_dark"
+             android:layout_centerVertical="true"
+             android:text="Morning"
+             android:textSize="@dimen/text_large"
+             android:textColor="@color/dark_grey"
+             android:paddingLeft="@dimen/edit_text_padding_medium"
+             android:layout_marginLeft="@dimen/edit_text_padding_large"
+             android:paddingRight="@dimen/edit_text_padding_medium"
+             android:layout_alignParentLeft="true"
+
+             />
+     </RelativeLayout>
+ <RelativeLayout
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:layout_marginLeft="@dimen/edit_text_padding_medium"
+     android:layout_marginRight="@dimen/edit_text_padding_medium"
+     android:layout_marginTop="2dp"
+
+     >
+     <View
+         android:id="@+id/evening_time_graph_bar"
+         android:layout_width="300dp"
+         android:layout_height="32dp"
+         android:background="#79a7ded9"
+         android:layout_centerVertical="true"
+         />
+     <CheckBox
+         android:id="@+id/cb_evening"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:drawableTint="@color/app_theme_dark"
+         android:buttonTint="@color/app_theme_dark"
+         android:layout_centerVertical="true"
+         android:text="Evening"
+         android:textSize="@dimen/text_large"
+         android:textColor="@color/dark_grey"
+         android:paddingLeft="@dimen/edit_text_padding_medium"
+         android:layout_marginLeft="@dimen/edit_text_padding_large"
+         android:paddingRight="@dimen/edit_text_padding_medium"
+         android:layout_alignParentLeft="true"
+
+         />
+ </RelativeLayout>
+ <RelativeLayout
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:layout_marginLeft="@dimen/edit_text_padding_medium"
+     android:layout_marginRight="@dimen/edit_text_padding_medium"
+     android:layout_marginTop="2dp"
+     >
+     <View
+         android:id="@+id/any_time_graph_bar"
+         android:layout_width="300dp"
+         android:layout_height="32dp"
+         android:background="#79a7ded9"
+         android:layout_centerVertical="true"
+         />
+     <CheckBox
+         android:id="@+id/cb_anytime"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:drawableTint="@color/app_theme_dark"
+         android:buttonTint="@color/app_theme_dark"
+         android:layout_centerVertical="true"
+         android:text="Any"
+         android:textSize="@dimen/text_large"
+         android:textColor="@color/dark_grey"
+         android:paddingLeft="@dimen/edit_text_padding_medium"
+         android:layout_marginLeft="@dimen/edit_text_padding_large"
+         android:paddingRight="@dimen/edit_text_padding_medium"
+         android:layout_alignParentLeft="true"
+
+         />
+ </RelativeLayout>
+
+-->
+</LinearLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ultra_light_grey"
+    android:orientation="vertical"
+    tools:activity=".fragments.ArticleSearchResultFragment">
+    <!--  <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:visibility="gone"
+          >
+          <ImageView
+              android:id="@+id/iv_filter"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentRight="true"
+              android:src="@android:drawable/ic_menu_sort_by_size"
+              android:padding="@dimen/edit_text_padding_small"
+              />
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:textSize="@dimen/text_xl"
+              android:layout_centerVertical="true"
+              android:layout_toLeftOf="@id/iv_filter"
+              android:textColor="@color/med_grey"
+              android:text="@string/filter"
+              android:layout_marginRight="@dimen/edit_text_padding_medium"
+              />
+      </RelativeLayout>-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/ultra_light_grey" />
+    <include layout="@layout/connection_error_sublayout"/>
+
+
+
+</RelativeLayout>

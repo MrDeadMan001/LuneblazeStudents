@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    tools:activity=".fragments.home.sessionslist.AllSessionListFragmentNew">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_top_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            >
+            <TextView
+                android:id="@+id/tv_filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_filter_gray"
+                android:text="@string/filter"
+                android:textColor="@color/med_grey"
+                android:textSize="@dimen/text_large"
+                android:gravity="center_vertical"
+                android:layout_alignParentRight="true"
+                android:padding="@dimen/padding_small"
+                />
+            <TextView
+                android:id="@+id/tv_create_session"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_session_unfilled"
+                android:drawablePadding="@dimen/padding_small"
+                android:text="@string/create_session"
+                android:textColor="@color/med_grey"
+                android:textSize="@dimen/text_large"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="@dimen/padding_medium"
+                android:layout_alignParentLeft="true"
+                android:padding="@dimen/padding_small"
+                />
+        </RelativeLayout>
+
+        <include layout="@layout/thinnest_light_grey_divider" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tl_session_tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:tabMode="fixed"
+            app:tabSelectedTextColor="@color/app_theme_dark"
+            app:tabTextColor="@color/med_grey"
+            />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/vp_session_pager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_bottom_bar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusable="true"
+    android:background="@color/transparent"
+   >
+
+    <EditText
+        android:id="@+id/et_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusableInTouchMode="true"
+        android:gravity="center_vertical"
+        android:hint="@string/type_here"
+        android:maxLines="6"
+        android:background="@drawable/rounded_light_grey_border"
+        android:paddingTop="@dimen/padding_large"
+        android:paddingBottom="@dimen/padding_large"
+        android:paddingLeft="@dimen/padding_large"
+        android:paddingRight="60dp"
+        android:layout_margin="@dimen/padding_extra_small"
+        android:textColor="@color/dark_grey"
+        android:textColorHint="@color/light_grey"
+        android:layout_centerVertical="true"
+        android:textSize="@dimen/text_large" />
+
+    <ImageButton
+        android:id="@+id/ib_send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/ic_menu_send"
+        android:background="@color/transparent"
+        android:padding="@dimen/padding_medium"
+
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:elevation="1dp"
+        android:focusable="true"
+        android:text="Send" />
+
+</RelativeLayout>
